@@ -102,7 +102,7 @@ export default function PortfolioNavBar() {
           width: "100%",
           top: 0,
           left: 0,
-          height: 60,
+          height: 80,
           zIndex: 1201,
           paddingInline: { xs: 1, sm: 2, md: "50px", lg: "100px", xl: "180px" },
           transition: "all 0.3s ease-in-out",
@@ -115,7 +115,7 @@ export default function PortfolioNavBar() {
             sx={{
               display: "flex",
               alignItems: "center",
-              width: { xs: "100px", sm: "150px", md: "180px", lg: "200px" },
+              width: { xs: "150px", sm: "180px", md: "200px", lg: "230px" },
               overflow: "hidden",
               position: "relative",
             }}
@@ -138,12 +138,13 @@ export default function PortfolioNavBar() {
             <IconButton
               onClick={toggleTheme}
               color={theme.palette.primary.text}
-              sx={{ marginLeft: "auto" }}
+
+              sx={{ marginLeft: { xs: "60px", sm: "80px", md: "100px" } }}
             >
               {mode === "dark" ? (
-                <DarkModeIcon sx={{ fontSize: { xs: "18px", sm: "27px" } }} />
+                <DarkModeIcon sx={{ fontSize: { xs: "20px", sm: "27px" } }} />
               ) : (
-                <LightMode sx={{ fontSize: { xs: "18px", sm: "27px" } }} />
+                <LightMode sx={{ fontSize: { xs: "20px", sm: "27px" } }} />
               )}
             </IconButton>
           </Box>
@@ -155,9 +156,9 @@ export default function PortfolioNavBar() {
             sx={{ display: { xs: "flex", sm: "none" }, alignItems: "center" }}
           >
             {menuOpen ? (
-              <MenuOpenIcon sx={{ fontSize: "clamp(15px,4vw,28px)" }} />
+              <MenuOpenIcon sx={{ fontSize: "clamp(20px,4vw,28px)" }} />
             ) : (
-              <MenuIcon sx={{ fontSize: "clamp(15px,4vw,28px)" }} />
+              <MenuIcon sx={{ fontSize: "clamp(20px,4vw,28px)" }} />
             )}
           </IconButton>
         </Tooltip>

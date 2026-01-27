@@ -59,7 +59,7 @@ export default function ProjectsSection() {
       id="projects"
       maxWidth={false}
       sx={{
-        maxWidth: "1550px", // Specific width between xl and lg
+        maxWidth: "1300px", // Specific width between xl and lg
         py: { xs: 4, sm: 6, md: 12 },
         position: "relative",
       }}

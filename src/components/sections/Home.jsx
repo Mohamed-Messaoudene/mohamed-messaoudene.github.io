@@ -130,7 +130,7 @@ function Home() {
                 marginInline: 1,
               }}
             />
-            , I'm
+           {" , I'm"}
             <TypeAnimation
               preRenderFirstString={true}
               sequence={[
@@ -236,8 +236,8 @@ function Home() {
                 textTransform: "none",
               }}
               component="a"
-              href="/my_resume.pdf"
-              download={"my_resume.pdf"}
+              href="/my resume.pdf"
+              download={"my resume.pdf"}
               startIcon={
                 <motion.div
                   animate={isHovered ? { y: [4] } : { y: [4, -3, 6] }}
