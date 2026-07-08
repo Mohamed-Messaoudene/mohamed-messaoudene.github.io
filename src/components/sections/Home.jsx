@@ -90,7 +90,7 @@ function Home() {
       <Box
         ref={ref}
         display={"flex"}
-        gap={"12px"}
+        gap={{ xs: "12px", md: "20px", lg: "30px" }}
         width={{ sx: "100%", sm: "58%" }}
       >
         <Box
@@ -98,6 +98,7 @@ function Home() {
           flexDirection={"column"}
           justifyContent={"center"}
           alignItems={"center"}
+          marginLeft={{xs:'10px', sm: '0px'}}
         >
           <Box
             width={"15px"}
@@ -107,7 +108,7 @@ function Home() {
           />
           <Box
             width={"3px"}
-            height={{ xs: "180px",sm:'210px', md: "260px", lg: "95%" }}
+            height="95%"
             sx={{
               backgroundImage: `linear-gradient(${theme.palette.primary.main}, transparent)`,
               backgroundRepeat: "no-repeat",
@@ -131,7 +132,7 @@ function Home() {
                 marginInline: 1,
               }}
             />
-           {" , I'm"}
+            {" , I'm"}
             <TypeAnimation
               preRenderFirstString={true}
               sequence={[
@@ -156,33 +157,31 @@ function Home() {
               marginBlock: { xs: 0, sm: 1, lg: 3 },
             }}
           >
-            {heroText
-              .split(" ")
-              .map((word, index) => (
-                <Box
-                  key={index}
-                  sx={{ whiteSpace: "nowrap", display: "inline-block" }} // Prevent word breaking
-                >
-                  {word.split("").map((letter, letterIndex) => (
-                    <motion.span
-                      key={letterIndex}
-                      initial={{ opacity: 0, filter: "blur(10px)", y: 12 }}
-                      animate={
-                        inView ? { opacity: 1, filter: "blur(0)", y: 0 } : {}
-                      }
-                      transition={{
-                        duration: 0.6,
-                        ease: "easeInOut",
-                        delay: index * 0.25,
-                      }}
-                      style={{ display: "inline-block" }}
-                    >
-                      {letter === " " ? "\u00A0" : letter}
-                    </motion.span>
-                  ))}
-                  <span>&nbsp;</span>
-                </Box>
-              ))}
+            {heroText.split(" ").map((word, index) => (
+              <Box
+                key={index}
+                sx={{ whiteSpace: "nowrap", display: "inline-block" }} // Prevent word breaking
+              >
+                {word.split("").map((letter, letterIndex) => (
+                  <motion.span
+                    key={letterIndex}
+                    initial={{ opacity: 0, filter: "blur(10px)", y: 12 }}
+                    animate={
+                      inView ? { opacity: 1, filter: "blur(0)", y: 0 } : {}
+                    }
+                    transition={{
+                      duration: 0.6,
+                      ease: "easeInOut",
+                      delay: index * 0.25,
+                    }}
+                    style={{ display: "inline-block" }}
+                  >
+                    {letter === " " ? "\u00A0" : letter}
+                  </motion.span>
+                ))}
+                <span>&nbsp;</span>
+              </Box>
+            ))}
           </Typography>
           <Stack
             direction="row"

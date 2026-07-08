@@ -29,7 +29,7 @@ function App() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          mt:'120px',
+          mt:{xs: '100px', sm: '120px'},
           gap:0
         }}
       >
