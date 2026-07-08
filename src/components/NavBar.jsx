@@ -30,7 +30,7 @@ const NAV_ITEMS = [
   { title: "contact", icon: <ContactMailIcon fontSize="small" /> },
 ];
 
-export default function PortfolioNavBar() {
+export default function NavBar() {
   const [activeSection, setActiveSection] = useState(null);
   const { mode, toggleTheme } = useCustomTheme();
   const theme = useTheme();

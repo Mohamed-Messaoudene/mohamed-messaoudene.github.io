@@ -19,6 +19,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { TypeAnimation } from "react-type-animation";
+import { heroText } from "../../constants";
 
 const contactItems = [
   {
@@ -106,7 +107,7 @@ function Home() {
           />
           <Box
             width={"3px"}
-            height={{ xs: "180px",sm:'210px', md: "260px", lg: "330px" }}
+            height={{ xs: "180px",sm:'210px', md: "260px", lg: "95%" }}
             sx={{
               backgroundImage: `linear-gradient(${theme.palette.primary.main}, transparent)`,
               backgroundRepeat: "no-repeat",
@@ -137,7 +138,7 @@ function Home() {
                 3000,
                 "Messaoudene Mohamed", // initially rendered starting point
                 3000,
-                "a fullstack developer",
+                "a Full-Stack Developer",
               ]}
               speed={10}
               style={{
@@ -155,7 +156,7 @@ function Home() {
               marginBlock: { xs: 0, sm: 1, lg: 3 },
             }}
           >
-            {"a fullstack developper with MERN stack but adaptif with other technologies"
+            {heroText
               .split(" ")
               .map((word, index) => (
                 <Box
@@ -236,8 +237,8 @@ function Home() {
                 textTransform: "none",
               }}
               component="a"
-              href="/my resume.pdf"
-              download={"my resume.pdf"}
+              href="/CV-Messaoudene-Mohamed.pdf"
+              download={"CV-Messaoudene-Mohamed.pdf"}
               startIcon={
                 <motion.div
                   animate={isHovered ? { y: [4] } : { y: [4, -3, 6] }}

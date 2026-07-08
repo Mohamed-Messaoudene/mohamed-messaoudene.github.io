@@ -133,3 +133,7 @@ export const projects = [
     color: "#F4A460",
   },
 ];
+
+export const heroText = `Building scalable, production-ready digital products like 
+Dashboards, SaaS platforms, business systems & landing pages — 
+crafted with React, TypeScript, Laravel & modern web technologies.`;
