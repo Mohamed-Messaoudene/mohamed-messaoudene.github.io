@@ -53,11 +53,7 @@
 
     <link rel="icon" href="/favicon.ico" />
 
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/logo-dark.png"
-    />
+    <link rel="icon" type="image/svg+xml" href="/logo-dark.png" />
 
     <link rel="apple-touch-icon" href="/logo-light.png" />
 
@@ -115,10 +111,7 @@
          Improves appearance when installed on mobile devices.
          ========================================================= -->
 
-    <meta
-      name="application-name"
-      content="Mohamed Messaoudene Portfolio"
-    />
+    <meta name="application-name" content="Mohamed Messaoudene Portfolio" />
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
@@ -126,6 +119,39 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
+   
+    <!-- =========================================================
+         Structured Data (JSON-LD)
+         Improves search engine understanding of the website.
+         ========================================================= 
+     -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mohamed Messaoudene",
+        "jobTitle": "Full-Stack Developer",
+        "description": "Full-Stack Developer specializing in React, TypeScript, Laravel, Node.js and scalable web applications.",
+        "url": "https://mohamed-messaoudene.github.io/",
+        <!-- "image": "https://mohamed-messaoudene.github.io/profile.png", -->
+        "email": "mailto:messaoudenemohamed54@gmail.com",
+        "knowsAbout": [
+          "React",
+          "TypeScript",
+          "Laravel",
+          "Node.js",
+          "Next.js",
+          "Tailwind CSS",
+          "REST APIs",
+          "PostgreSQL",
+          "MongoDB"
+        ],
+        "sameAs": [
+          "https://github.com/Mohamed-messaoudene",
+          "https://linkedin.com/in/mohamed-messaoudene-ab595a269"
+        ]
+      }
+    </script>
 
     <!-- =========================================================
          Performance Optimizations
