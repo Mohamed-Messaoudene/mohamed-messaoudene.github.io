@@ -1,33 +1,72 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- =========================================================
+         Basic Document Metadata
+         ========================================================= -->
+
     <meta charset="UTF-8" />
+
+    <!-- Makes the website responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Indicates the author of the website -->
+    <meta name="author" content="Mohamed Messaoudene" />
+
+    <!-- Short description displayed by search engines -->
+    <meta
+      name="description"
+      content="Full-Stack Developer specializing in React, TypeScript, Laravel and Node.js. Building scalable SaaS platforms, dashboards, business systems and modern web applications."
+    />
+
+    <!-- SEO keywords (minor ranking impact today, but still acceptable) -->
+    <meta
+      name="keywords"
+      content="Mohamed Messaoudene, Full Stack Developer, React Developer, Laravel Developer, TypeScript, Node.js, JavaScript, Portfolio, Software Engineer"
+    />
+
+    <!-- Allows search engines to index this website -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Browser theme color on supported mobile browsers -->
+    <meta name="theme-color" content="#111827" />
+
+    <!-- =========================================================
+         Page Title
+         ========================================================= -->
+
+    <title>
+      Mohamed Messaoudene | Full-Stack Developer | React, TypeScript & Laravel
+    </title>
+
+    <!-- =========================================================
+         Canonical URL
+         Prevents duplicate-content issues in search engines
+         ========================================================= -->
+
+    <link rel="canonical" href="https://mohamed-messaoudene.github.io/" />
+
+    <!-- =========================================================
+         Favicons
+         Icons displayed in browser tabs, bookmarks and mobile devices
+         ========================================================= -->
+
+    <link rel="icon" href="/favicon.ico" />
+
     <link
       rel="icon"
       type="image/svg+xml"
       href="/messaoudene-high-resolution-logo-transparent (dark).svg"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
 
-    <link rel="stylesheet" href="./src//index.css" />
-    <title>
-      Mohamed Messaoudene | Full-Stack Developer | React, TypeScript & Laravel
-    </title>
-    <meta
-      name="description"
-      content="Full-Stack Developer specializing in React, TypeScript, Laravel and Node.js. Building scalable SaaS platforms, dashboards, business systems and modern web applications."
-    />
-    <meta
-      name="keywords"
-      content="Mohamed Messaoudene, Full Stack Developer, React Developer, Laravel Developer, TypeScript, Node.js, JavaScript, Portfolio, Software Engineer"
-    />
-    <meta name="author" content="Mohamed Messaoudene" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- =========================================================
+         Open Graph Metadata
+         Used by LinkedIn, Facebook, Discord, WhatsApp, etc.
+         Controls how the website appears when shared.
+         ========================================================= -->
+
     <meta property="og:type" content="website" />
 
     <meta
@@ -48,6 +87,12 @@
     <meta property="og:url" content="https://mohamed-messaoudene.github.io/" />
 
     <meta property="og:site_name" content="Mohamed Messaoudene Portfolio" />
+
+    <!-- =========================================================
+         Twitter / X Card Metadata
+         Used by Twitter/X and some messaging platforms.
+         ========================================================= -->
+
     <meta name="twitter:card" content="summary_large_image" />
 
     <meta
@@ -64,26 +109,48 @@
       name="twitter:image"
       content="https://mohamed-messaoudene.github.io/og-preview.png"
     />
-    <link rel="canonical" href="https://mohamed-messaoudene.github.io/" />
-    <meta name="robots" content="index, follow" />
-    <link rel="icon" href="/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/messaoudene-high-resolution-logo-transparent (dark).svg"
+
+    <!-- =========================================================
+         Progressive Web App (PWA) Metadata
+         Improves appearance when installed on mobile devices.
+         ========================================================= -->
+
+    <meta
+      name="application-name"
+      content="Mohamed Messaoudene Portfolio"
     />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="application-name" content="Mohamed Messaoudene Portfolio" />
 
-<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
-<meta
-  name="apple-mobile-web-app-status-bar-style"
-  content="black-translucent"
-/>
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <!-- =========================================================
+         Performance Optimizations
+         ========================================================= -->
+
+    <!-- Preconnect to Google Fonts for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- Required for loading Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Portfolio fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Global stylesheet -->
+    <link rel="stylesheet" href="./src/index.css" />
   </head>
+
   <body>
     <div id="root"></div>
+
+    <!-- React application entry point -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
