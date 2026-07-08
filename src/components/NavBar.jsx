@@ -104,7 +104,7 @@ export default function NavBar() {
           left: 0,
           height: 80,
           zIndex: 1201,
-          paddingInline: { xs: 1, sm: 2, md: "50px", lg: "100px", xl: "180px" },
+          paddingInline: { xs: 1, sm: 2, md: "50px", lg: "70px", xl: "160px" },
           transition: "all 0.3s ease-in-out",
           boxShadow: isScrolled ? "0px 4px 12px rgba(0, 0, 0, 0.2)" : "none",
           backdropFilter: isScrolled ? "blur(15px)" : "none",
