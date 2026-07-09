@@ -16,8 +16,8 @@ import {
   Container,
 } from "@mui/material";
 import { GitHub, Launch, SwipeRounded } from "@mui/icons-material";
-import CustomDevider from "../CustomDevider";
-import { projects } from "../../constants/index";
+import CustomDevider from "../../CustomDevider";
+import { projects } from "../../../constants/index";
 
 export default function ProjectsSection() {
   const scrollRef = useRef(null);

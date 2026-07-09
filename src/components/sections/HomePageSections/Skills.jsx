@@ -1,4 +1,4 @@
-import CustomDevider from "../CustomDevider";
+import CustomDevider from "../../CustomDevider";
 import { useState } from "react";
 import {
   Box,

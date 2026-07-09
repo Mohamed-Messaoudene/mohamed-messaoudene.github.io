@@ -19,7 +19,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { TypeAnimation } from "react-type-animation";
-import { heroText } from "../../constants";
+import { heroText } from "../../../constants";
 
 const contactItems = [
   {

@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import { Send as SendIcon } from "@mui/icons-material";
-import CustomDevider from "../CustomDevider";
+import CustomDevider from "../../CustomDevider";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { useInView } from "react-intersection-observer";
