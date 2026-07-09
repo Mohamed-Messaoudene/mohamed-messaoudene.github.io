@@ -23,11 +23,36 @@ import { Home, LightMode } from "@mui/icons-material";
 import { motion } from "framer-motion";
 
 const NAV_ITEMS = [
-  { title: "home", icon: <Home fontSize="small" /> },
-  { title: "about", icon: <PersonIcon fontSize="small" /> },
-  { title: "projects", icon: <WorkIcon fontSize="small" /> },
-  { title: "skills", icon: <CodeIcon fontSize="small" /> },
-  { title: "contact", icon: <ContactMailIcon fontSize="small" /> },
+  {
+    title: "home",
+    label: "Home",
+    icon: <Home fontSize="small" />,
+  },
+  {
+    title: "experience",
+    label: "Journey",
+    icon: <WorkIcon fontSize="small" />,
+  },
+  {
+    title: "projects",
+    label: "Projects",
+    icon: <WorkIcon fontSize="small" />,
+  },
+  {
+    title: "skills",
+    label: "Skills",
+    icon: <CodeIcon fontSize="small" />,
+  },
+  {
+    title: "about",
+    label: "About",
+    icon: <PersonIcon fontSize="small" />,
+  },
+  {
+    title: "contact",
+    label: "Contact",
+    icon: <ContactMailIcon fontSize="small" />,
+  },
 ];
 
 export default function NavBar() {
@@ -39,7 +64,7 @@ export default function NavBar() {
 
   useEffect(() => {
     const sections = NAV_ITEMS.map((item) =>
-      document.getElementById(item.title)
+      document.getElementById(item.title),
     );
 
     const observer = new IntersectionObserver(
@@ -50,7 +75,7 @@ export default function NavBar() {
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.6 },
     );
 
     sections.forEach((section) => {
@@ -138,7 +163,6 @@ export default function NavBar() {
             <IconButton
               onClick={toggleTheme}
               color={theme.palette.primary.text}
-
               sx={{ marginLeft: { xs: "60px", sm: "80px", md: "100px" } }}
             >
               {mode === "dark" ? (
@@ -174,14 +198,14 @@ export default function NavBar() {
               <Button
                 onClick={() => handleScrollToSection(section.title)}
                 sx={{
-                  textTransform: "lowercase",
+                  textTransform: "none",
                   color: "text.primary",
-                  fontWeight: "bold",
-                  fontSize: { sm: "14px", lg: "18px" },
+                  fontWeight: 600,
+                  fontSize: { sm: "14px", lg: "17px" },
                   position: "relative",
                 }}
               >
-                {section.title}
+                {section.label}
               </Button>
 
               <motion.div
@@ -233,9 +257,10 @@ export default function NavBar() {
               <Typography
                 variant="body2"
                 color={theme.palette.primary.text}
-                fontSize={"clamp(12px,1vw,17px)"}
+                fontWeight={500}
+                fontSize="clamp(12px,1vw,17px)"
               >
-                {section.title}
+                {section.label}
               </Typography>
             </MenuItem>
           ))}

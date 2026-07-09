@@ -84,7 +84,7 @@ function Home() {
       justifyContent={"space-between"}
       sx={{
         height: { xs: "auto", md: "70vh" },
-        width: { xs: "97%", md: "90%", lg: "85%", xl: "75%" },
+        width: "100%",
       }}
     >
       <Box
