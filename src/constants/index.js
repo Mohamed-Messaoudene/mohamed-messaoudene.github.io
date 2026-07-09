@@ -137,3 +137,55 @@ export const projects = [
 export const heroText = `Building scalable, production-ready digital products like 
 Dashboards, SaaS platforms, business systems & landing pages — 
 crafted with React, TypeScript, Laravel & modern web technologies.`;
+
+export /**
+ * Single source of truth for the timeline, ordered chronologically
+ * (oldest -> newest). To add a future role, just push a new object
+ * with type: "experience" at the end of this array — the timeline,
+ * colors, and animations all extend automatically.
+ */
+const timelineData = [
+  {
+    type: "education",
+    title: "ICT Engineer",
+    org: "National Higher School of Telecommunications and ICT",
+    location: "Oran, Algeria",
+    duration: "Graduated: June 2025",
+    color: "#607d8b",
+    description:
+      "Engineering degree covering the full foundation of modern software and communication systems.",
+    tags: [
+      "Software Engineering",
+      "Web Development",
+      "Database Systems",
+      "Computer Networks",
+      "Telecommunications",
+    ],
+  },
+  {
+    type: "experience",
+    title: "Frontend Developer (Contract)",
+    org: "GamifierSA",
+    location: "Saudi Arabia (Remote)",
+    duration: "April 2025 — May 2026",
+    color: "#3f51b5",
+    contributions: [
+      "Delivered multiple production-ready projects — landing pages, dashboards, and full-featured platforms — including NearClinic and Montasib, serving Arabic and English-speaking users across Saudi Arabia",
+      "Converted Figma designs into pixel-perfect, fully responsive UIs with smooth animations using Tailwind CSS and Material-UI",
+      "Optimized API performance through React Query caching and request batching, improving load times and perceived speed across key user flows",
+      "Developed reusable component libraries and consistent state management patterns adopted across the team, reducing development time on new features",
+      "Participated in code reviews, bug fixing, performance improvements, and deployment preparation for production releases",
+    ],
+  },
+  
+  // 👇 Future roles go here, same shape as the GamifierSA entry above:
+  // {
+  //   type: "experience",
+  //   title: "...",
+  //   org: "...",
+  //   location: "...",
+  //   duration: "...",
+  //   color: "#00897b",
+  //   contributions: ["..."],
+  // },
+];

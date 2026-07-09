@@ -7,6 +7,7 @@ import Contact from "./components/sections/Contact";
 import Skills from "./components/sections/Skills";
 import Footer from "./components/sections/Footer";
 import NavBar from "./components/NavBar";
+import Experience from "./components/sections/Experience";
 
 function App() {
   const theme = useTheme();
@@ -34,6 +35,7 @@ function App() {
         }}
       >
         <Home />
+        <Experience />
         <AboutMe />
         <Projects />
         <Skills />
