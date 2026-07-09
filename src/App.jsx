@@ -1,49 +1,15 @@
-import { Box, useTheme } from "@mui/material";
-
-import Home from "./components/sections/Home";
-import AboutMe from "./components/sections/AboutMe";
-import Projects from "./components/sections/Projects";
-import Contact from "./components/sections/Contact";
-import Skills from "./components/sections/Skills";
-import Footer from "./components/sections/Footer";
-import NavBar from "./components/NavBar";
-import Experience from "./components/sections/Experience";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/home";
+import ProjectDetails from "./pages/ProjectDetails";
+import NotFound from "./pages/NotFound";
 
 function App() {
-  const theme = useTheme();
-
   return (
-    <Box
-      sx={{
-        backgroundColor: theme.palette.background.bgcolor,
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        overflowX: "hidden",
-      }}
-    >
-      <NavBar />
-      <Box
-        sx={{
-                  width: { xs: "97%", md: "90%", lg: "85%", xl: "75%" },
-          flexGrow: 1,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          mt:{xs: '100px', sm: '120px'},
-          mx: "auto",
-          gap:0
-        }}
-      >
-        <Home />
-        <Experience />
-        <AboutMe />
-        <Projects />
-        <Skills />
-        <Contact />
-        <Footer/>
-      </Box>
-    </Box>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/projects/:slug" element={<ProjectDetails />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 
