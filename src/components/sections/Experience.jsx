@@ -23,11 +23,6 @@ function Experience() {
       flexDirection="column"
       alignItems="center"
       paddingBlock={3}
-      paddingInline={{
-        xs: "clamp(6px,8vw,30px)",
-        md: "60px",
-        lg: "200px",
-      }}
     >
       <Typography
         variant="h4"

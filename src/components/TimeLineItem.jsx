@@ -1,21 +1,35 @@
 import PropTypes from "prop-types";
-import { Box, Typography, Paper, Chip, useTheme } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Paper,
+  Chip,
+  useTheme,
+  Stack,
+  Button,
+} from "@mui/material";
 import { motion } from "framer-motion";
 import {
   Work as WorkIcon,
   School as SchoolIcon,
   LocationOn as LocationOnIcon,
   CalendarMonth as CalendarMonthIcon,
+  ExpandMore,
+  ExpandLess,
+  CheckCircleRounded,
 } from "@mui/icons-material";
+import Collapse from "@mui/material/Collapse";
+import { useState } from "react";
 
 function TimelineItem({ item, index, isLast, inView, nextColor }) {
+  const [expanded, setExpanded] = useState(false);
   const theme = useTheme();
 
   const Icon = item.type === "education" ? SchoolIcon : WorkIcon;
   const fromLeft = index % 2 === 0;
 
   return (
-    <Box sx={{ display: "flex", width: "100%" }}>
+    <Box sx={{ display: "flex", width: "100%"}}>
       {/* Timeline rail */}
       <Box
         sx={{
@@ -86,6 +100,7 @@ function TimelineItem({ item, index, isLast, inView, nextColor }) {
             p: "clamp(12px,2vw,24px)",
             borderLeft: `4px solid ${item.color}`,
             transition: ".3s",
+            marginRight:1,
 
             "&:hover": {
               transform: "translateY(-4px)",
@@ -104,9 +119,7 @@ function TimelineItem({ item, index, isLast, inView, nextColor }) {
           >
             <Box>
               <Chip
-                label={
-                  item.type === "education" ? "Education" : "Experience"
-                }
+                label={item.type === "education" ? "Education" : "Experience"}
                 size="small"
                 sx={{
                   bgcolor: `${item.color}22`,
@@ -129,6 +142,7 @@ function TimelineItem({ item, index, isLast, inView, nextColor }) {
                 sx={{
                   color: item.color,
                   fontWeight: 600,
+                  fontSize: "clamp(13px,2vw,22px)",
                 }}
               >
                 {item.org}
@@ -136,10 +150,10 @@ function TimelineItem({ item, index, isLast, inView, nextColor }) {
             </Box>
 
             <Chip
-              icon={<CalendarMonthIcon />}
+              icon={<CalendarMonthIcon sx={{fontSize:{xs:'16px',md:'22px'}}} />}
               label={item.duration}
-              size="small"
               sx={{
+                fontSize: "clamp(11px,2vw,16px)",
                 bgcolor: item.color,
                 color: "#fff",
 
@@ -160,50 +174,87 @@ function TimelineItem({ item, index, isLast, inView, nextColor }) {
           >
             <LocationOnIcon fontSize="small" color="action" />
 
-            <Typography color="text.secondary">
+            <Typography
+              color="text.secondary"
+              sx={{ fontSize: "clamp(12px,2vw,18px)" }}
+            >
               {item.location}
             </Typography>
           </Box>
 
-          {item.type === "education" ? (
-            <>
-              <Typography
-                sx={{
-                  mb: 1.5,
-                  color: "text.secondary",
-                }}
-              >
-                {item.description}
-              </Typography>
-
-              <Box
-                sx={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: 1,
-                }}
-              >
-                {item.tags.map((tag) => (
-                  <Chip key={tag} label={tag} size="small" />
-                ))}
-              </Box>
-            </>
-          ) : (
-            <Box component="ul" sx={{ m: 0, pl: "1.2rem" }}>
-              {item.contributions.map((point) => (
+          <Collapse in={expanded} timeout={350}>
+            {item.type === "education" ? (
+              <>
                 <Typography
-                  key={point}
-                  component="li"
                   sx={{
-                    mb: 0.8,
+                    mb: 1.5,
                     color: "text.secondary",
+                    fontSize: "clamp(12px,1.8vw,18px)",
                   }}
                 >
-                  {point}
+                  {item.description}
                 </Typography>
-              ))}
-            </Box>
-          )}
+
+                <Stack direction="row" flexWrap="wrap" gap={1}>
+                  {item.tags.map((tag) => (
+                    <Chip key={tag} label={tag} size="small" />
+                  ))}
+                </Stack>
+              </>
+            ) : (
+              <Stack spacing={1.5}>
+                {item.contributions.map((point) => (
+                  <Box
+                    key={point}
+                    sx={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      gap: 1,
+                    }}
+                  >
+                    <CheckCircleRounded
+                      sx={{
+                        color: item.color,
+                        fontSize: { xs: 12, md: 22 },
+                        mt: "3px",
+                      }}
+                    />
+
+                    <Typography
+                      sx={{
+                        color: "text.secondary",
+                        fontSize: "clamp(11px,1.8vw,18px)",
+                      }}
+                    >
+                      {point}
+                    </Typography>
+                  </Box>
+                ))}
+              </Stack>
+            )}
+          </Collapse>
+          <Button
+            onClick={() => setExpanded((prev) => !prev)}
+            endIcon={expanded ? <ExpandLess /> : <ExpandMore />}
+            sx={{
+              mt: 2,
+              p: 0,
+              textTransform: "none",
+              fontWeight: 600,
+              color: item.color,
+
+              "&:hover": {
+                background: "transparent",
+                opacity: 0.85,
+              },
+            }}
+          >
+            {expanded
+              ? "Show less"
+              : item.type === "experience"
+                ? "View achievements"
+                : "View coursework"}
+          </Button>
         </Paper>
       </motion.div>
     </Box>

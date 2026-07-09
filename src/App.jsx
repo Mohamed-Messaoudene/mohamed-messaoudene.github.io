@@ -25,12 +25,13 @@ function App() {
       <NavBar />
       <Box
         sx={{
-          width:'100%',
+                  width: { xs: "97%", md: "90%", lg: "85%", xl: "75%" },
           flexGrow: 1,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           mt:{xs: '100px', sm: '120px'},
+          mx: "auto",
           gap:0
         }}
       >
