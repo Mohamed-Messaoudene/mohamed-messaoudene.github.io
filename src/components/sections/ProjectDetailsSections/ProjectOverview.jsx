@@ -98,7 +98,7 @@ function ProjectOverview({ project }) {
           display: "grid",
           gridTemplateColumns: {
             xs: "1fr",
-            lg: "2fr 1fr",
+            md: "2fr 1fr",
           },
           gap: 6,
           mb: 8,
@@ -216,7 +216,7 @@ function ProjectOverview({ project }) {
           display: "grid",
           gridTemplateColumns: {
             xs: "1fr",
-            lg: "repeat(3,1fr)",
+            md: "repeat(3,1fr)",
           },
           gap: 5,
         }}
