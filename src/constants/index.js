@@ -134,14 +134,12 @@
 //   },
 // ];
 
-
 import {
   SiReact,
   SiTypescript,
   SiTailwindcss,
   SiLaravel,
 } from "react-icons/si";
-
 
 export const projects = [
   {
@@ -175,6 +173,10 @@ export const projects = [
 
     image: "/clinic.jpg",
 
+    platform: "Web Platform",
+
+    industry: "Healthcare",
+    
     gallery: [
       "/projects/NearClinic/nearclinic1.png",
       "/projects/NearClinic/nearclinic2.png",
@@ -183,28 +185,28 @@ export const projects = [
       "/projects/NearClinic/nearclinic5.png",
     ],
 
-   technologies: [
-  {
-    name: "React",
-    icon: SiReact,
-    color: "#61DAFB",
-  },
-  {
-    name: "TypeScript",
-    icon: SiTypescript,
-    color: "#3178C6",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: SiTailwindcss,
-    color: "#06B6D4",
-  },
-  {
-    name: "Laravel",
-    icon: SiLaravel,
-    color: "#FF2D20",
-  },
-],
+    technologies: [
+      {
+        name: "React",
+        icon: SiReact,
+        color: "#61DAFB",
+      },
+      {
+        name: "TypeScript",
+        icon: SiTypescript,
+        color: "#3178C6",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: SiTailwindcss,
+        color: "#06B6D4",
+      },
+      {
+        name: "Laravel",
+        icon: SiLaravel,
+        color: "#FF2D20",
+      },
+    ],
 
     demoUrl: "https://near-clinics.com/",
 

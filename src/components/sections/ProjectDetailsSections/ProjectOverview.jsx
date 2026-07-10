@@ -13,10 +13,11 @@ import {
   LightbulbRounded,
   AutoAwesomeRounded,
   PersonRounded,
-  CalendarMonthRounded,
-  GroupsRounded,
-  RocketLaunchRounded,
   CheckCircleRounded,
+  LaptopMacRounded,
+  BusinessRounded,
+  LanguageRounded,
+  GitHub,
 } from "@mui/icons-material";
 
 function SectionTitle({ icon, title, color }) {
@@ -32,6 +33,7 @@ function SectionTitle({ icon, title, color }) {
       <Typography
         variant="h5"
         fontWeight={700}
+        fontSize={"clamp(16px,2vw,26px)"}
         color={color}
       >
         {title}
@@ -43,28 +45,35 @@ function SectionTitle({ icon, title, color }) {
 function ProjectOverview({ project }) {
   const theme = useTheme();
 
-  const quickInfo = [
-    {
-      icon: <PersonRounded fontSize="small" />,
-      label: "Role",
-      value: project.role.title,
-    },
-    {
-      icon: <CalendarMonthRounded fontSize="small" />,
-      label: "Duration",
-      value: project.duration,
-    },
-    {
-      icon: <GroupsRounded fontSize="small" />,
-      label: "Team",
-      value: project.team,
-    },
-    {
-      icon: <RocketLaunchRounded fontSize="small" />,
-      label: "Status",
-      value: project.status,
-    },
-  ];
+ const quickInfo = [
+  {
+    icon: <PersonRounded fontSize="small" sx={{ color: theme.palette.text.primary }} />,
+    label: "Role",
+    value: project.role.title,
+  },
+  {
+    icon: <LaptopMacRounded fontSize="small" sx={{ color: theme.palette.text.primary }} />,
+    label: "Platform",
+    value: project.platform,
+  },
+  {
+    icon: <BusinessRounded fontSize="small" sx={{ color: theme.palette.text.primary }} />,
+    label: "Industry",
+    value: project.industry,
+  },
+    project.demoUrl && {
+    icon: <LanguageRounded fontSize="small" sx={{ color: theme.palette.text.primary }} />,
+    label: "Live Demo",
+    value: project.demoUrl,
+    isLink: true,
+  },
+  project.githubUrl && {
+    icon: <GitHub fontSize="small" sx={{ color: theme.palette.text.primary }} />,
+    label: "GitHub",
+    value: project.githubUrl,
+    isLink: true,
+  },
+].filter(Boolean);
 
   return (
     <Box
@@ -75,8 +84,8 @@ function ProjectOverview({ project }) {
       <Typography
         variant="h3"
         fontWeight={800}
-        mb={6}
-        fontSize={{ xs: "clamp(20px,4vw,40px)", md: "clamp(30px,4vw,50px)" }}
+        mb={{xs:2,md:6}}
+        fontSize={"clamp(20px,4vw,40px)"}
         color={theme.palette.text.primary}
       >
         Project Overview
@@ -103,7 +112,7 @@ function ProjectOverview({ project }) {
             title="About the project"
             icon={
               <DescriptionRounded
-                sx={{ color: theme.palette.primary.main }}
+                sx={{ color: theme.palette.primary.main ,fontSize:{xs:20,md:25}}}
               />
             }
           />
@@ -112,60 +121,92 @@ function ProjectOverview({ project }) {
             sx={{
               color: "text.secondary",
               lineHeight: 2,
-              fontSize: 17,
+              fontSize: "clamp(13px,2vw,17px)",
             }}
           >
             {project.longDescription}
           </Typography>
         </Box>
 
-        {/* Quick facts */}
+       {/* Quick Facts */}
 
-        <Box>
-          <SectionTitle
-            color={theme.palette.primary.main}
-            title="Quick facts"
-            icon={
-              <AutoAwesomeRounded
-                sx={{ color: theme.palette.primary.main }}
-              />
-            }
-          />
+<Box>
+  <SectionTitle
+    color={theme.palette.primary.main}
+    title="Quick Facts"
+    icon={
+      <AutoAwesomeRounded
+        sx={{
+          color: theme.palette.primary.main,
+          fontSize: { xs: 20, md: 25 },
+        }}
+      />
+    }
+  />
 
-          <Stack spacing={2}>
-            {quickInfo.map((item) => (
-              <Box
-                key={item.label}
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  borderBottom: "1px solid",
-                  borderColor: "divider",
-                  pb: 1.5,
-                }}
-              >
-                <Stack
-                  direction="row"
-                  spacing={1}
-                  alignItems="center"
-                >
-                  {item.icon}
+  <Stack spacing={2}>
+    {quickInfo.map((item) => (
+      <Box
+        key={item.label}
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: 2,
+          borderBottom: "1px solid",
+          borderColor: "divider",
+          pb: 1.5,
+        }}
+      >
+        <Stack
+          direction="row"
+          spacing={1}
+          alignItems="center"
+        >
+          {item.icon}
 
-                  <Typography
-                    fontWeight={600}
-                  >
-                    {item.label}
-                  </Typography>
-                </Stack>
+          <Typography
+            fontWeight={600}
+            color="text.primary"
+            fontSize="clamp(13px,2vw,16px)"
+          >
+            {item.label}
+          </Typography>
+        </Stack>
 
-                <Typography color="text.secondary">
-                  {item.value}
-                </Typography>
-              </Box>
-            ))}
-          </Stack>
-        </Box>
+        {item.isLink ? (
+          <Typography
+            component="a"
+            href={item.value}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              color: "secondary.main",
+              textDecoration: "none",
+              fontWeight: 600,
+              fontSize: "clamp(12px,2vw,16px)",
+              transition: ".2s",
+
+              "&:hover": {
+                textDecoration: "underline",
+              },
+            }}
+          >
+            {item.label === "GitHub" ? "View Repository" : "Open Website"}
+          </Typography>
+        ) : (
+          <Typography
+            color="text.secondary"
+            fontSize="clamp(13px,2vw,16px)"
+            textAlign="right"
+          >
+            {item.value}
+          </Typography>
+        )}
+      </Box>
+    ))}
+  </Stack>
+</Box>
       </Box>
 
       {/* ================= BOTTOM ================= */}
@@ -188,7 +229,7 @@ function ProjectOverview({ project }) {
             title="Problem"
             icon={
               <ErrorOutlineRounded
-                sx={{ color: "#e53935" }}
+                sx={{ color: "#e53935",fontSize:{xs:20,md:25} }}
               />
             }
           />
@@ -205,11 +246,11 @@ function ProjectOverview({ project }) {
                   sx={{
                     color: "#e53935",
                     mt: "3px",
-                    fontSize: 18,
+                    fontSize: {xs:12,sm:18},
                   }}
                 />
 
-                <Typography color="text.secondary">
+                <Typography color="text.secondary" fontSize={"clamp(13px,2vw,17px)"}>
                   {item}
                 </Typography>
               </Stack>
@@ -225,7 +266,7 @@ function ProjectOverview({ project }) {
             title="Solution"
             icon={
               <LightbulbRounded
-                sx={{ color: "#43a047" }}
+                sx={{ color: "#43a047",fontSize:{xs:20,md:25} }}
               />
             }
           />
@@ -242,11 +283,11 @@ function ProjectOverview({ project }) {
                   sx={{
                     color: "#43a047",
                     mt: "3px",
-                    fontSize: 18,
+                    fontSize: {xs:12,sm:18},
                   }}
                 />
 
-                <Typography color="text.secondary">
+                <Typography color="text.secondary" fontSize={"clamp(13px,2vw,17px)"}>
                   {item}
                 </Typography>
               </Stack>
@@ -263,7 +304,7 @@ function ProjectOverview({ project }) {
             icon={
               <AutoAwesomeRounded
                 sx={{
-                  color: theme.palette.primary.main,
+                  color: theme.palette.primary.main,fontSize:{xs:20,md:25}
                 }}
               />
             }
@@ -280,6 +321,7 @@ function ProjectOverview({ project }) {
                 label={feature}
                 sx={{
                   fontWeight: 600,
+                  fontSize:"clamp(11px,1.5vw,13px)",
                   borderRadius: 2,
                 }}
               />
