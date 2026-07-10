@@ -89,8 +89,8 @@ export default function Footer() {
         <img
           src={
             theme.palette.mode == "light"
-              ? "/public/messaoudene-high-resolution-logo-transparent (light).svg"
-              : "/public/messaoudene-high-resolution-logo-transparent (dark).svg"
+              ? "/messaoudene-high-resolution-logo-transparent (light).svg"
+              : "/messaoudene-high-resolution-logo-transparent (dark).svg"
           }
           alt="logo"
           style={{
@@ -104,7 +104,7 @@ export default function Footer() {
           variant="h5"
           component="div"
           sx={{
-            marginLeft:5,
+            marginLeft: 5,
             fontSize: "clamp(16px,1.7vw,24px)",
             fontWeight: "bold",
             background: "linear-gradient(45deg, #3f51b5 30%,#ba68c8 90%)",
