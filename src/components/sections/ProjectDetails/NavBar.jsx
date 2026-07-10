@@ -83,7 +83,7 @@ function MiniNav({ color, demoUrl, githubUrl }) {
                   },
                 }}
               >
-                <LaunchIcon sx={{ fontSize: { xs: 14, md: 22 } }} />
+                <LaunchIcon sx={{ fontSize: { xs: 14, md: 18 } }} />
               </IconButton>
             </Tooltip>
           )}
@@ -106,7 +106,7 @@ function MiniNav({ color, demoUrl, githubUrl }) {
                   },
                 }}
               >
-                <GitHubIcon sx={{ fontSize: { xs: 14, md: 22 } }} />
+                <GitHubIcon sx={{ fontSize: { xs: 14, md: 18 } }} />
               </IconButton>
             </Tooltip>
           )}
@@ -126,9 +126,9 @@ function MiniNav({ color, demoUrl, githubUrl }) {
               }}
             >
               {mode === "dark" ? (
-                <LightModeRoundedIcon sx={{ fontSize: { xs: 14, md: 22 } }} />
+                <LightModeRoundedIcon sx={{ fontSize: { xs: 14, md: 18 } }} />
               ) : (
-                <DarkModeRoundedIcon sx={{ fontSize: { xs: 14, md: 22 } }} />
+                <DarkModeRoundedIcon sx={{ fontSize: { xs: 14, md: 18 } }} />
               )}
             </IconButton>
           </Tooltip>
