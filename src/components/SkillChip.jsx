@@ -1,4 +1,5 @@
-import { Chip } from "@mui/material";
+import { alpha, Chip } from "@mui/material";
+import PropTypes from "prop-types";
 
 function SkillChip({ skill, categoryColor }) {
   const Icon = skill.icon;
@@ -24,5 +25,16 @@ function SkillChip({ skill, categoryColor }) {
     />
   );
 }
+
+
+SkillChip.propTypes = {
+  skill: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    icon: PropTypes.elementType.isRequired,
+    core: PropTypes.bool,
+  }).isRequired,
+
+  categoryColor: PropTypes.string.isRequired,
+};
 
 export default SkillChip;

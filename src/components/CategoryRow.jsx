@@ -2,6 +2,7 @@ import { useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import { Box, Typography } from "@mui/material";
 import SkillChip from "./SkillChip";
+import PropTypes from "prop-types";
 
 function CategoryRow({ category, index, inView }) {
   const theme = useTheme();
@@ -36,7 +37,11 @@ function CategoryRow({ category, index, inView }) {
             {category.icon}
           </Box>
           <Typography
-            sx={{ fontWeight: 700, fontSize: "clamp(14px,1.6vw,18px)",color:theme.palette.primary.text }}
+            sx={{
+              fontWeight: 700,
+              fontSize: "clamp(14px,1.6vw,18px)",
+              color: theme.palette.primary.text,
+            }}
           >
             {category.title}
           </Typography>
@@ -56,5 +61,23 @@ function CategoryRow({ category, index, inView }) {
     </motion.div>
   );
 }
+
+CategoryRow.propTypes = {
+  category: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    icon: PropTypes.node.isRequired,
+    color: PropTypes.string.isRequired,
+    skills: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        icon: PropTypes.elementType.isRequired,
+        core: PropTypes.bool,
+      }),
+    ).isRequired,
+  }).isRequired,
+
+  index: PropTypes.number.isRequired,
+  inView: PropTypes.bool.isRequired,
+};
 
 export default CategoryRow;
