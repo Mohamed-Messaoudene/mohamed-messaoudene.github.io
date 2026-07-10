@@ -210,7 +210,7 @@ export const projects = [
 
     demoUrl: "https://near-clinics.com/",
 
-    githubUrl: "null",
+    githubUrl: null,
 
     color: "#3B82F6",
 

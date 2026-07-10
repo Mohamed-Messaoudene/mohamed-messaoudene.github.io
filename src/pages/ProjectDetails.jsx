@@ -5,10 +5,9 @@ import Footer from "../components/sections/Footer";
 
 // import ProjectOverview from "../components/project/ProjectOverview";
 import { projects } from "../constants";
-import ProjectHero from "../components/sections/ProjectDetailsSections/ProjectHero";
-import ProjectOverview from "../components/sections/ProjectDetailsSections/ProjectOverview";
-import ProjectTechStack from "../components/sections/ProjectDetailsSections/ProjectTechStack";
-
+import ProjectHero from "../components/sections/ProjectDetails/ProjectHero";
+import ProjectOverview from "../components/sections/ProjectDetails/ProjectOverview";
+import ProjectTechStack from "../components/sections/ProjectDetails/ProjectTechStack";
 
 function ProjectDetail() {
   const { slug } = useParams();
@@ -26,9 +25,9 @@ function ProjectDetail() {
       sx={{
         backgroundColor: theme.palette.background.bgcolor,
         minHeight: "100vh",
+        pt: { xs: 10, md: 12 },
       }}
     >
-
       <Box
         sx={{
           width: {
@@ -45,7 +44,10 @@ function ProjectDetail() {
         <ProjectHero project={project} />
         <ProjectOverview project={project} />
         {/* <ProjectFeatures features={project.features} /> */}
-        <ProjectTechStack role={project.role} technologies={project.technologies}/>
+        <ProjectTechStack
+          role={project.role}
+          technologies={project.technologies}
+        />
 
         {/* <ProjectOverview project={project} /> */}
       </Box>

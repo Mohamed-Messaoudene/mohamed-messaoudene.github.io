@@ -2,12 +2,12 @@ import { Box, useTheme } from "@mui/material";
 
 import NavBar from "../components/NavBar";
 
-import Home from "../components/sections/HomePageSections/Home";
-import Experience from "../components/sections/HomePageSections/Experience";
-import AboutMe from "../components/sections/HomePageSections/AboutMe";
-import Projects from "../components/sections/HomePageSections/Projects";
-import Skills from "../components/sections/HomePageSections/Skills";
-import Contact from "../components/sections/HomePageSections/Contact";
+import Home from "../components/sections/Home/Home";
+import Experience from "../components/sections/Home/Experience";
+import AboutMe from "../components/sections/Home/AboutMe";
+import Projects from "../components/sections/Home/Projects";
+import Skills from "../components/sections/Home/Skills";
+import Contact from "../components/sections/Home/Contact";
 import Footer from "../components/sections/Footer";
 
 function HomePage() {

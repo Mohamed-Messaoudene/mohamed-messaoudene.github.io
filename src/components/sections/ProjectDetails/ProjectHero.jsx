@@ -1,22 +1,5 @@
 import PropTypes from "prop-types";
-import { Link as RouterLink } from "react-router-dom";
 
-import {
-  Box,
-  Typography,
-  Button,
-  Chip,
-  Stack,
-  IconButton,
-  useTheme,
-  alpha,
-} from "@mui/material";
-
-import LaunchIcon from "@mui/icons-material/Launch";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
-import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
-import DarkModeRoundedIcon from "@mui/icons-material/DarkModeRounded";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import LinkRoundedIcon from "@mui/icons-material/LinkRounded";
 
@@ -26,8 +9,8 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-import { useCustomTheme } from "../../../context/themeContext";
+import { alpha, Box, Chip, Stack, Typography, useTheme } from "@mui/material";
+import MiniNav from "./NavBar";
 
 /** Pulls a clean, displayable hostname out of a full URL, or null if invalid/empty. */
 function getDisplayHost(url) {
@@ -37,52 +20,6 @@ function getDisplayHost(url) {
   } catch {
     return null;
   }
-}
-
-function MiniNav({ color }) {
-  const { mode, toggleTheme } = useCustomTheme();
-
-  return (
-    <Box
-      sx={{
-        width: "100%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        py: 2,
-      }}
-    >
-      <Button
-        component={RouterLink}
-        to="/"
-        startIcon={<ArrowBackRoundedIcon />}
-        sx={{
-          textTransform: "none",
-          color: "text.secondary",
-          fontWeight: 600,
-          "&:hover": { color },
-        }}
-      >
-        Back to Home
-      </Button>
-
-      <IconButton
-        onClick={toggleTheme}
-        aria-label="Toggle light/dark mode"
-        sx={{
-          border: (t) => `1px solid ${t.palette.divider}`,
-          transition: "all 0.25s ease",
-          "&:hover": { borderColor: color, color },
-        }}
-      >
-        {mode === "dark" ? (
-          <LightModeRoundedIcon fontSize="small" />
-        ) : (
-          <DarkModeRoundedIcon fontSize="small" />
-        )}
-      </IconButton>
-    </Box>
-  );
 }
 
 function ProjectHero({ project }) {
@@ -105,8 +42,11 @@ function ProjectHero({ project }) {
         mb: 8,
       }}
     >
-      <MiniNav color={project.color} />
-
+      <MiniNav
+        color={project.color}
+        demoUrl={project.demoUrl}
+        githubUrl={project.githubUrl}
+      />
       {/* ---------------- Header ---------------- */}
       <Stack
         spacing={2.5}
@@ -178,68 +118,63 @@ function ProjectHero({ project }) {
           {project.shortDescription}
         </Typography>
 
-        
+        {demoHost && (
+          <Stack
+            direction="row"
+            spacing={1}
+            alignItems="center"
+            sx={{
+              mt: 1,
+              color: "text.secondary",
+            }}
+          >
+            <LinkRoundedIcon
+              sx={{
+                fontSize: 18,
+              }}
+            />
 
-       {demoHost && (
-  <Stack
-    direction="row"
-    spacing={1}
-    alignItems="center"
-    sx={{
-      mt: 1,
-      color: "text.secondary",
-    }}
-  >
-    <LinkRoundedIcon
-      sx={{
-        fontSize: 18,
-      }}
-    />
+            <Typography
+              component="a"
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                color: "inherit",
+                textDecoration: "none",
+                fontWeight: 500,
+                fontSize: {
+                  xs: "0.9rem",
+                  md: "1rem",
+                },
 
-    <Typography
-      component="a"
-      href={project.demoUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      sx={{
-        color: "inherit",
-        textDecoration: "none",
-        fontWeight: 500,
-        fontSize: {
-          xs: "0.9rem",
-          md: "1rem",
-        },
-
-        "&:hover": {
-          color: project.color,
-          textDecoration: "underline",
-        },
-      }}
-    >
-      {demoHost}
-    </Typography>
-  </Stack>
-)}
+                "&:hover": {
+                  color: project.color,
+                  textDecoration: "underline",
+                },
+              }}
+            >
+              {demoHost}
+            </Typography>
+          </Stack>
+        )}
       </Stack>
 
       {/* ---------------- Slider ---------------- */}
-     <Box
-  sx={{
-    width: "100%",
-    borderRadius: {
-      xs: 3,
-      md: 4,
-    },
-    overflow: "hidden",
-    boxShadow: `0 14px 45px ${alpha(
-      theme.palette.common.black,
-      0.18
-    )}`,
-    "--swiper-navigation-color": project.color,
-    "--swiper-pagination-color": project.color,
-    "--swiper-navigation-size": "22px",
-  }}
->
+      <Box
+        sx={{
+          width: "100%",
+          borderRadius: {
+            xs: 3,
+            md: 4,
+          },
+          overflow: "hidden",
+          boxShadow: `0 14px 45px ${alpha(theme.palette.common.black, 0.18)}`,
+          "--swiper-navigation-color": project.color,
+          "--swiper-pagination-color": project.color,
+          "--swiper-navigation-size": "22px",
+        }}
+      >
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           navigation={images.length > 1}
@@ -259,20 +194,20 @@ function ProjectHero({ project }) {
           {images.map((image, i) => (
             <SwiperSlide key={`${image}-${i}`}>
               <Box
-  component="img"
-  src={image}
-  alt={`${project.title} preview ${i + 1}`}
-  loading={i === 0 ? "eager" : "lazy"}
-  sx={{
-    width: "100%",
-    display: "block",
-    aspectRatio: {
-      xs: "4 / 3",
-      sm: "16 / 9",
-    },
-    objectFit: "cover",
-  }}
-/>
+                component="img"
+                src={image}
+                alt={`${project.title} preview ${i + 1}`}
+                loading={i === 0 ? "eager" : "lazy"}
+                sx={{
+                  width: "100%",
+                  display: "block",
+                  aspectRatio: {
+                    xs: "4 / 3",
+                    sm: "16 / 9",
+                  },
+                  objectFit: "cover",
+                }}
+              />
             </SwiperSlide>
           ))}
         </Swiper>
