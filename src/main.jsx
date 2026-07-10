@@ -4,6 +4,13 @@ import App from "./App.jsx";
 import { ThemeProvider } from "./context/themeContext.jsx";
 import { BrowserRouter } from "react-router-dom";
 
+const redirect = sessionStorage.redirect;
+
+if (redirect) {
+  delete sessionStorage.redirect;
+  window.history.replaceState(null, "", redirect);
+}
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
