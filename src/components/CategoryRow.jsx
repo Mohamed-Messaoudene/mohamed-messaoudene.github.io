@@ -6,6 +6,9 @@ import PropTypes from "prop-types";
 
 function CategoryRow({ category, index, inView }) {
   const theme = useTheme();
+
+  const CategoryIcon = category.icon;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
@@ -21,7 +24,6 @@ function CategoryRow({ category, index, inView }) {
           py: { xs: 2.5, md: 3 },
         }}
       >
-        {/* Category label column */}
         <Box
           sx={{
             display: "flex",
@@ -33,9 +35,13 @@ function CategoryRow({ category, index, inView }) {
             pl: { xs: 0, md: 2 },
           }}
         >
-          <Box sx={{ color: category.color, display: "flex" }}>
-            {category.icon}
-          </Box>
+          <CategoryIcon
+            sx={{
+              fontSize: "clamp(16px,2vw,26px)",
+              color: category.color,
+            }}
+          />
+
           <Typography
             sx={{
               fontWeight: 700,
@@ -47,7 +53,6 @@ function CategoryRow({ category, index, inView }) {
           </Typography>
         </Box>
 
-        {/* Skills */}
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.8, flex: 1 }}>
           {category.skills.map((skill) => (
             <SkillChip
@@ -65,7 +70,7 @@ function CategoryRow({ category, index, inView }) {
 CategoryRow.propTypes = {
   category: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    icon: PropTypes.node.isRequired,
+    icon: PropTypes.elementType.isRequired,
     color: PropTypes.string.isRequired,
     skills: PropTypes.arrayOf(
       PropTypes.shape({

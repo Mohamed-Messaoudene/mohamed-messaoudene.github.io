@@ -54,7 +54,7 @@ import {
 export const skillCategories = [
   {
     title: "Frontend",
-    icon: <LanguageIcon sx={{ fontSize: "clamp(16px,2vw,26px)" }} />,
+    icon: LanguageIcon,
     color: "#3f51b5",
     skills: [
       { name: "React", icon: SiReact, core: true },
@@ -69,7 +69,7 @@ export const skillCategories = [
   },
   {
     title: "State & Data",
-    icon: <TuneIcon sx={{ fontSize: "clamp(16px,2vw,26px)" }} />,
+    icon: TuneIcon,
     color: "#9c27b0",
     skills: [
       { name: "React Query", icon: SiReactquery, core: true },
@@ -81,7 +81,7 @@ export const skillCategories = [
   },
   {
     title: "Backend",
-    icon: <DnsIcon sx={{ fontSize: "clamp(16px,2vw,26px)" }} />,
+    icon: DnsIcon,
     color: "#4caf50",
     skills: [
       { name: "Laravel", icon: SiLaravel, core: true },
@@ -96,7 +96,7 @@ export const skillCategories = [
   },
   {
     title: "Databases",
-    icon: <StorageIcon sx={{ fontSize: "clamp(16px,2vw,26px)" }} />,
+    icon: StorageIcon,
     color: "#ff9800",
     skills: [
       { name: "PostgreSQL", icon: SiPostgresql, core: true },
@@ -108,7 +108,7 @@ export const skillCategories = [
   },
   {
     title: "Tools",
-    icon: <BuildIcon sx={{ fontSize: "clamp(16px,2vw,26px)" }} />,
+    icon: BuildIcon,
     color: "#607d8b",
     skills: [
       { name: "Git", icon: SiGit, core: true },
