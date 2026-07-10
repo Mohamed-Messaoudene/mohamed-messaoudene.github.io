@@ -2,9 +2,9 @@ import { Box, Typography, useTheme } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 
 
-import { timelineData } from "../../constants";
-import CustomDevider from "../CustomDevider";
-import TimelineItem from "../TimeLineItem";
+import { timelineData } from "../../../constants";
+import CustomDevider from "../../CustomDevider";
+import TimelineItem from "../../TimeLineItem";
 
 function Experience() {
   const theme = useTheme();

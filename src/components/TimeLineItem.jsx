@@ -95,8 +95,10 @@ function TimelineItem({ item, index, isLast, inView, nextColor }) {
         transition={{ duration: 0.6, delay: index * 0.2 }}
       >
         <Paper
-          elevation={3}
+          elevation={1}
+          
           sx={{
+            bgcolor: theme.palette.background.bgcolor,
             p: "clamp(12px,2vw,24px)",
             borderLeft: `4px solid ${item.color}`,
             transition: ".3s",

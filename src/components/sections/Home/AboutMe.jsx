@@ -8,7 +8,7 @@ import {
   TableCell,
 } from "@mui/material";
 import { Cake, Phone, Public, Home } from "@mui/icons-material";
-import CustomDevider from "../CustomDevider";
+import CustomDevider from "../../CustomDevider";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 

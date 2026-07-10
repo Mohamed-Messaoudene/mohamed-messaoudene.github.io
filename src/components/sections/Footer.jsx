@@ -59,7 +59,7 @@ export default function Footer() {
       component="footer"
       width="100%"
       display="flex"
-      flexDirection={{ xs: "column", md: "row" }}
+      flexDirection={{ xs: "column", sm: "row" }}
       justifyContent={{ xs: "center", sm: "space-between" }}
       alignItems={"center"}
       paddingBlock={3}
@@ -89,22 +89,22 @@ export default function Footer() {
         <img
           src={
             theme.palette.mode == "light"
-              ? "/messaoudene-high-resolution-logo-transparent (light).svg"
-              : "/messaoudene-high-resolution-logo-transparent (dark).svg"
+              ? "/public/messaoudene-high-resolution-logo-transparent (light).svg"
+              : "/public/messaoudene-high-resolution-logo-transparent (dark).svg"
           }
           alt="logo"
           style={{
             objectFit: "contain",
             width: "100%",
             position: "absolute",
-            left: "-60%",
+            left: "-40%",
           }}
         />
         <Typography
           variant="h5"
           component="div"
           sx={{
-            marginLeft: { xs: 5, lg: 5 },
+            marginLeft:5,
             fontSize: "clamp(16px,1.7vw,24px)",
             fontWeight: "bold",
             background: "linear-gradient(45deg, #3f51b5 30%,#ba68c8 90%)",
