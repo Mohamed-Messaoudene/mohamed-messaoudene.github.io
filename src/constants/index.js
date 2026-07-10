@@ -16,9 +16,109 @@ import {
   SiBootstrap,
   SiJavascript,
   SiOpenstreetmap,
+  SiHtml5,
+  SiI18Next,
+  SiRedux,
+  SiReacthookform,
+  SiZod,
+  SiGraphql,
+  SiJsonwebtokens,
+  SiStripe,
+  SiPaypal,
+  SiRedis,
+  SiSequelize,
+  SiDocker,
+  SiGit,
+  SiGithub,
+  SiLinux,
+  SiFigma
 } from "react-icons/si";
+
 import { MdCloud } from "react-icons/md";
 
+import {
+  Language as LanguageIcon,
+  Tune as TuneIcon,
+  Dns as DnsIcon,
+  Storage as StorageIcon,
+  Build as BuildIcon,
+  Bolt as BoltIcon,
+  Security as SecurityIcon,
+  DevicesRounded as DevicesRoundedIcon,
+} from "@mui/icons-material";
+
+// `core: true` renders as a solid filled chip — the skills you'd lead
+// with in an interview. Everything else renders outlined: still fully
+// visible, just visually secondary. No percentages — nobody can
+// defend "why 85% and not 80%" under questioning, so we don't claim it.
+export const skillCategories = [
+  {
+    title: "Frontend",
+    icon: LanguageIcon,
+    color: "#3f51b5",
+    skills: [
+      { name: "React", icon: SiReact, core: true },
+      { name: "TypeScript", icon: SiTypescript, core: true },
+      { name: "Tailwind CSS", icon: SiTailwindcss, core: true },
+      { name: "Material UI", icon: SiMui, core: false },
+      { name: "JavaScript (ES6+)", icon: SiJavascript, core: false },
+      { name: "HTML5 / CSS3", icon: SiHtml5, core: false },
+      { name: "Responsive Design", icon: DevicesRoundedIcon, core: false },
+      { name: "i18n / RTL", icon: SiI18Next, core: false },
+    ],
+  },
+  {
+    title: "State & Data",
+    icon: TuneIcon,
+    color: "#9c27b0",
+    skills: [
+      { name: "React Query", icon: SiReactquery, core: true },
+      { name: "Redux Toolkit", icon: SiRedux, core: true },
+      { name: "Zustand", icon: BoltIcon, core: false },
+      { name: "React Hook Form", icon: SiReacthookform, core: false },
+      { name: "Zod", icon: SiZod, core: false },
+    ],
+  },
+  {
+    title: "Backend",
+    icon: DnsIcon,
+    color: "#4caf50",
+    skills: [
+      { name: "Laravel", icon: SiLaravel, core: true },
+      { name: "Node.js", icon: SiNodedotjs, core: true },
+      { name: "Express", icon: SiExpress, core: false },
+      { name: "GraphQL", icon: SiGraphql, core: false },
+      { name: "JWT / OAuth 2.0", icon: SiJsonwebtokens, core: false },
+      { name: "RBAC", icon: SecurityIcon, core: false },
+      { name: "Stripe", icon: SiStripe, core: false },
+      { name: "PayPal", icon: SiPaypal, core: false },
+    ],
+  },
+  {
+    title: "Databases",
+    icon: StorageIcon,
+    color: "#ff9800",
+    skills: [
+      { name: "PostgreSQL", icon: SiPostgresql, core: true },
+      { name: "MySQL", icon: SiMysql, core: true },
+      { name: "MongoDB", icon: SiMongodb, core: false },
+      { name: "Redis", icon: SiRedis, core: false },
+      { name: "Sequelize / ORMs", icon: SiSequelize, core: false },
+    ],
+  },
+  {
+    title: "Tools",
+    icon: BuildIcon,
+    color: "#607d8b",
+    skills: [
+      { name: "Git", icon: SiGit, core: true },
+      { name: "GitHub", icon: SiGithub, core: true },
+      { name: "Docker", icon: SiDocker, core: false },
+      { name: "Linux", icon: SiLinux, core: false },
+      { name: "Figma", icon: SiFigma, core: false },
+    ],
+  },
+];
 
 export const projects = [
   {
@@ -731,367 +831,364 @@ export const projects = [
     ],
   },
   {
-  // =====================================================
-  // Basic Information
-  // =====================================================
+    // =====================================================
+    // Basic Information
+    // =====================================================
 
-  id: 7,
+    id: 7,
 
-  slug: "weather-forecasting-app",
+    slug: "weather-forecasting-app",
 
-  title: "Weather Forecasting App",
+    title: "Weather Forecasting App",
 
-  subtitle:
-    "Modern weather application with location detection and multi-day forecasts.",
+    subtitle:
+      "Modern weather application with location detection and multi-day forecasts.",
 
-  shortDescription:
-    "A responsive weather application providing real-time weather conditions, location detection and five-day forecasts using external weather APIs.",
+    shortDescription:
+      "A responsive weather application providing real-time weather conditions, location detection and five-day forecasts using external weather APIs.",
 
-  // =====================================================
-  // Hero
-  // =====================================================
+    // =====================================================
+    // Hero
+    // =====================================================
 
-  status: "Completed",
+    status: "Completed",
 
-  duration: "2024",
+    duration: "2024",
 
-  team: "Personal Project",
+    team: "Personal Project",
 
-  client: "Personal",
+    client: "Personal",
 
-  image: "/weather.jpg",
+    image: "/weather.jpg",
 
-  platform: "Web Application",
+    platform: "Web Application",
 
-  industry: "Weather",
+    industry: "Weather",
 
-  gallery: [],
+    gallery: [],
 
-  technologies: [
-    {
-      name: "React",
-      icon: SiReact,
-      color: "#61DAFB",
+    technologies: [
+      {
+        name: "React",
+        icon: SiReact,
+        color: "#61DAFB",
+      },
+      {
+        name: "Material UI",
+        icon: SiMui,
+        color: "#007FFF",
+      },
+      {
+        name: "OpenWeather API",
+        icon: MdCloud,
+        color: "#EB6E4B",
+      },
+      {
+        name: "OpenCage API",
+        icon: SiOpenstreetmap,
+        color: "#7EBC6F",
+      },
+    ],
+
+    demoUrl: "https://weathergeo.netlify.app/",
+
+    githubUrl: "https://github.com/Mohamed-Messaoudene/react-weather-app",
+
+    color: "#45B8AC",
+
+    // =====================================================
+    // Overview
+    // =====================================================
+
+    longDescription:
+      "A modern weather application that provides current weather conditions and five-day forecasts. Users can search by city or use their current location to receive accurate weather information through third-party APIs.",
+
+    problem: [
+      "Users need quick access to accurate weather information.",
+      "Searching locations manually can be inconvenient.",
+      "Weather information should be presented clearly on all devices.",
+      "API responses require efficient state management.",
+    ],
+
+    solution: [
+      "Integrated OpenWeather API for forecasts.",
+      "Implemented geolocation using OpenCage API.",
+      "Built a responsive Material UI interface.",
+      "Optimized API requests and loading states.",
+    ],
+
+    role: {
+      title: "Frontend Developer",
+
+      description:
+        "Designed and developed the complete frontend application, integrated external APIs, and focused on delivering a responsive and intuitive weather experience.",
+
+      responsibilities: [
+        "Integrated weather APIs",
+        "Implemented geolocation",
+        "Built responsive UI",
+        "Managed application state",
+        "Handled API errors",
+        "Optimized user experience",
+      ],
     },
-    {
-      name: "Material UI",
-      icon: SiMui,
-      color: "#007FFF",
-    },
-    {
-      name: "OpenWeather API",
-      icon: MdCloud,
-      color: "#EB6E4B",
-    },
-    {
-      name: "OpenCage API",
-      icon: SiOpenstreetmap,
-      color: "#7EBC6F",
-    },
-  ],
 
-  demoUrl: "https://weathergeo.netlify.app/",
-
-  githubUrl:
-    "https://github.com/Mohamed-Messaoudene/react-weather-app",
-
-  color: "#45B8AC",
-
-  // =====================================================
-  // Overview
-  // =====================================================
-
-  longDescription:
-    "A modern weather application that provides current weather conditions and five-day forecasts. Users can search by city or use their current location to receive accurate weather information through third-party APIs.",
-
-  problem: [
-    "Users need quick access to accurate weather information.",
-    "Searching locations manually can be inconvenient.",
-    "Weather information should be presented clearly on all devices.",
-    "API responses require efficient state management.",
-  ],
-
-  solution: [
-    "Integrated OpenWeather API for forecasts.",
-    "Implemented geolocation using OpenCage API.",
-    "Built a responsive Material UI interface.",
-    "Optimized API requests and loading states.",
-  ],
-
-  role: {
-    title: "Frontend Developer",
-
-    description:
-      "Designed and developed the complete frontend application, integrated external APIs, and focused on delivering a responsive and intuitive weather experience.",
-
-    responsibilities: [
-      "Integrated weather APIs",
-      "Implemented geolocation",
-      "Built responsive UI",
-      "Managed application state",
-      "Handled API errors",
-      "Optimized user experience",
+    features: [
+      "Current weather",
+      "5-day forecast",
+      "City search",
+      "Location detection",
+      "Responsive design",
+      "Weather icons",
+      "API integration",
+      "Loading states",
     ],
   },
+  {
+    // =====================================================
+    // Basic Information
+    // =====================================================
 
-  features: [
-    "Current weather",
-    "5-day forecast",
-    "City search",
-    "Location detection",
-    "Responsive design",
-    "Weather icons",
-    "API integration",
-    "Loading states",
-  ],
-},
-{
-  // =====================================================
-  // Basic Information
-  // =====================================================
+    id: 8,
 
-  id: 8,
+    slug: "social-media-laravel",
 
-  slug: "social-media-laravel",
+    title: "Social Media App",
 
-  title: "Social Media App",
+    subtitle:
+      "Full-stack social networking application built with Laravel and React.",
 
-  subtitle:
-    "Full-stack social networking application built with Laravel and React.",
+    shortDescription:
+      "A Laravel-powered social networking platform allowing users to create posts, interact with others and manage personal profiles through a modern React interface.",
 
-  shortDescription:
-    "A Laravel-powered social networking platform allowing users to create posts, interact with others and manage personal profiles through a modern React interface.",
+    // =====================================================
+    // Hero
+    // =====================================================
 
-  // =====================================================
-  // Hero
-  // =====================================================
+    status: "Completed",
 
-  status: "Completed",
+    duration: "2024",
 
-  duration: "2024",
+    team: "Personal Project",
 
-  team: "Personal Project",
+    client: "Personal",
 
-  client: "Personal",
+    image: "/social medea laravel.jpg",
 
-  image: "/social medea laravel.jpg",
+    platform: "Web Application",
 
-  platform: "Web Application",
+    industry: "Social Networking",
 
-  industry: "Social Networking",
+    gallery: [],
 
-  gallery: [],
+    technologies: [
+      {
+        name: "Laravel",
+        icon: SiLaravel,
+        color: "#FF2D20",
+      },
+      {
+        name: "React",
+        icon: SiReact,
+        color: "#61DAFB",
+      },
+      {
+        name: "Inertia.js",
+        icon: SiInertia,
+        color: "#9553E9",
+      },
+      {
+        name: "MySQL",
+        icon: SiMysql,
+        color: "#4479A1",
+      },
+      {
+        name: "Material UI",
+        icon: SiMui,
+        color: "#007FFF",
+      },
+    ],
 
-  technologies: [
-    {
-      name: "Laravel",
-      icon: SiLaravel,
-      color: "#FF2D20",
+    demoUrl: null,
+
+    githubUrl:
+      "https://github.com/Mohamed-Messaoudene/social-media-app-with-laravel",
+
+    color: "#9370DB",
+
+    // =====================================================
+    // Overview
+    // =====================================================
+
+    longDescription:
+      "A social networking platform built with Laravel, Inertia.js and React that enables users to publish posts, interact through comments and likes, manage profiles and experience a seamless SPA architecture.",
+
+    problem: [
+      "Explore Laravel with Inertia.js architecture.",
+      "Build a modern SPA without REST overhead.",
+      "Implement authentication and social interactions.",
+      "Practice scalable Laravel application structure.",
+    ],
+
+    solution: [
+      "Built Laravel backend with Inertia.js.",
+      "Developed React frontend components.",
+      "Implemented authentication and authorization.",
+      "Designed reusable application architecture.",
+    ],
+
+    role: {
+      title: "Full-Stack Developer",
+
+      description:
+        "Developed the complete application including backend logic, database design, authentication, frontend interfaces and deployment configuration.",
+
+      responsibilities: [
+        "Developed Laravel backend",
+        "Built React frontend",
+        "Implemented authentication",
+        "Designed MySQL database",
+        "Created reusable components",
+        "Integrated Inertia.js",
+      ],
     },
-    {
-      name: "React",
-      icon: SiReact,
-      color: "#61DAFB",
-    },
-    {
-      name: "Inertia.js",
-      icon: SiInertia,
-      color: "#9553E9",
-    },
-    {
-      name: "MySQL",
-      icon: SiMysql,
-      color: "#4479A1",
-    },
-    {
-      name: "Material UI",
-      icon: SiMui,
-      color: "#007FFF",
-    },
-  ],
 
-  demoUrl: null,
-
-  githubUrl:
-    "https://github.com/Mohamed-Messaoudene/social-media-app-with-laravel",
-
-  color: "#9370DB",
-
-  // =====================================================
-  // Overview
-  // =====================================================
-
-  longDescription:
-    "A social networking platform built with Laravel, Inertia.js and React that enables users to publish posts, interact through comments and likes, manage profiles and experience a seamless SPA architecture.",
-
-  problem: [
-    "Explore Laravel with Inertia.js architecture.",
-    "Build a modern SPA without REST overhead.",
-    "Implement authentication and social interactions.",
-    "Practice scalable Laravel application structure.",
-  ],
-
-  solution: [
-    "Built Laravel backend with Inertia.js.",
-    "Developed React frontend components.",
-    "Implemented authentication and authorization.",
-    "Designed reusable application architecture.",
-  ],
-
-  role: {
-    title: "Full-Stack Developer",
-
-    description:
-      "Developed the complete application including backend logic, database design, authentication, frontend interfaces and deployment configuration.",
-
-    responsibilities: [
-      "Developed Laravel backend",
-      "Built React frontend",
-      "Implemented authentication",
-      "Designed MySQL database",
-      "Created reusable components",
-      "Integrated Inertia.js",
+    features: [
+      "Authentication",
+      "Posts",
+      "Comments",
+      "Likes",
+      "User profiles",
+      "SPA architecture",
+      "Responsive interface",
+      "Dashboard",
     ],
   },
+  {
+    // =====================================================
+    // Basic Information
+    // =====================================================
 
-  features: [
-    "Authentication",
-    "Posts",
-    "Comments",
-    "Likes",
-    "User profiles",
-    "SPA architecture",
-    "Responsive interface",
-    "Dashboard",
-  ],
-},
-{
-  // =====================================================
-  // Basic Information
-  // =====================================================
+    id: 9,
 
-  id: 9,
+    slug: "stock-management-system",
 
-  slug: "stock-management-system",
+    title: "Stock Management System",
 
-  title: "Stock Management System",
+    subtitle: "Inventory management system for products, users and invoices.",
 
-  subtitle:
-    "Inventory management system for products, users and invoices.",
+    shortDescription:
+      "A PHP-based inventory management application enabling businesses to efficiently manage products, stock levels, users and invoices.",
 
-  shortDescription:
-    "A PHP-based inventory management application enabling businesses to efficiently manage products, stock levels, users and invoices.",
+    // =====================================================
+    // Hero
+    // =====================================================
 
-  // =====================================================
-  // Hero
-  // =====================================================
+    status: "Completed",
 
-  status: "Completed",
+    duration: "2023",
 
-  duration: "2023",
+    team: "Academic Project",
 
-  team: "Academic Project",
+    client: "Academic",
 
-  client: "Academic",
+    image: "/stock management.webp",
 
-  image: "/stock management.webp",
+    platform: "Management System",
 
-  platform: "Management System",
+    industry: "Business",
 
-  industry: "Business",
+    gallery: [],
 
-  gallery: [],
+    technologies: [
+      {
+        name: "PHP",
+        icon: SiPhp,
+        color: "#777BB4",
+      },
+      {
+        name: "Bootstrap",
+        icon: SiBootstrap,
+        color: "#7952B3",
+      },
+      {
+        name: "MySQL",
+        icon: SiMysql,
+        color: "#4479A1",
+      },
+      {
+        name: "JavaScript",
+        icon: SiJavascript,
+        color: "#F7DF1E",
+      },
+    ],
 
-  technologies: [
-    {
-      name: "PHP",
-      icon: SiPhp,
-      color: "#777BB4",
+    demoUrl: null,
+
+    githubUrl: "https://github.com/Mohamed-Messaoudene/stock-managment",
+
+    color: "#F4A460",
+
+    // =====================================================
+    // Overview
+    // =====================================================
+
+    longDescription:
+      "A stock management system developed to simplify inventory operations by managing products, users, stock movements and invoices through an intuitive administrative interface.",
+
+    problem: [
+      "Businesses require accurate inventory tracking.",
+      "Manual stock management is time-consuming.",
+      "Invoice generation should be centralized.",
+      "Administrators need efficient product management.",
+    ],
+
+    solution: [
+      "Developed a complete PHP MVC application.",
+      "Implemented CRUD operations for inventory.",
+      "Designed a relational MySQL database.",
+      "Built responsive Bootstrap interfaces.",
+    ],
+
+    role: {
+      title: "Full-Stack Developer",
+
+      description:
+        "Designed and developed the complete inventory management system, including database design, backend business logic and responsive administrative interfaces.",
+
+      responsibilities: [
+        "Designed database schema",
+        "Developed PHP backend",
+        "Implemented CRUD operations",
+        "Managed inventory workflow",
+        "Built Bootstrap UI",
+        "Implemented invoice management",
+      ],
     },
-    {
-      name: "Bootstrap",
-      icon: SiBootstrap,
-      color: "#7952B3",
-    },
-    {
-      name: "MySQL",
-      icon: SiMysql,
-      color: "#4479A1",
-    },
-    {
-      name: "JavaScript",
-      icon: SiJavascript,
-      color: "#F7DF1E",
-    },
-  ],
 
-  demoUrl: null,
-
-  githubUrl:
-    "https://github.com/Mohamed-Messaoudene/stock-managment",
-
-  color: "#F4A460",
-
-  // =====================================================
-  // Overview
-  // =====================================================
-
-  longDescription:
-    "A stock management system developed to simplify inventory operations by managing products, users, stock movements and invoices through an intuitive administrative interface.",
-
-  problem: [
-    "Businesses require accurate inventory tracking.",
-    "Manual stock management is time-consuming.",
-    "Invoice generation should be centralized.",
-    "Administrators need efficient product management.",
-  ],
-
-  solution: [
-    "Developed a complete PHP MVC application.",
-    "Implemented CRUD operations for inventory.",
-    "Designed a relational MySQL database.",
-    "Built responsive Bootstrap interfaces.",
-  ],
-
-  role: {
-    title: "Full-Stack Developer",
-
-    description:
-      "Designed and developed the complete inventory management system, including database design, backend business logic and responsive administrative interfaces.",
-
-    responsibilities: [
-      "Designed database schema",
-      "Developed PHP backend",
-      "Implemented CRUD operations",
-      "Managed inventory workflow",
-      "Built Bootstrap UI",
-      "Implemented invoice management",
+    features: [
+      "Product management",
+      "Inventory tracking",
+      "User management",
+      "Invoice management",
+      "Authentication",
+      "Reporting",
+      "Responsive dashboard",
+      "CRUD operations",
     ],
   },
-
-  features: [
-    "Product management",
-    "Inventory tracking",
-    "User management",
-    "Invoice management",
-    "Authentication",
-    "Reporting",
-    "Responsive dashboard",
-    "CRUD operations",
-  ],
-}
 ];
 export const heroText = `Building scalable, production-ready digital products like 
 Dashboards, SaaS platforms, business systems & landing pages — 
 crafted with React, TypeScript, Laravel & modern web technologies.`;
 
-export /**
+ /**
  * Single source of truth for the timeline, ordered chronologically
  * (oldest -> newest). To add a future role, just push a new object
  * with type: "experience" at the end of this array — the timeline,
  * colors, and animations all extend automatically.
  */
-const timelineData = [
+export const timelineData = [
   {
     type: "education",
     title: "ICT Engineer",
