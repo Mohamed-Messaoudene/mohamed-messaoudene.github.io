@@ -11,7 +11,7 @@ import {
 
 import { projects } from "../../../constants";
 import CustomDevider from "../../CustomDevider";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../../ProjectCard";
 
 const ALL_FILTER = "All";
 
