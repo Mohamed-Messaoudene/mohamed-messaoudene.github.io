@@ -1,0 +1,28 @@
+import { Chip } from "@mui/material";
+
+function SkillChip({ skill, categoryColor }) {
+  const Icon = skill.icon;
+  return (
+    <Chip
+      icon={
+        <Icon
+          style={{
+            fontSize: 15,
+            color: skill.core ? "#fff" : categoryColor,
+          }}
+        />
+      }
+      label={skill.name}
+      size="small"
+      sx={{
+        fontWeight: 600,
+        fontSize: "clamp(10px,1.1vw,13px)",
+        bgcolor: skill.core ? categoryColor : alpha(categoryColor, 0.1),
+        color: skill.core ? "#fff" : categoryColor,
+        border: skill.core ? "none" : `1px solid ${alpha(categoryColor, 0.35)}`,
+      }}
+    />
+  );
+}
+
+export default SkillChip;
