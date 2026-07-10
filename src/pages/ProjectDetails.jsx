@@ -1,9 +1,58 @@
-import React from 'react'
+import { useParams, Navigate } from "react-router-dom";
+import { Box, useTheme } from "@mui/material";
 
-function ProjectDetails() {
+import Footer from "../components/sections/Footer";
+
+// import ProjectOverview from "../components/project/ProjectOverview";
+import { projects } from "../constants";
+import ProjectHero from "../components/sections/ProjectDetailsSections/ProjectHero";
+import ProjectOverview from "../components/sections/ProjectDetailsSections/ProjectOverview";
+import ProjectTechStack from "../components/sections/ProjectDetailsSections/ProjectTechStack";
+
+
+function ProjectDetail() {
+  const { slug } = useParams();
+
+  const theme = useTheme();
+
+  const project = projects.find((p) => p.slug === slug);
+
+  if (!project) {
+    return <Navigate to="/404" replace />;
+  }
+
   return (
-    <div>ProjectDetails</div>
-  )
+    <Box
+      sx={{
+        backgroundColor: theme.palette.background.bgcolor,
+        minHeight: "100vh",
+      }}
+    >
+
+      <Box
+        sx={{
+          width: {
+            xs: "95%",
+            md: "90%",
+            lg: "85%",
+            xl: "75%",
+          },
+          mx: "auto",
+          pt: "10px",
+          pb: 10,
+        }}
+      >
+        <ProjectHero project={project} />
+        <ProjectOverview project={project} />
+        {/* <ProjectFeatures features={project.features} /> */}
+        <ProjectTechStack role={project.role} technologies={project.technologies}/>
+
+        {/* <ProjectOverview project={project} /> */}
+      </Box>
+
+      <Footer />
+    </Box>
+  );
 }
 
-export default ProjectDetails
+export default ProjectDetail;

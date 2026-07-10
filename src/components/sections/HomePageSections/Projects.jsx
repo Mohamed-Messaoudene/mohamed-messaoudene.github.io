@@ -297,8 +297,8 @@ export default function ProjectsSection() {
                     <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
                       {project.technologies.map((tech) => (
                         <Chip
-                          key={tech}
-                          label={tech}
+                          key={tech.name}
+                          label={tech.name}
                           size="small"
                           sx={{
                             height: 20,
