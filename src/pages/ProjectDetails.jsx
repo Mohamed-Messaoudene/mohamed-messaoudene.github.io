@@ -39,7 +39,7 @@ function ProjectDetail() {
           },
           mx: "auto",
           pt: "10px",
-          pb: 10,
+          pb: { xs: 2, md: 6 },
         }}
       >
         <ProjectHero project={project} />
