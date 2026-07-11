@@ -20,6 +20,7 @@ function HomePage() {
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
+        alignItems: "center",
         overflowX: "hidden",
       }}
     >
@@ -28,7 +29,7 @@ function HomePage() {
       <Box
         sx={{
           width: {
-            xs: "97%",
+            xs: "95%",
             md: "90%",
             lg: "85%",
             xl: "75%",

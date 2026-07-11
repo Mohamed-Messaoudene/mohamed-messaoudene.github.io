@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { alpha, Box, Chip, Stack, Typography, useTheme } from "@mui/material";
-import MiniNav from "./NavBar";
+
 
 /** Pulls a clean, displayable hostname out of a full URL, or null if invalid/empty. */
 function getDisplayHost(url) {
@@ -42,11 +42,7 @@ function ProjectHero({ project }) {
         mb: 8,
       }}
     >
-      <MiniNav
-        color={project.color}
-        demoUrl={project.demoUrl}
-        githubUrl={project.githubUrl}
-      />
+      
       {/* ---------------- Header ---------------- */}
       <Stack
         spacing={2.5}

@@ -26,7 +26,6 @@ export default function Contact() {
   const [error, setError] = useState(false);
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
-
   const {
     register,
     handleSubmit,
@@ -59,14 +58,13 @@ export default function Contact() {
 
   return (
     <Box
-    id='contact'
-    ref={ref}
+      id="contact"
+      ref={ref}
       width="100%"
       display="flex"
       flexDirection="column"
       alignItems="center"
       paddingBlock={3}
-      paddingInline={{ xs: "10px", sm: "30px", md: "60px" }}
     >
       <Typography
         variant="h4"
@@ -81,10 +79,10 @@ export default function Contact() {
 
       <motion.div
         initial={{ opacity: 0, x: 30 }}
-        animate={inView?{ opacity: 1, x: 0 }:{}}
+        animate={inView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <Box sx={{ p: { xs: 1, sm: 4 }, mt: 2 }}>
+        <Box sx={{ mt: 2 }}>
           <form onSubmit={handleSubmit(sendEmail)}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
@@ -238,7 +236,7 @@ export default function Contact() {
                         )
                       }
                       sx={{
-                        textTransform:'none',
+                        textTransform: "none",
                         py: "clamp(4px,1.2vw,8px)",
                         px: "clamp(6px,1.4vw,15px)",
                         fontSize: "clamp(11px,1.5vw,16px)",
