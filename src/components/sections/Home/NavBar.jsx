@@ -18,7 +18,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import WorkIcon from "@mui/icons-material/Work";
 import CodeIcon from "@mui/icons-material/Code";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
-import { useCustomTheme } from "../context/themeContext";
+import { useCustomTheme } from "../../../context/themeContext";
 import { Home, LightMode } from "@mui/icons-material";
 import { motion } from "framer-motion";
 

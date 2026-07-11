@@ -31,8 +31,9 @@ import {
   SiGit,
   SiGithub,
   SiLinux,
-  SiFigma
+  SiFigma,
 } from "react-icons/si";
+import HubRoundedIcon from "@mui/icons-material/HubRounded";
 
 import { MdCloud } from "react-icons/md";
 
@@ -132,10 +133,11 @@ export const projects = [
 
     title: "Islamic Values Forum",
 
-    subtitle: "Official landing page for a national Islamic values conference.",
+    subtitle:
+      "Official event platform for attendee registration, workshop management, and conference information.",
 
     shortDescription:
-      "A modern multilingual landing page presenting the forum's objectives, speakers, workshops, agenda, sponsors and registration experience.",
+      "A full-stack multilingual event platform featuring attendee registration, workshop enrollment, dynamic content management, and an administrative dashboard built for a national Islamic conference.",
 
     // =====================================================
     // Hero
@@ -145,17 +147,17 @@ export const projects = [
 
     duration: "2025",
 
-    team: "Frontend Team",
+    team: "Full-Stack Team",
 
     client: "GamifierSA",
 
-    image: "/qiam islamic.png",
+    image: "/projects/IslamicEvent/qiam islamic.png",
 
     platform: "Landing Page",
 
     industry: "Events",
 
-    gallery: [],
+    gallery: ["/projects/IslamicEvent/qiam islamic.png","/projects/IslamicEvent/moltaqa1.png", "/projects/IslamicEvent/moltaqa2.png"],
 
     technologies: [
       {
@@ -168,20 +170,31 @@ export const projects = [
         icon: SiTypescript,
         color: "#3178C6",
       },
-      {
+ {
         name: "Tailwind CSS",
         icon: SiTailwindcss,
         color: "#06B6D4",
+      },
+      {
+        name: "Laravel",
+        icon: SiLaravel,
+        color: "#FF2D20",
       },
       {
         name: "Inertia.js",
         icon: SiInertia,
         color: "#9553E9",
       },
+     
       {
-        name: "Laravel",
-        icon: SiLaravel,
-        color: "#FF2D20",
+        name: "MySQL",
+        icon: SiMysql,
+        color: "#4479A1",
+      },
+      {
+        name: "REST API",
+        icon: HubRoundedIcon,
+        color: "#56cfc3",
       },
     ],
 
@@ -196,47 +209,58 @@ export const projects = [
     // =====================================================
 
     longDescription:
-      "The Islamic Values Forum website serves as the official online presence of the conference, providing visitors with detailed information about the event, speakers, workshops, agenda, sponsors, and registration. The application focuses on delivering a clear, accessible, and responsive experience while maintaining a modern visual identity.",
+      "The Islamic Values Forum platform is the official digital experience for a national conference focused on promoting Islamic values and community engagement. Beyond presenting event information, the platform streamlines the complete attendee journey—from discovering the forum and exploring speakers, workshops, and schedules to registering online through a guided multi-step process. Administrators can efficiently manage registrations, workshops, participants, and dynamic website content from a centralized dashboard. Built with Laravel, Inertia.js, React, and MySQL, the application delivers the responsiveness of a modern single-page application while leveraging Laravel's robust backend architecture.",
 
     problem: [
-      "The event required an official digital platform to present all conference information.",
-      "Visitors needed a simple registration journey.",
-      "The website had to remain fully responsive across all devices.",
-      "The design needed to reflect the event's cultural identity while remaining modern.",
+      "The event relied heavily on manual registration and participant management processes.",
+      "Organizers needed a centralized platform to publish event information and manage attendees.",
+      "Participants required a simple and intuitive online registration experience.",
+      "Workshop enrollment needed to be integrated into the registration workflow.",
+      "Content such as speakers, schedules, and workshops had to be easily manageable without modifying the source code.",
     ],
 
     solution: [
-      "Developed a responsive landing page using React and Tailwind CSS.",
-      "Implemented reusable UI components for easy maintenance.",
-      "Integrated Laravel backend APIs using Inertia.js.",
-      "Optimized performance and accessibility across modern browsers.",
+      "Developed a modern landing page showcasing the event, speakers, workshops, agenda, and sponsors.",
+      "Implemented a secure multi-step attendee registration workflow with server-side validation.",
+      "Built workshop enrollment functionality directly into the registration process.",
+      "Created an administrative dashboard for managing participants, registrations, workshops, and event content.",
+      "Integrated Laravel, Inertia.js, React, and MySQL to deliver a responsive single-page experience while maintaining a scalable backend architecture.",
     ],
 
     role: {
-      title: "Frontend Developer",
+      title: "Full-Stack Developer",
 
       description:
-        "Responsible for implementing the complete frontend experience, translating UI designs into reusable components, integrating backend data, and ensuring responsiveness and accessibility.",
+        "Designed and developed the complete application, including the frontend, backend, database architecture, registration workflows, administrative dashboard, and business logic while ensuring responsiveness, security, and maintainability.",
 
       responsibilities: [
-        "Developed reusable React components",
-        "Integrated backend APIs",
-        "Built responsive layouts",
-        "Implemented interactive UI sections",
-        "Optimized performance",
-        "Collaborated with backend developers",
+        "Designed the overall system architecture",
+        "Developed the React frontend and integrated it with the Laravel backend using Inertia.js.",
+        "Built Laravel backend logic and APIs",
+        "Designed the MySQL database schema",
+        "Implemented attendee registration workflows",
+        "Developed workshop enrollment functionality",
+        "Built the administrative dashboard",
+        "Implemented server-side validation and secure form handling",
+        "Integrated dynamic content management",
+        "Optimized responsiveness and application performance",
       ],
     },
 
     features: [
-      "Event overview",
-      "Workshop information",
+      "Modern event landing page",
+      "Multi-step attendee registration",
+      "Workshop enrollment",
       "Speaker profiles",
       "Conference agenda",
       "Sponsor showcase",
-      "Registration flow",
+      "Administrative dashboard",
+      "Participant management",
+      "Registration tracking",
+      "Dynamic content management",
       "Responsive design",
-      "Modern landing page",
+      "Multilingual support",
+      "Server-side Validation",
     ],
   },
   {
@@ -1182,7 +1206,7 @@ export const heroText = `Building scalable, production-ready digital products li
 Dashboards, SaaS platforms, business systems & landing pages — 
 crafted with React, TypeScript, Laravel & modern web technologies.`;
 
- /**
+/**
  * Single source of truth for the timeline, ordered chronologically
  * (oldest -> newest). To add a future role, just push a new object
  * with type: "experience" at the end of this array — the timeline,
