@@ -595,125 +595,136 @@ export const projects = [
       "Performance optimization",
     ],
   },
-  {
-    // =====================================================
-    // Basic Information
-    // =====================================================
+ {
+  // =====================================================
+  // Basic Information
+  // =====================================================
 
-    id: 4,
+  id: 4,
 
-    slug: "sharefiring-platform",
+  slug: "sharefiring-platform",
 
-    title: "ShareFiring",
+  title: "ShareFiring",
 
-    subtitle:
-      "Freelance platform featuring a modern landing page and an administration dashboard.",
+  subtitle:
+    "AI-powered knowledge management platform for organizations and enterprise teams.",
 
-    shortDescription:
-      "A responsive landing page and management dashboard built for a freelance platform, allowing administrators to manage users, content and platform operations.",
+  shortDescription:
+    "A modern enterprise platform combining a responsive marketing website with an administrative dashboard to help organizations centralize, organize, and share institutional knowledge.",
 
-    // =====================================================
-    // Hero
-    // =====================================================
+  // =====================================================
+  // Hero
+  // =====================================================
 
-    status: "Production",
+  status: "Production",
 
-    duration: "2025",
+  duration: "2025",
 
-    team: "Full-Stack Team",
+  team: "Frontend Team",
 
-    client: "ShareFiring",
+  client: "ShareFiring",
 
-    image: "/sharefirng landing page.png",
+  image: "/projects/Sahrefiring/sharefiring1.png",
 
-    platform: "Web Platform",
+  platform: "Web Platform",
 
-    industry: "Freelancing",
+  industry: "Knowledge Management",
 
-    gallery: [],
 
-    technologies: [
-      {
-        name: "React",
-        icon: SiReact,
-        color: "#61DAFB",
-      },
-      {
-        name: "Tailwind CSS",
-        icon: SiTailwindcss,
-        color: "#06B6D4",
-      },
-      {
-        name: "Inertia.js",
-        icon: SiInertia,
-        color: "#9553E9",
-      },
-      {
-        name: "Laravel",
-        icon: SiLaravel,
-        color: "#FF2D20",
-      },
-      {
-        name: "MySQL",
-        icon: SiMysql,
-        color: "#4479A1",
-      },
-    ],
-
-    demoUrl: "https://sharefiring.com/",
-
-    githubUrl: null,
-
-    color: "#1E90FF",
-
-    // =====================================================
-    // Overview
-    // =====================================================
-
-    longDescription:
-      "ShareFiring is a freelancing platform consisting of a public-facing landing page and an administrative dashboard. The platform enables administrators to manage users, platform content and system resources through a clean and responsive interface.",
-
-    problem: [
-      "The platform required a professional online presence.",
-      "Administrators needed a centralized dashboard.",
-      "The interface had to be fully responsive.",
-      "Frontend and backend integration needed to remain maintainable.",
-    ],
-
-    solution: [
-      "Built a modern landing page.",
-      "Developed responsive dashboard interfaces.",
-      "Integrated Laravel APIs using Inertia.js.",
-      "Created reusable UI components for scalability.",
-    ],
-
-    role: {
-      title: "Full-Stack Developer",
-
-      description:
-        "Designed and implemented both the landing page and dashboard, integrated backend functionality, and ensured responsive and maintainable user interfaces.",
-
-      responsibilities: [
-        "Developed dashboard pages",
-        "Built reusable React components",
-        "Integrated Laravel backend",
-        "Implemented responsive layouts",
-        "Managed CRUD operations",
-        "Optimized UI performance",
-      ],
+  gallery: [
+    '/projects/Sahrefiring/sharefiring1.png',
+    '/projects/Sahrefiring/sharefiring2.png',
+    '/projects/Sahrefiring/sharefiring3.png'
+  ],
+  technologies: [
+    {
+      name: "React",
+      icon: SiReact,
+      color: "#61DAFB",
     },
+    {
+      name: "Material UI",
+      icon: SiMui,
+      color: "#007FFF",
+    },
+    {
+      name: "Inertia.js",
+      icon: SiInertia,
+      color: "#9553E9",
+    },
+    {
+      name: "Laravel",
+      icon: SiLaravel,
+      color: "#FF2D20",
+    },
+    {
+      name: "MySQL",
+      icon: SiMysql,
+      color: "#4479A1",
+    },
+  ],
 
-    features: [
-      "Landing page",
-      "Admin dashboard",
-      "User management",
-      "Content management",
-      "Responsive UI",
-      "Authentication",
-      "CRUD operations",
-      "Modern interface",
+  demoUrl: "https://sharefiring.com/",
+
+  githubUrl: null,
+
+  color: "#1E90FF",
+
+  // =====================================================
+  // Overview
+  // =====================================================
+
+  longDescription:
+    "ShareFiring is an enterprise knowledge management platform designed to help organizations centralize, organize, and share institutional knowledge. The platform combines a modern marketing website that presents the product and its capabilities with an administrative dashboard for managing users, organizational content, and platform resources. As a Frontend Developer, I contributed to building responsive interfaces, integrating frontend functionality with the Laravel backend through Inertia.js, and delivering a consistent user experience across both the public website and the administration portal.",
+
+  problem: [
+    "Organizations needed a centralized platform to preserve and organize institutional knowledge.",
+    "The product required a professional marketing website to clearly communicate its value proposition.",
+    "Administrators needed an intuitive dashboard to manage users and platform resources efficiently.",
+    "The application had to deliver a responsive and consistent user experience across desktop and mobile devices.",
+  ],
+
+  solution: [
+    "Developed responsive React interfaces for both the landing page and administrative dashboard.",
+    "Integrated frontend pages with Laravel backend endpoints using Inertia.js.",
+    "Built reusable UI components with Material UI to improve consistency and maintainability.",
+    "Implemented responsive layouts, interactive forms, and frontend validation to deliver a smooth user experience.",
+  ],
+
+  role: {
+    title: "Frontend Developer",
+
+    description:
+      "Contributed to the frontend development of both the marketing website and the administrative dashboard. Worked with React, Material UI, and Inertia.js to build responsive interfaces, integrate backend data, implement application flows, and deliver a polished user experience while collaborating closely with backend developers.",
+
+    responsibilities: [
+      "Developed the responsive landing page",
+      "Built administrative dashboard interfaces",
+      "Developed reusable React components",
+      "Integrated Laravel backend using Inertia.js",
+      "Implemented frontend forms and validation",
+      "Handled authentication and protected frontend routes",
+      "Implemented CRUD interfaces",
+      "Built responsive layouts for desktop, tablet, and mobile",
+      "Improved UI consistency using Material UI components",
+      "Collaborated with backend developers to integrate APIs and business logic",
     ],
   },
+
+  features: [
+    "Responsive marketing website",
+    "Administrative dashboard",
+    "Authentication flows",
+    "User management interface",
+    "Content management interface",
+    "Knowledge resource management",
+    "Contact and lead request forms",
+    "CRUD management screens",
+    "Responsive design",
+    "Material UI component system",
+    "Laravel + Inertia.js integration",
+  ],
+},
   {
     // =====================================================
     // Basic Information
