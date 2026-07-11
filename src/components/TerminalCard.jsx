@@ -1,16 +1,15 @@
 // Two syntax palettes, loosely modeled on VS Code's Dark+ / Light+
 // themes, so the code panel actually respects the site's mode toggle
 
-import { alpha, Box, useTheme,Typography } from "@mui/material";
+import { alpha, Box, useTheme, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-
+import PropTypes from "prop-types";
 
 const bioBefore =
   "I'm Mohamed Messaoudene, a full-stack developer based in Medea, Algeria, specializing in React, TypeScript, and Laravel. After graduating as an ICT Engineer from ";
 
 const bioAfter =
   " in June 2025, I worked remotely as a frontend contractor for GamifierSA in Saudi Arabia, delivering production applications—from multilingual healthcare platforms to B2B/B2C marketplaces—for international clients. That contract has since ended, and I'm now focused on new freelance projects and full-time opportunities where I can bring that same experience to a team.";
-
 
 // instead of always forcing a dark editor look.
 function useCodeColors(mode) {
@@ -53,10 +52,14 @@ function TerminalCard({ inView }) {
         bgcolor: c.bg,
         borderRadius: "12px",
         overflow: "hidden",
-        boxShadow: theme.palette.mode === "dark"
-          ? "0 12px 32px rgba(0,0,0,0.35)"
-          : "0 12px 32px rgba(0,0,0,0.12)",
-        border: theme.palette.mode === "dark" ? "none" : `1px solid ${c.chromeBorder}`,
+        boxShadow:
+          theme.palette.mode === "dark"
+            ? "0 12px 32px rgba(0,0,0,0.35)"
+            : "0 12px 32px rgba(0,0,0,0.12)",
+        border:
+          theme.palette.mode === "dark"
+            ? "none"
+            : `1px solid ${c.chromeBorder}`,
         fontFamily: '"Fira Code", "Courier New", monospace',
         width: "100%",
         transition: "background-color 0.3s ease",
@@ -131,35 +134,35 @@ function TerminalCard({ inView }) {
               }}
             >
               <Typography
-  component="span"
-  sx={{
-    fontFamily: '"Fira Code", "Courier New", monospace',
-    fontSize: "clamp(11px,1.25vw,14.5px)",
-    lineHeight: 1.9,
-    color: c.bioText,
-  }}
->
-  {bioBefore}
+                component="span"
+                sx={{
+                  fontFamily: '"Fira Code", "Courier New", monospace',
+                  fontSize: "clamp(11px,1.25vw,14.5px)",
+                  lineHeight: 1.9,
+                  color: c.bioText,
+                }}
+              >
+                {bioBefore}
 
-  <Box
-    component="a"
-    href="https://www.ensttic.dz/"
-    target="_blank"
-    rel="noopener noreferrer"
-    sx={{
-      color: c.variable,
-      fontWeight: 700,
-      textDecoration: "none",
-      "&:hover": {
-        textDecoration: "underline",
-      },
-    }}
-  >
-    ENSTTIC
-  </Box>
+                <Box
+                  component="a"
+                  href="https://www.ensttic.dz/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: c.variable,
+                    fontWeight: 700,
+                    textDecoration: "none",
+                    "&:hover": {
+                      textDecoration: "underline",
+                    },
+                  }}
+                >
+                  ENSTTIC
+                </Box>
 
-  {bioAfter}
-</Typography>
+                {bioAfter}
+              </Typography>
             </Box>
 
             <Box sx={{ display: "flex", alignItems: "baseline", gap: "4px" }}>
@@ -173,5 +176,10 @@ function TerminalCard({ inView }) {
     </Box>
   );
 }
+
+// PropTypes for TerminalCard
+TerminalCard.propTypes = {
+  inView: PropTypes.bool.isRequired,
+};
 
 export default TerminalCard;

@@ -8,11 +8,20 @@ import { projects } from "../constants";
 import ProjectHero from "../components/sections/ProjectDetails/ProjectHero";
 import ProjectOverview from "../components/sections/ProjectDetails/ProjectOverview";
 import ProjectTechStack from "../components/sections/ProjectDetails/ProjectTechStack";
+import { useEffect } from "react";
 
 function ProjectDetail() {
   const { slug } = useParams();
 
   const theme = useTheme();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [slug]);
 
   const project = projects.find((p) => p.slug === slug);
 
