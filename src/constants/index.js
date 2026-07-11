@@ -32,6 +32,8 @@ import {
   SiGithub,
   SiLinux,
   SiFigma,
+  SiAxios,
+  SiReactrouter,
 } from "react-icons/si";
 import HubRoundedIcon from "@mui/icons-material/HubRounded";
 
@@ -157,7 +159,11 @@ export const projects = [
 
     industry: "Events",
 
-    gallery: ["/projects/IslamicEvent/qiam islamic.png","/projects/IslamicEvent/moltaqa1.png", "/projects/IslamicEvent/moltaqa2.png"],
+    gallery: [
+      "/projects/IslamicEvent/qiam islamic.png",
+      "/projects/IslamicEvent/moltaqa1.png",
+      "/projects/IslamicEvent/moltaqa2.png",
+    ],
 
     technologies: [
       {
@@ -170,7 +176,7 @@ export const projects = [
         icon: SiTypescript,
         color: "#3178C6",
       },
- {
+      {
         name: "Tailwind CSS",
         icon: SiTailwindcss,
         color: "#06B6D4",
@@ -185,7 +191,7 @@ export const projects = [
         icon: SiInertia,
         color: "#9553E9",
       },
-     
+
       {
         name: "MySQL",
         icon: SiMysql,
@@ -275,10 +281,10 @@ export const projects = [
     title: "NearClinic",
 
     subtitle:
-      "Healthcare platform for discovering clinics and booking appointments.",
+      "A multilingual healthcare platform connecting patients with clinics through online appointment booking and management.",
 
     shortDescription:
-      "A multilingual healthcare platform enabling patients to discover clinics, book appointments and manage healthcare services.",
+      "A production-ready healthcare platform featuring clinic discovery, appointment booking, multilingual support, role-based dashboards, and complete clinic management for patients, clinic owners, and administrators.",
 
     // =====================================================
     // Hero
@@ -292,13 +298,23 @@ export const projects = [
 
     client: "GamifierSA",
 
-    image: "/clinic.jpg",
+    image: "/projects/NearClinic/clinic.jpg",
 
     platform: "Web Platform",
 
     industry: "Healthcare",
 
-    gallery: [],
+    gallery: [
+      "/projects/NearClinic/clinic.jpg",
+      "/projects/NearClinic/nearclinic1.png",
+      "/projects/NearClinic/nearclinic2.png",
+      "/projects/NearClinic/nearclinic3.png",
+      "/projects/NearClinic/nearclinic4.png",
+      "/projects/NearClinic/nearclinic5.png",
+      "/projects/NearClinic/nearclinic6.png",
+      "/projects/NearClinic/nearclinic7.png",
+      "/projects/NearClinic/nearclinic8.png",
+    ],
 
     technologies: [
       {
@@ -320,6 +336,26 @@ export const projects = [
         name: "React Query",
         icon: SiReactquery,
         color: "#FF4154",
+      },
+      {
+        name: "Axios",
+        icon: SiAxios,
+        color: "#5A29E4",
+      },
+      {
+        name: "React Router",
+        icon: SiReactrouter,
+        color: "#CA4245",
+      },
+      {
+        name: "React Hook Form",
+        icon: SiReacthookform,
+        color: "#EC5990",
+      },
+      {
+        name: "i18next",
+        icon: SiI18Next,
+        color: "#26A69A",
       },
     ],
 
@@ -334,48 +370,69 @@ export const projects = [
     // =====================================================
 
     longDescription:
-      "NearClinic is a healthcare platform that enables patients to search for nearby clinics, explore healthcare providers, and book appointments online. It also provides dashboards for clinic owners to manage appointments and clinic information with complete Arabic and English support.",
+      "NearClinic is a comprehensive healthcare platform that simplifies the process of finding healthcare providers and booking medical appointments online. The platform supports three different user roles—patients, clinic owners, and super administrators—each with dedicated dashboards and workflows. Patients can search nearby clinics, explore doctors and services, schedule appointments, and manage their bookings. Clinic owners can manage clinics, doctors, services, working hours, appointments, and patients from a centralized dashboard, while administrators oversee users and clinic approvals across the platform. As a Frontend Developer, I built responsive user interfaces, integrated REST APIs, implemented authentication flows, client-side caching, multilingual support, RTL layouts, and dark/light themes to deliver a fast, scalable, and user-friendly healthcare experience.",
 
     problem: [
-      "Patients relied on manual appointment booking.",
-      "Finding nearby clinics was time-consuming.",
-      "Clinic owners lacked a centralized management platform.",
-      "The platform required multilingual support.",
+      "Patients struggled to find nearby clinics and book appointments efficiently.",
+      "Clinic owners relied on fragmented tools to manage doctors, services, schedules, and patient appointments.",
+      "The platform required separate workflows for patients, clinic owners, and administrators while maintaining a consistent user experience.",
+      "The application needed full Arabic and English localization with RTL support.",
+      "Frequent API requests and dynamic healthcare data required efficient client-side caching and state management.",
     ],
 
     solution: [
-      "Built a responsive multilingual frontend.",
-      "Integrated advanced search and filtering.",
-      "Implemented appointment booking workflows.",
-      "Connected frontend to REST APIs using React Query.",
+      "Built a responsive React application supporting patients, clinic owners, and super administrators.",
+      "Integrated REST APIs using Axios with React Query for data fetching, caching, synchronization, and error handling.",
+      "Implemented secure authentication and protected route flows for multiple user roles.",
+      "Developed multilingual support using i18next with seamless RTL/LTR switching.",
+      "Implemented dark and light themes while maintaining a consistent design system across the platform.",
+      "Created reusable frontend components and responsive layouts optimized for desktop, tablet, and mobile devices.",
     ],
 
     role: {
       title: "Frontend Developer",
 
       description:
-        "Responsible for building the user interface, integrating APIs, implementing responsive layouts, and delivering a multilingual healthcare experience.",
+        "Responsible for developing the complete frontend application, integrating backend REST APIs, implementing authentication and booking workflows, optimizing client-side performance with React Query, and delivering a fully responsive multilingual healthcare experience supporting multiple user roles.",
 
       responsibilities: [
-        "Developed reusable React components",
-        "Integrated REST APIs",
-        "Implemented responsive layouts",
-        "Optimized application performance",
-        "Implemented multilingual support",
-        "Collaborated with backend developers",
+        "Developed reusable React and TypeScript components",
+        "Integrated REST APIs using Axios",
+        "Implemented React Query caching and server-state management",
+        "Handled API loading, success, and error states",
+        "Built authentication and authorization flows",
+        "Implemented appointment booking workflows",
+        "Developed responsive layouts for all screen sizes",
+        "Implemented Arabic & English localization using i18next",
+        "Built RTL/LTR language support",
+        "Implemented dark and light themes",
+        "Collaborated closely with backend developers",
+        "Optimized frontend performance and user experience",
       ],
     },
 
     features: [
-      "Clinic search",
-      "Advanced filtering",
-      "Appointment booking",
+      "Patient authentication",
+      "Clinic owner authentication",
+      "Super administrator dashboard",
+      "Clinic discovery",
+      "Google Maps integration",
+      "Advanced clinic search & filtering",
       "Clinic profiles",
+      "Doctor management",
+      "Medical services management",
       "Doctor schedules",
-      "Patient dashboard",
-      "Clinic dashboard",
+      "Clinic availability management",
+      "Multi-step appointment booking",
+      "Appointment management",
+      "Patient management",
+      "Clinic registration",
+      "User management",
+      "Clinic administration",
+      "Responsive design",
       "Arabic & English localization",
-      "Responsive UI",
+      "RTL/LTR support",
+      "Dark & light themes",
     ],
   },
   {
@@ -389,10 +446,11 @@ export const projects = [
 
     title: "Montasib",
 
-    subtitle: "Enterprise B2B/B2C marketplace for the Saudi Arabian market.",
+    subtitle:
+      "Enterprise B2B/B2C marketplace connecting businesses, suppliers, and customers across Saudi Arabia.",
 
     shortDescription:
-      "A multilingual marketplace connecting suppliers and buyers through product discovery, tenders, and price comparison.",
+      "A multilingual marketplace platform enabling businesses and consumers to discover products, publish listings, manage services, communicate in real time, organize events, and streamline commercial transactions.",
 
     // =====================================================
     // Hero
@@ -406,13 +464,22 @@ export const projects = [
 
     client: "GamifierSA",
 
-    image: "/montasib.jpg",
+    image: "/projects/Montassib/montasib.jpg",
 
     platform: "Marketplace",
 
     industry: "E-Commerce",
 
-    gallery: [],
+    gallery: [
+      "/projects/Montassib/montasib.jpg",
+      "/projects/Montassib/montassib1.png",
+      "/projects/Montassib/montassib2.png",
+      "/projects/Montassib/montassib3.png",
+      "/projects/Montassib/montassib4.png",
+      "/projects/Montassib/montassib5.png",
+      "/projects/Montassib/montassib6.png",
+      "/projects/Montassib/montassib7.png",
+    ],
 
     technologies: [
       {
@@ -435,6 +502,26 @@ export const projects = [
         icon: SiReactquery,
         color: "#FF4154",
       },
+      {
+        name: "REST APIs",
+        icon: SiAxios,
+        color: "#5A29E4",
+      },
+      {
+        name: "React Hook Form",
+        icon: SiReacthookform,
+        color: "#EC5990",
+      },
+      {
+        name: "Zod",
+        icon: SiZod,
+        color: "#3E67B1",
+      },
+      {
+        name: "i18next",
+        icon: SiI18Next,
+        color: "#26A69A",
+      },
     ],
 
     demoUrl: "https://montasib.com/",
@@ -448,46 +535,63 @@ export const projects = [
     // =====================================================
 
     longDescription:
-      "Montasib is a large-scale marketplace designed for businesses and consumers in Saudi Arabia. The platform enables users to compare products, participate in tenders, discover suppliers, and manage procurement through a responsive multilingual interface.",
+      "Montasib is a large-scale multilingual B2B/B2C marketplace developed for the Saudi Arabian market. The platform brings together suppliers, businesses, and customers through product listings, service directories, event management, real-time messaging, procurement workflows, and commercial networking. Built as a modern React application, it delivers a responsive user experience while integrating seamlessly with backend REST APIs to provide fast, scalable, and reliable business operations.",
 
     problem: [
-      "Businesses needed a centralized procurement platform.",
-      "Users required efficient product comparison tools.",
-      "The marketplace needed to support Arabic and English.",
-      "Large datasets required fast and efficient loading.",
+      "Businesses lacked a centralized platform for discovering suppliers, services, and commercial opportunities.",
+      "Users needed an efficient marketplace supporting products, services, events, and business networking in one place.",
+      "The application had to provide a complete Arabic and English experience with full RTL support.",
+      "Large amounts of marketplace data required efficient client-side caching and optimized loading.",
+      "Multiple business workflows required intuitive and responsive user experiences across desktop and mobile devices.",
     ],
 
     solution: [
-      "Developed a responsive React frontend.",
-      "Integrated React Query for efficient server-state management.",
-      "Implemented multilingual support.",
-      "Built reusable UI components for scalability.",
+      "Developed a scalable React and TypeScript frontend using reusable and maintainable component architecture.",
+      "Integrated REST APIs with React Query for server-state management, caching, background synchronization, and optimized data fetching.",
+      "Implemented multilingual support using i18next with complete RTL compatibility for Arabic users.",
+      "Built responsive interfaces with Tailwind CSS following mobile-first design principles.",
+      "Implemented complex authentication flows, form validation, and user interactions using React Hook Form and Zod.",
+      "Delivered consistent UI patterns, error handling, loading states, and smooth navigation across the entire platform.",
     ],
 
     role: {
       title: "Frontend Developer",
 
       description:
-        "Responsible for implementing responsive user interfaces, integrating backend APIs, optimizing performance, and contributing to a scalable multilingual marketplace.",
+        "Responsible for developing production-ready frontend features across multiple business modules, integrating backend APIs, implementing multilingual support, optimizing application performance, and delivering responsive user experiences for a large-scale enterprise marketplace.",
 
       responsibilities: [
-        "Developed reusable UI components",
-        "Integrated REST APIs",
-        "Implemented multilingual support",
-        "Built responsive layouts",
-        "Optimized performance",
-        "Collaborated with backend developers",
+        "Developed reusable React and TypeScript components",
+        "Integrated REST APIs using Axios and React Query",
+        "Implemented client-side caching and server-state management",
+        "Handled API loading, success, and error states",
+        "Built authentication and user onboarding flows",
+        "Implemented multilingual support using i18next",
+        "Developed full RTL compatibility for Arabic",
+        "Created responsive layouts with Tailwind CSS",
+        "Implemented complex forms using React Hook Form and Zod",
+        "Optimized frontend performance and user experience",
+        "Collaborated closely with backend developers during feature integration",
+        "Converted Figma designs into production-ready interfaces",
       ],
     },
 
     features: [
       "Product marketplace",
-      "Supplier directory",
-      "Tender management",
-      "Product comparison",
-      "Advanced search",
+      "Supply & demand listings",
+      "Business service directory",
+      "Business event management",
+      "Event booking system",
+      "Supplier profiles",
+      "Marketplace listing management",
+      "Real-time messaging",
+      "Notifications center",
+      "User dashboard",
+      "Profile management",
+      "Advanced search and filtering",
       "Responsive interface",
       "Arabic & English localization",
+      "RTL support",
       "Performance optimization",
     ],
   },
