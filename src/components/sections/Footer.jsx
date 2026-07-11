@@ -63,13 +63,6 @@ export default function Footer() {
       justifyContent={{ xs: "center", sm: "space-between" }}
       alignItems={"center"}
       paddingBlock={3}
-      paddingInline={{
-        xs: "10px",
-        sm: "20px",
-        md: "90px",
-        lg: "100px",
-        xl: "180px",
-      }}
       sx={{
         position: "relative",
         borderTop: `1px solid ${theme.palette.divider}`,
