@@ -9,6 +9,7 @@ import ProjectHero from "../components/sections/ProjectDetails/ProjectHero";
 import ProjectOverview from "../components/sections/ProjectDetails/ProjectOverview";
 import ProjectTechStack from "../components/sections/ProjectDetails/ProjectTechStack";
 import { useEffect } from "react";
+import MiniNav from "../components/sections/ProjectDetails/NavBar";
 
 function ProjectDetail() {
   const { slug } = useParams();
@@ -34,7 +35,7 @@ function ProjectDetail() {
       sx={{
         backgroundColor: theme.palette.background.bgcolor,
         minHeight: "100vh",
-        pt: { xs: 10, md: 12 },
+        pt: { xs: 11, md: 14 },
       }}
     >
       <Box
@@ -45,23 +46,23 @@ function ProjectDetail() {
             lg: "85%",
             xl: "75%",
           },
-          mx: "auto",
-          pt: "10px",
-          pb: { xs: 2, md: 6 },
+          mx: "auto",    pb: { xs: 2, md: 6 },
         }}
       >
+        <MiniNav
+        color={project.color}
+        demoUrl={project.demoUrl}
+        githubUrl={project.githubUrl}
+      />
         <ProjectHero project={project} />
         <ProjectOverview project={project} />
-        {/* <ProjectFeatures features={project.features} /> */}
         <ProjectTechStack
           role={project.role}
           technologies={project.technologies}
         />
 
-        {/* <ProjectOverview project={project} /> */}
+        <Footer />
       </Box>
-
-      <Footer />
     </Box>
   );
 }
