@@ -117,38 +117,56 @@ function Home() {
           />
         </Box>
         <Box>
-          <Typography
-            variant="h1"
-            sx={{
-              fontSize: "clamp(18px, 4vw, 45px)",
-              marginBottom: "10px",
-            }}
-            color={theme.palette.primary.text}
-          >
-            Hi
-            <WavingHand
-              sx={{
-                fontSize: "clamp(18px, 3vw, 455px)",
-                marginInline: 1,
-              }}
-            />
-            {" , I'm"}
-            <TypeAnimation
-              preRenderFirstString={true}
-              sequence={[
-                3000,
-                "Messaoudene Mohamed", // initially rendered starting point
-                3000,
-                "a Full-Stack Developer",
-              ]}
-              speed={10}
-              style={{
-                color: theme.palette.primary.main,
-                display: "block",
-              }}
-              repeat={Infinity}
-            />
-          </Typography>
+         <motion.div
+  initial={{ opacity: 0, y: 40 }}
+  animate={inView ? { opacity: 1, y: 0 } : {}}
+  transition={{
+    duration: 0.8,
+    ease: "easeOut",
+  }}
+>
+  <Typography
+    variant="h1"
+    sx={{
+      fontSize: "clamp(18px, 4vw, 45px)",
+      mb: 2,
+      fontWeight: 700,
+    }}
+    color={theme.palette.primary.text}
+  >
+    Hi
+    <WavingHand
+      sx={{
+        fontSize: "clamp(18px,3vw,45px)",
+        mx: 1,
+      }}
+    />
+    {"I'm"}
+
+    <Box
+      component="span"
+      sx={{
+        display: "block",
+        mt: 1,
+        color: theme.palette.primary.main,
+      }}
+    >
+      <TypeAnimation
+        sequence={[
+          1000,
+          "Mohamed Messaoudene",
+          2500,
+          "Full-Stack Developer",
+          2500,
+        ]}
+        wrapper="span"
+        speed={45}
+        deletionSpeed={55}
+        repeat={Infinity}
+      />
+    </Box>
+  </Typography>
+</motion.div>
           <Typography
             variant="body1"
             color={theme.palette.primary.text}
