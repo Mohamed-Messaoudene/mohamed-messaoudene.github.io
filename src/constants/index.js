@@ -1027,9 +1027,10 @@ export const projects = [
 
     industry: "Weather",
 
-    gallery: ["/projects/WeatherForcast/weather.jpg",
+    gallery: [
+      "/projects/WeatherForcast/weather.jpg",
       "/projects/WeatherForcast/weatherforcast1.png",
-      "/projects/WeatherForcast/weatherforcast2.png"
+      "/projects/WeatherForcast/weatherforcast2.png",
     ],
 
     technologies: [
@@ -1249,130 +1250,138 @@ export const projects = [
       "Responsive Material UI interface",
     ],
   },
- {
-  // =====================================================
-  // Basic Information
-  // =====================================================
+  {
+    // =====================================================
+    // Basic Information
+    // =====================================================
 
-  id: 9,
+    id: 9,
 
-  slug: "stock-management-system",
+    slug: "stock-management-system",
 
-  title: "Stock Management System",
+    title: "Stock Management System",
 
-  subtitle:
-    "Academic full-stack project built with native PHP to explore inventory management and web application fundamentals.",
+    subtitle:
+      "Academic full-stack project built with native PHP to explore inventory management and web application fundamentals.",
 
-  shortDescription:
-    "A PHP-based inventory management system developed as a university project to practice native PHP, MySQL, MVC architecture, CRUD operations, authentication, and responsive dashboard development.",
+    shortDescription:
+      "A PHP-based inventory management system developed as a university project to practice native PHP, MySQL, MVC architecture, CRUD operations, authentication, and responsive dashboard development.",
 
-  // =====================================================
-  // Hero
-  // =====================================================
+    // =====================================================
+    // Hero
+    // =====================================================
 
-  status: "Learning Project",
+    status: "Learning Project",
 
-  duration: "2023",
+    duration: "2023",
 
-  team: "Academic Project",
+    team: "Academic Project",
 
-  client: "University",
+    client: "University",
 
-  image: "/stock management.webp",
+    image: "/projects/StockManagment/stock management.webp",
 
-  platform: "Management System",
+    platform: "Management System",
 
-  industry: "Business",
+    industry: "Business",
 
-  gallery: [],
+    gallery: [
+      "/projects/StockManagment/stock management.webp",
+      "/projects/StockManagment/stock-managment1.png",
+      "/projects/StockManagment/stock-managment2.png",
+      "/projects/StockManagment/stock-managment3.png",
+      "/projects/StockManagment/stock-managment4.png",
+      "/projects/StockManagment/stock-managment5.png",
+      "/projects/StockManagment/stock-managment6.png",
+    ],
 
-  technologies: [
-    {
-      name: "PHP",
-      icon: SiPhp,
-      color: "#777BB4",
+    technologies: [
+      {
+        name: "PHP",
+        icon: SiPhp,
+        color: "#777BB4",
+      },
+      {
+        name: "Bootstrap",
+        icon: SiBootstrap,
+        color: "#7952B3",
+      },
+      {
+        name: "MySQL",
+        icon: SiMysql,
+        color: "#4479A1",
+      },
+      {
+        name: "JavaScript",
+        icon: SiJavascript,
+        color: "#F7DF1E",
+      },
+    ],
+
+    demoUrl: null,
+
+    githubUrl: "https://github.com/Mohamed-Messaoudene/stock-managment",
+
+    color: "#F4A460",
+
+    // =====================================================
+    // Overview
+    // =====================================================
+
+    longDescription:
+      "This project was developed as part of a university practical assignment to gain hands-on experience with full-stack web development using native PHP. The objective was to understand how traditional server-rendered web applications are built without modern frameworks. Throughout the project, I learned how to structure applications using the MVC architecture, interact with MySQL databases, implement authentication and authorization, perform CRUD operations, manage inventory workflows, and build responsive user interfaces with Bootstrap. The system allows administrators to manage products, stock movements, users, and invoices through a centralized dashboard.",
+
+    problem: [
+      "Gain practical experience with native PHP web development.",
+      "Understand how server-side applications interact with relational databases.",
+      "Learn MVC architecture and application organization.",
+      "Practice implementing CRUD operations and business logic.",
+      "Explore authentication and session management in PHP.",
+      "Build responsive administrative interfaces using Bootstrap.",
+    ],
+
+    solution: [
+      "Developed the application using native PHP following the MVC architecture.",
+      "Designed and implemented a relational MySQL database.",
+      "Built authentication and session-based access control.",
+      "Implemented complete CRUD operations for products, users, and inventory.",
+      "Developed invoice and stock management workflows.",
+      "Created responsive Bootstrap interfaces for desktop and mobile devices.",
+    ],
+
+    role: {
+      title: "Full-Stack Developer",
+
+      description:
+        "Designed and developed the complete application independently as a university learning project, covering backend development, database design, business logic implementation, and responsive frontend interfaces using native PHP.",
+
+      responsibilities: [
+        "Designed the MySQL database schema",
+        "Developed backend business logic with native PHP",
+        "Applied the MVC architecture",
+        "Implemented authentication and session management",
+        "Built CRUD operations for products, users, and inventory",
+        "Developed invoice management functionality",
+        "Created responsive Bootstrap interfaces",
+        "Implemented client-side interactions with JavaScript",
+        "Connected frontend with backend and database",
+        "Tested and debugged the complete application",
+      ],
     },
-    {
-      name: "Bootstrap",
-      icon: SiBootstrap,
-      color: "#7952B3",
-    },
-    {
-      name: "MySQL",
-      icon: SiMysql,
-      color: "#4479A1",
-    },
-    {
-      name: "JavaScript",
-      icon: SiJavascript,
-      color: "#F7DF1E",
-    },
-  ],
 
-  demoUrl: null,
-
-  githubUrl: "https://github.com/Mohamed-Messaoudene/stock-managment",
-
-  color: "#F4A460",
-
-  // =====================================================
-  // Overview
-  // =====================================================
-
-  longDescription:
-    "This project was developed as part of a university practical assignment to gain hands-on experience with full-stack web development using native PHP. The objective was to understand how traditional server-rendered web applications are built without modern frameworks. Throughout the project, I learned how to structure applications using the MVC architecture, interact with MySQL databases, implement authentication and authorization, perform CRUD operations, manage inventory workflows, and build responsive user interfaces with Bootstrap. The system allows administrators to manage products, stock movements, users, and invoices through a centralized dashboard.",
-
-  problem: [
-    "Gain practical experience with native PHP web development.",
-    "Understand how server-side applications interact with relational databases.",
-    "Learn MVC architecture and application organization.",
-    "Practice implementing CRUD operations and business logic.",
-    "Explore authentication and session management in PHP.",
-    "Build responsive administrative interfaces using Bootstrap.",
-  ],
-
-  solution: [
-    "Developed the application using native PHP following the MVC architecture.",
-    "Designed and implemented a relational MySQL database.",
-    "Built authentication and session-based access control.",
-    "Implemented complete CRUD operations for products, users, and inventory.",
-    "Developed invoice and stock management workflows.",
-    "Created responsive Bootstrap interfaces for desktop and mobile devices.",
-  ],
-
-  role: {
-    title: "Full-Stack Developer",
-
-    description:
-      "Designed and developed the complete application independently as a university learning project, covering backend development, database design, business logic implementation, and responsive frontend interfaces using native PHP.",
-
-    responsibilities: [
-      "Designed the MySQL database schema",
-      "Developed backend business logic with native PHP",
-      "Applied the MVC architecture",
-      "Implemented authentication and session management",
-      "Built CRUD operations for products, users, and inventory",
-      "Developed invoice management functionality",
-      "Created responsive Bootstrap interfaces",
-      "Implemented client-side interactions with JavaScript",
-      "Connected frontend with backend and database",
-      "Tested and debugged the complete application",
+    features: [
+      "User authentication",
+      "Product management",
+      "Inventory tracking",
+      "Stock movement management",
+      "Invoice management",
+      "User management",
+      "CRUD operations",
+      "Responsive admin dashboard",
+      "MySQL database integration",
+      "MVC architecture",
     ],
   },
-
-  features: [
-    "User authentication",
-    "Product management",
-    "Inventory tracking",
-    "Stock movement management",
-    "Invoice management",
-    "User management",
-    "CRUD operations",
-    "Responsive admin dashboard",
-    "MySQL database integration",
-    "MVC architecture",
-  ],
-},
 ];
 export const heroText = `Building scalable, production-ready digital products like 
 Dashboards, SaaS platforms, business systems & landing pages — 
