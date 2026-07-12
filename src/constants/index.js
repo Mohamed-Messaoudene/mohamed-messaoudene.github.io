@@ -31,8 +31,11 @@ import {
   SiGit,
   SiGithub,
   SiLinux,
-  SiFigma
+  SiFigma,
+  SiAxios,
+  SiReactrouter,
 } from "react-icons/si";
+import HubRoundedIcon from "@mui/icons-material/HubRounded";
 
 import { MdCloud } from "react-icons/md";
 
@@ -132,10 +135,11 @@ export const projects = [
 
     title: "Islamic Values Forum",
 
-    subtitle: "Official landing page for a national Islamic values conference.",
+    subtitle:
+      "Official event platform for attendee registration, workshop management, and conference information.",
 
     shortDescription:
-      "A modern multilingual landing page presenting the forum's objectives, speakers, workshops, agenda, sponsors and registration experience.",
+      "A full-stack multilingual event platform featuring attendee registration, workshop enrollment, dynamic content management, and an administrative dashboard built for a national Islamic conference.",
 
     // =====================================================
     // Hero
@@ -145,17 +149,21 @@ export const projects = [
 
     duration: "2025",
 
-    team: "Frontend Team",
+    team: "Full-Stack Team",
 
     client: "GamifierSA",
 
-    image: "/qiam islamic.png",
+    image: "/projects/IslamicEvent/qiam islamic.png",
 
     platform: "Landing Page",
 
     industry: "Events",
 
-    gallery: [],
+    gallery: [
+      "/projects/IslamicEvent/qiam islamic.png",
+      "/projects/IslamicEvent/moltaqa1.png",
+      "/projects/IslamicEvent/moltaqa2.png",
+    ],
 
     technologies: [
       {
@@ -174,14 +182,25 @@ export const projects = [
         color: "#06B6D4",
       },
       {
+        name: "Laravel",
+        icon: SiLaravel,
+        color: "#FF2D20",
+      },
+      {
         name: "Inertia.js",
         icon: SiInertia,
         color: "#9553E9",
       },
+
       {
-        name: "Laravel",
-        icon: SiLaravel,
-        color: "#FF2D20",
+        name: "MySQL",
+        icon: SiMysql,
+        color: "#4479A1",
+      },
+      {
+        name: "REST API",
+        icon: HubRoundedIcon,
+        color: "#56cfc3",
       },
     ],
 
@@ -196,47 +215,58 @@ export const projects = [
     // =====================================================
 
     longDescription:
-      "The Islamic Values Forum website serves as the official online presence of the conference, providing visitors with detailed information about the event, speakers, workshops, agenda, sponsors, and registration. The application focuses on delivering a clear, accessible, and responsive experience while maintaining a modern visual identity.",
+      "The Islamic Values Forum platform is the official digital experience for a national conference focused on promoting Islamic values and community engagement. Beyond presenting event information, the platform streamlines the complete attendee journey—from discovering the forum and exploring speakers, workshops, and schedules to registering online through a guided multi-step process. Administrators can efficiently manage registrations, workshops, participants, and dynamic website content from a centralized dashboard. Built with Laravel, Inertia.js, React, and MySQL, the application delivers the responsiveness of a modern single-page application while leveraging Laravel's robust backend architecture.",
 
     problem: [
-      "The event required an official digital platform to present all conference information.",
-      "Visitors needed a simple registration journey.",
-      "The website had to remain fully responsive across all devices.",
-      "The design needed to reflect the event's cultural identity while remaining modern.",
+      "The event relied heavily on manual registration and participant management processes.",
+      "Organizers needed a centralized platform to publish event information and manage attendees.",
+      "Participants required a simple and intuitive online registration experience.",
+      "Workshop enrollment needed to be integrated into the registration workflow.",
+      "Content such as speakers, schedules, and workshops had to be easily manageable without modifying the source code.",
     ],
 
     solution: [
-      "Developed a responsive landing page using React and Tailwind CSS.",
-      "Implemented reusable UI components for easy maintenance.",
-      "Integrated Laravel backend APIs using Inertia.js.",
-      "Optimized performance and accessibility across modern browsers.",
+      "Developed a modern landing page showcasing the event, speakers, workshops, agenda, and sponsors.",
+      "Implemented a secure multi-step attendee registration workflow with server-side validation.",
+      "Built workshop enrollment functionality directly into the registration process.",
+      "Created an administrative dashboard for managing participants, registrations, workshops, and event content.",
+      "Integrated Laravel, Inertia.js, React, and MySQL to deliver a responsive single-page experience while maintaining a scalable backend architecture.",
     ],
 
     role: {
-      title: "Frontend Developer",
+      title: "Full-Stack Developer",
 
       description:
-        "Responsible for implementing the complete frontend experience, translating UI designs into reusable components, integrating backend data, and ensuring responsiveness and accessibility.",
+        "Designed and developed the complete application, including the frontend, backend, database architecture, registration workflows, administrative dashboard, and business logic while ensuring responsiveness, security, and maintainability.",
 
       responsibilities: [
-        "Developed reusable React components",
-        "Integrated backend APIs",
-        "Built responsive layouts",
-        "Implemented interactive UI sections",
-        "Optimized performance",
-        "Collaborated with backend developers",
+        "Designed the overall system architecture",
+        "Developed the React frontend and integrated it with the Laravel backend using Inertia.js.",
+        "Built Laravel backend logic and APIs",
+        "Designed the MySQL database schema",
+        "Implemented attendee registration workflows",
+        "Developed workshop enrollment functionality",
+        "Built the administrative dashboard",
+        "Implemented server-side validation and secure form handling",
+        "Integrated dynamic content management",
+        "Optimized responsiveness and application performance",
       ],
     },
 
     features: [
-      "Event overview",
-      "Workshop information",
+      "Modern event landing page",
+      "Multi-step attendee registration",
+      "Workshop enrollment",
       "Speaker profiles",
       "Conference agenda",
       "Sponsor showcase",
-      "Registration flow",
+      "Administrative dashboard",
+      "Participant management",
+      "Registration tracking",
+      "Dynamic content management",
       "Responsive design",
-      "Modern landing page",
+      "Multilingual support",
+      "Server-side Validation",
     ],
   },
   {
@@ -251,10 +281,10 @@ export const projects = [
     title: "NearClinic",
 
     subtitle:
-      "Healthcare platform for discovering clinics and booking appointments.",
+      "A multilingual healthcare platform connecting patients with clinics through online appointment booking and management.",
 
     shortDescription:
-      "A multilingual healthcare platform enabling patients to discover clinics, book appointments and manage healthcare services.",
+      "A production-ready healthcare platform featuring clinic discovery, appointment booking, multilingual support, role-based dashboards, and complete clinic management for patients, clinic owners, and administrators.",
 
     // =====================================================
     // Hero
@@ -268,13 +298,23 @@ export const projects = [
 
     client: "GamifierSA",
 
-    image: "/clinic.jpg",
+    image: "/projects/NearClinic/clinic.jpg",
 
     platform: "Web Platform",
 
     industry: "Healthcare",
 
-    gallery: [],
+    gallery: [
+      "/projects/NearClinic/clinic.jpg",
+      "/projects/NearClinic/nearclinic1.png",
+      "/projects/NearClinic/nearclinic2.png",
+      "/projects/NearClinic/nearclinic3.png",
+      "/projects/NearClinic/nearclinic4.png",
+      "/projects/NearClinic/nearclinic5.png",
+      "/projects/NearClinic/nearclinic6.png",
+      "/projects/NearClinic/nearclinic7.png",
+      "/projects/NearClinic/nearclinic8.png",
+    ],
 
     technologies: [
       {
@@ -296,6 +336,26 @@ export const projects = [
         name: "React Query",
         icon: SiReactquery,
         color: "#FF4154",
+      },
+      {
+        name: "Axios",
+        icon: SiAxios,
+        color: "#5A29E4",
+      },
+      {
+        name: "React Router",
+        icon: SiReactrouter,
+        color: "#CA4245",
+      },
+      {
+        name: "React Hook Form",
+        icon: SiReacthookform,
+        color: "#EC5990",
+      },
+      {
+        name: "i18next",
+        icon: SiI18Next,
+        color: "#26A69A",
       },
     ],
 
@@ -310,48 +370,69 @@ export const projects = [
     // =====================================================
 
     longDescription:
-      "NearClinic is a healthcare platform that enables patients to search for nearby clinics, explore healthcare providers, and book appointments online. It also provides dashboards for clinic owners to manage appointments and clinic information with complete Arabic and English support.",
+      "NearClinic is a comprehensive healthcare platform that simplifies the process of finding healthcare providers and booking medical appointments online. The platform supports three different user roles—patients, clinic owners, and super administrators—each with dedicated dashboards and workflows. Patients can search nearby clinics, explore doctors and services, schedule appointments, and manage their bookings. Clinic owners can manage clinics, doctors, services, working hours, appointments, and patients from a centralized dashboard, while administrators oversee users and clinic approvals across the platform. As a Frontend Developer, I built responsive user interfaces, integrated REST APIs, implemented authentication flows, client-side caching, multilingual support, RTL layouts, and dark/light themes to deliver a fast, scalable, and user-friendly healthcare experience.",
 
     problem: [
-      "Patients relied on manual appointment booking.",
-      "Finding nearby clinics was time-consuming.",
-      "Clinic owners lacked a centralized management platform.",
-      "The platform required multilingual support.",
+      "Patients struggled to find nearby clinics and book appointments efficiently.",
+      "Clinic owners relied on fragmented tools to manage doctors, services, schedules, and patient appointments.",
+      "The platform required separate workflows for patients, clinic owners, and administrators while maintaining a consistent user experience.",
+      "The application needed full Arabic and English localization with RTL support.",
+      "Frequent API requests and dynamic healthcare data required efficient client-side caching and state management.",
     ],
 
     solution: [
-      "Built a responsive multilingual frontend.",
-      "Integrated advanced search and filtering.",
-      "Implemented appointment booking workflows.",
-      "Connected frontend to REST APIs using React Query.",
+      "Built a responsive React application supporting patients, clinic owners, and super administrators.",
+      "Integrated REST APIs using Axios with React Query for data fetching, caching, synchronization, and error handling.",
+      "Implemented secure authentication and protected route flows for multiple user roles.",
+      "Developed multilingual support using i18next with seamless RTL/LTR switching.",
+      "Implemented dark and light themes while maintaining a consistent design system across the platform.",
+      "Created reusable frontend components and responsive layouts optimized for desktop, tablet, and mobile devices.",
     ],
 
     role: {
       title: "Frontend Developer",
 
       description:
-        "Responsible for building the user interface, integrating APIs, implementing responsive layouts, and delivering a multilingual healthcare experience.",
+        "Responsible for developing the complete frontend application, integrating backend REST APIs, implementing authentication and booking workflows, optimizing client-side performance with React Query, and delivering a fully responsive multilingual healthcare experience supporting multiple user roles.",
 
       responsibilities: [
-        "Developed reusable React components",
-        "Integrated REST APIs",
-        "Implemented responsive layouts",
-        "Optimized application performance",
-        "Implemented multilingual support",
-        "Collaborated with backend developers",
+        "Developed reusable React and TypeScript components",
+        "Integrated REST APIs using Axios",
+        "Implemented React Query caching and server-state management",
+        "Handled API loading, success, and error states",
+        "Built authentication and authorization flows",
+        "Implemented appointment booking workflows",
+        "Developed responsive layouts for all screen sizes",
+        "Implemented Arabic & English localization using i18next",
+        "Built RTL/LTR language support",
+        "Implemented dark and light themes",
+        "Collaborated closely with backend developers",
+        "Optimized frontend performance and user experience",
       ],
     },
 
     features: [
-      "Clinic search",
-      "Advanced filtering",
-      "Appointment booking",
+      "Patient authentication",
+      "Clinic owner authentication",
+      "Super administrator dashboard",
+      "Clinic discovery",
+      "Google Maps integration",
+      "Advanced clinic search & filtering",
       "Clinic profiles",
+      "Doctor management",
+      "Medical services management",
       "Doctor schedules",
-      "Patient dashboard",
-      "Clinic dashboard",
+      "Clinic availability management",
+      "Multi-step appointment booking",
+      "Appointment management",
+      "Patient management",
+      "Clinic registration",
+      "User management",
+      "Clinic administration",
+      "Responsive design",
       "Arabic & English localization",
-      "Responsive UI",
+      "RTL/LTR support",
+      "Dark & light themes",
     ],
   },
   {
@@ -365,10 +446,11 @@ export const projects = [
 
     title: "Montasib",
 
-    subtitle: "Enterprise B2B/B2C marketplace for the Saudi Arabian market.",
+    subtitle:
+      "Enterprise B2B/B2C marketplace connecting businesses, suppliers, and customers across Saudi Arabia.",
 
     shortDescription:
-      "A multilingual marketplace connecting suppliers and buyers through product discovery, tenders, and price comparison.",
+      "A multilingual marketplace platform enabling businesses and consumers to discover products, publish listings, manage services, communicate in real time, organize events, and streamline commercial transactions.",
 
     // =====================================================
     // Hero
@@ -382,13 +464,22 @@ export const projects = [
 
     client: "GamifierSA",
 
-    image: "/montasib.jpg",
+    image: "/projects/Montassib/montasib.jpg",
 
     platform: "Marketplace",
 
     industry: "E-Commerce",
 
-    gallery: [],
+    gallery: [
+      "/projects/Montassib/montasib.jpg",
+      "/projects/Montassib/montassib1.png",
+      "/projects/Montassib/montassib2.png",
+      "/projects/Montassib/montassib3.png",
+      "/projects/Montassib/montassib4.png",
+      "/projects/Montassib/montassib5.png",
+      "/projects/Montassib/montassib6.png",
+      "/projects/Montassib/montassib7.png",
+    ],
 
     technologies: [
       {
@@ -411,6 +502,26 @@ export const projects = [
         icon: SiReactquery,
         color: "#FF4154",
       },
+      {
+        name: "REST APIs",
+        icon: SiAxios,
+        color: "#5A29E4",
+      },
+      {
+        name: "React Hook Form",
+        icon: SiReacthookform,
+        color: "#EC5990",
+      },
+      {
+        name: "Zod",
+        icon: SiZod,
+        color: "#3E67B1",
+      },
+      {
+        name: "i18next",
+        icon: SiI18Next,
+        color: "#26A69A",
+      },
     ],
 
     demoUrl: "https://montasib.com/",
@@ -424,46 +535,63 @@ export const projects = [
     // =====================================================
 
     longDescription:
-      "Montasib is a large-scale marketplace designed for businesses and consumers in Saudi Arabia. The platform enables users to compare products, participate in tenders, discover suppliers, and manage procurement through a responsive multilingual interface.",
+      "Montasib is a large-scale multilingual B2B/B2C marketplace developed for the Saudi Arabian market. The platform brings together suppliers, businesses, and customers through product listings, service directories, event management, real-time messaging, procurement workflows, and commercial networking. Built as a modern React application, it delivers a responsive user experience while integrating seamlessly with backend REST APIs to provide fast, scalable, and reliable business operations.",
 
     problem: [
-      "Businesses needed a centralized procurement platform.",
-      "Users required efficient product comparison tools.",
-      "The marketplace needed to support Arabic and English.",
-      "Large datasets required fast and efficient loading.",
+      "Businesses lacked a centralized platform for discovering suppliers, services, and commercial opportunities.",
+      "Users needed an efficient marketplace supporting products, services, events, and business networking in one place.",
+      "The application had to provide a complete Arabic and English experience with full RTL support.",
+      "Large amounts of marketplace data required efficient client-side caching and optimized loading.",
+      "Multiple business workflows required intuitive and responsive user experiences across desktop and mobile devices.",
     ],
 
     solution: [
-      "Developed a responsive React frontend.",
-      "Integrated React Query for efficient server-state management.",
-      "Implemented multilingual support.",
-      "Built reusable UI components for scalability.",
+      "Developed a scalable React and TypeScript frontend using reusable and maintainable component architecture.",
+      "Integrated REST APIs with React Query for server-state management, caching, background synchronization, and optimized data fetching.",
+      "Implemented multilingual support using i18next with complete RTL compatibility for Arabic users.",
+      "Built responsive interfaces with Tailwind CSS following mobile-first design principles.",
+      "Implemented complex authentication flows, form validation, and user interactions using React Hook Form and Zod.",
+      "Delivered consistent UI patterns, error handling, loading states, and smooth navigation across the entire platform.",
     ],
 
     role: {
       title: "Frontend Developer",
 
       description:
-        "Responsible for implementing responsive user interfaces, integrating backend APIs, optimizing performance, and contributing to a scalable multilingual marketplace.",
+        "Responsible for developing production-ready frontend features across multiple business modules, integrating backend APIs, implementing multilingual support, optimizing application performance, and delivering responsive user experiences for a large-scale enterprise marketplace.",
 
       responsibilities: [
-        "Developed reusable UI components",
-        "Integrated REST APIs",
-        "Implemented multilingual support",
-        "Built responsive layouts",
-        "Optimized performance",
-        "Collaborated with backend developers",
+        "Developed reusable React and TypeScript components",
+        "Integrated REST APIs using Axios and React Query",
+        "Implemented client-side caching and server-state management",
+        "Handled API loading, success, and error states",
+        "Built authentication and user onboarding flows",
+        "Implemented multilingual support using i18next",
+        "Developed full RTL compatibility for Arabic",
+        "Created responsive layouts with Tailwind CSS",
+        "Implemented complex forms using React Hook Form and Zod",
+        "Optimized frontend performance and user experience",
+        "Collaborated closely with backend developers during feature integration",
+        "Converted Figma designs into production-ready interfaces",
       ],
     },
 
     features: [
       "Product marketplace",
-      "Supplier directory",
-      "Tender management",
-      "Product comparison",
-      "Advanced search",
+      "Supply & demand listings",
+      "Business service directory",
+      "Business event management",
+      "Event booking system",
+      "Supplier profiles",
+      "Marketplace listing management",
+      "Real-time messaging",
+      "Notifications center",
+      "User dashboard",
+      "Profile management",
+      "Advanced search and filtering",
       "Responsive interface",
       "Arabic & English localization",
+      "RTL support",
       "Performance optimization",
     ],
   },
@@ -479,10 +607,10 @@ export const projects = [
     title: "ShareFiring",
 
     subtitle:
-      "Freelance platform featuring a modern landing page and an administration dashboard.",
+      "AI-powered knowledge management platform for organizations and enterprise teams.",
 
     shortDescription:
-      "A responsive landing page and management dashboard built for a freelance platform, allowing administrators to manage users, content and platform operations.",
+      "A modern enterprise platform combining a responsive marketing website with an administrative dashboard to help organizations centralize, organize, and share institutional knowledge.",
 
     // =====================================================
     // Hero
@@ -492,18 +620,21 @@ export const projects = [
 
     duration: "2025",
 
-    team: "Full-Stack Team",
+    team: "Frontend Team",
 
     client: "ShareFiring",
 
-    image: "/sharefirng landing page.png",
+    image: "/projects/Sahrefiring/sharefiring1.png",
 
     platform: "Web Platform",
 
-    industry: "Freelancing",
+    industry: "Knowledge Management",
 
-    gallery: [],
-
+    gallery: [
+      "/projects/Sahrefiring/sharefiring1.png",
+      "/projects/Sahrefiring/sharefiring2.png",
+      "/projects/Sahrefiring/sharefiring3.png",
+    ],
     technologies: [
       {
         name: "React",
@@ -511,9 +642,9 @@ export const projects = [
         color: "#61DAFB",
       },
       {
-        name: "Tailwind CSS",
-        icon: SiTailwindcss,
-        color: "#06B6D4",
+        name: "Material UI",
+        icon: SiMui,
+        color: "#007FFF",
       },
       {
         name: "Inertia.js",
@@ -543,47 +674,54 @@ export const projects = [
     // =====================================================
 
     longDescription:
-      "ShareFiring is a freelancing platform consisting of a public-facing landing page and an administrative dashboard. The platform enables administrators to manage users, platform content and system resources through a clean and responsive interface.",
+      "ShareFiring is an enterprise knowledge management platform designed to help organizations centralize, organize, and share institutional knowledge. The platform combines a modern marketing website that presents the product and its capabilities with an administrative dashboard for managing users, organizational content, and platform resources. As a Frontend Developer, I contributed to building responsive interfaces, integrating frontend functionality with the Laravel backend through Inertia.js, and delivering a consistent user experience across both the public website and the administration portal.",
 
     problem: [
-      "The platform required a professional online presence.",
-      "Administrators needed a centralized dashboard.",
-      "The interface had to be fully responsive.",
-      "Frontend and backend integration needed to remain maintainable.",
+      "Organizations needed a centralized platform to preserve and organize institutional knowledge.",
+      "The product required a professional marketing website to clearly communicate its value proposition.",
+      "Administrators needed an intuitive dashboard to manage users and platform resources efficiently.",
+      "The application had to deliver a responsive and consistent user experience across desktop and mobile devices.",
     ],
 
     solution: [
-      "Built a modern landing page.",
-      "Developed responsive dashboard interfaces.",
-      "Integrated Laravel APIs using Inertia.js.",
-      "Created reusable UI components for scalability.",
+      "Developed responsive React interfaces for both the landing page and administrative dashboard.",
+      "Integrated frontend pages with Laravel backend endpoints using Inertia.js.",
+      "Built reusable UI components with Material UI to improve consistency and maintainability.",
+      "Implemented responsive layouts, interactive forms, and frontend validation to deliver a smooth user experience.",
     ],
 
     role: {
-      title: "Full-Stack Developer",
+      title: "Frontend Developer",
 
       description:
-        "Designed and implemented both the landing page and dashboard, integrated backend functionality, and ensured responsive and maintainable user interfaces.",
+        "Contributed to the frontend development of both the marketing website and the administrative dashboard. Worked with React, Material UI, and Inertia.js to build responsive interfaces, integrate backend data, implement application flows, and deliver a polished user experience while collaborating closely with backend developers.",
 
       responsibilities: [
-        "Developed dashboard pages",
-        "Built reusable React components",
-        "Integrated Laravel backend",
-        "Implemented responsive layouts",
-        "Managed CRUD operations",
-        "Optimized UI performance",
+        "Developed the responsive landing page",
+        "Built administrative dashboard interfaces",
+        "Developed reusable React components",
+        "Integrated Laravel backend using Inertia.js",
+        "Implemented frontend forms and validation",
+        "Handled authentication and protected frontend routes",
+        "Implemented CRUD interfaces",
+        "Built responsive layouts for desktop, tablet, and mobile",
+        "Improved UI consistency using Material UI components",
+        "Collaborated with backend developers to integrate APIs and business logic",
       ],
     },
 
     features: [
-      "Landing page",
-      "Admin dashboard",
-      "User management",
-      "Content management",
-      "Responsive UI",
-      "Authentication",
-      "CRUD operations",
-      "Modern interface",
+      "Responsive marketing website",
+      "Administrative dashboard",
+      "Authentication flows",
+      "User management interface",
+      "Content management interface",
+      "Knowledge resource management",
+      "Contact and lead request forms",
+      "CRUD management screens",
+      "Responsive design",
+      "Material UI component system",
+      "Laravel + Inertia.js integration",
     ],
   },
   {
@@ -598,22 +736,22 @@ export const projects = [
     title: "Social Media App",
 
     subtitle:
-      "Full-stack social networking platform with authentication and real-time interactions.",
+      "Full-stack practice project built to explore modern web application architecture and backend development.",
 
     shortDescription:
-      "A social networking application allowing users to create posts, interact with others through comments and likes, and build their own social network.",
+      "A full-stack social networking application developed as a hands-on learning project to practice React, Express.js, PostgreSQL, authentication, REST APIs, and MVC architecture.",
 
     // =====================================================
     // Hero
     // =====================================================
 
-    status: "Completed",
+    status: "Learning Project",
 
     duration: "2024",
 
     team: "Personal Project",
 
-    client: "Personal",
+    client: "Self",
 
     image: "/social medea app.jpg",
 
@@ -630,12 +768,17 @@ export const projects = [
         color: "#61DAFB",
       },
       {
+        name: "Material UI",
+        icon: SiMui,
+        color: "#007FFF",
+      },
+      {
         name: "Node.js",
         icon: SiNodedotjs,
         color: "#339933",
       },
       {
-        name: "Express",
+        name: "Express.js",
         icon: SiExpress,
         color: "#000000",
       },
@@ -645,13 +788,13 @@ export const projects = [
         color: "#4169E1",
       },
       {
-        name: "Material UI",
-        icon: SiMui,
-        color: "#007FFF",
+        name: "Sequelize",
+        icon: SiSequelize,
+        color: "#52B0E7",
       },
     ],
 
-    demoUrl: "https://social-media-j5ch.onrender.com/",
+    demoUrl: null,
 
     githubUrl: "https://github.com/Mohamed-Messaoudene/social-media-app",
 
@@ -662,47 +805,57 @@ export const projects = [
     // =====================================================
 
     longDescription:
-      "A complete full-stack social networking platform that enables users to create posts, upload content, comment, like posts, follow other users, and manage personal profiles using a secure authentication system.",
+      "This project was built as a practical full-stack learning experience to understand how modern web applications are designed and developed from scratch. Rather than focusing on solving a business problem, the goal was to gain hands-on experience with frontend and backend development, database design, authentication, REST APIs, and application architecture. The application allows users to create accounts, publish posts, interact through likes and comments, manage profiles, and communicate with a backend powered by Express.js and PostgreSQL using the Sequelize ORM.",
 
     problem: [
-      "Learn full-stack application architecture.",
-      "Implement authentication and authorization.",
-      "Practice relational database design.",
-      "Build scalable REST APIs.",
+      "Gain practical experience building a complete full-stack application.",
+      "Understand how frontend and backend communicate through REST APIs.",
+      "Practice designing relational databases using PostgreSQL and Sequelize ORM.",
+      "Learn authentication, authorization, and protected routes.",
+      "Apply the MVC architecture in a real-world backend project.",
+      "Build reusable React components and responsive user interfaces.",
     ],
 
     solution: [
-      "Built REST APIs using Express.js.",
-      "Designed PostgreSQL database models.",
-      "Implemented secure authentication.",
-      "Developed responsive React interfaces.",
+      "Developed a complete Express.js backend following the MVC architecture.",
+      "Designed a normalized PostgreSQL database using Sequelize ORM.",
+      "Implemented secure user authentication and authorization.",
+      "Created RESTful APIs for posts, users, comments, and social interactions.",
+      "Built a responsive React frontend using Material UI.",
+      "Connected the frontend to backend APIs using Axios with proper error handling and state management.",
     ],
 
     role: {
       title: "Full-Stack Developer",
 
       description:
-        "Designed, developed and deployed the entire application including frontend, backend, database architecture and authentication.",
+        "Designed and developed the entire application independently as a practical learning project, covering frontend development, backend architecture, database design, authentication, and API integration.",
 
       responsibilities: [
-        "Designed database schema",
-        "Built REST APIs",
-        "Implemented authentication",
-        "Developed React frontend",
-        "Managed PostgreSQL database",
-        "Deployed the application",
+        "Designed the PostgreSQL database schema",
+        "Implemented Sequelize ORM models and relationships",
+        "Built RESTful APIs with Express.js",
+        "Applied the MVC architecture",
+        "Implemented user authentication and authorization",
+        "Created reusable React components",
+        "Built responsive Material UI interfaces",
+        "Integrated frontend with backend APIs",
+        "Handled API requests, validation, and error states",
+        "Tested and debugged the complete application",
       ],
     },
 
     features: [
-      "User authentication",
-      "Create posts",
-      "Like & comment",
-      "Follow users",
+      "User registration & authentication",
+      "Secure login and protected routes",
       "User profiles",
-      "News feed",
-      "Responsive design",
-      "REST API",
+      "Create, edit and delete posts",
+      "Like and comment system",
+      "Personalized news feed",
+      "RESTful API architecture",
+      "PostgreSQL database with Sequelize ORM",
+      "Responsive Material UI interface",
+      "MVC backend architecture",
     ],
   },
   {
@@ -717,22 +870,22 @@ export const projects = [
     title: "Authentication System",
 
     subtitle:
-      "Complete authentication platform supporting multiple authentication strategies.",
+      "Practice project exploring multiple authentication strategies with Passport.js.",
 
     shortDescription:
-      "A secure authentication system implementing local authentication alongside OAuth providers including Google, GitHub and Facebook using Passport.js.",
+      "A full-stack authentication application built to practice local authentication, session management, and OAuth login with Google, GitHub, and Facebook using Passport.js.",
 
     // =====================================================
     // Hero
     // =====================================================
 
-    status: "Completed",
+    status: "Learning Project",
 
     duration: "2024",
 
     team: "Personal Project",
 
-    client: "Personal",
+    client: "Self",
 
     image: "/authentification.jpg",
 
@@ -749,7 +902,7 @@ export const projects = [
         color: "#339933",
       },
       {
-        name: "Express",
+        name: "Express.js",
         icon: SiExpress,
         color: "#000000",
       },
@@ -787,47 +940,56 @@ export const projects = [
     // =====================================================
 
     longDescription:
-      "A complete authentication platform built to explore different authentication strategies including local authentication, session-based authentication, and OAuth integrations with Google, GitHub and Facebook using Passport.js.",
+      "This project was built as a practical learning experience focused entirely on authentication and authorization. The objective was to understand how different authentication strategies are implemented in modern web applications using Passport.js. The application includes user registration, login, OAuth authentication with Google, GitHub, and Facebook, secure session management, and protected routes. After successful authentication, users are redirected to a simple welcome page, allowing the project to focus exclusively on implementing and understanding authentication workflows rather than application features.",
 
     problem: [
-      "Applications often require multiple authentication methods.",
-      "Secure session management is essential.",
-      "OAuth integrations can be complex.",
-      "Authentication flows should remain reusable.",
+      "Learn how authentication works in modern web applications.",
+      "Understand the differences between local authentication and OAuth providers.",
+      "Practice implementing secure session-based authentication.",
+      "Explore Passport.js strategies for multiple authentication providers.",
+      "Build reusable authentication flows that can be integrated into larger applications.",
     ],
 
     solution: [
-      "Implemented Passport.js authentication strategies.",
-      "Integrated Google, GitHub and Facebook OAuth.",
-      "Configured secure session management.",
-      "Built reusable authentication components.",
+      "Implemented local username/password authentication using Passport.js.",
+      "Integrated OAuth authentication with Google, GitHub, and Facebook.",
+      "Configured secure session management with Express.",
+      "Protected authenticated routes using Passport middleware.",
+      "Built React authentication pages with validation and error handling.",
+      "Created a simple authenticated dashboard to verify successful login flows.",
     ],
 
     role: {
       title: "Full-Stack Developer",
 
       description:
-        "Designed and implemented the authentication architecture, backend APIs, frontend interfaces and OAuth integrations while ensuring secure user authentication.",
+        "Designed and developed the complete authentication system independently as a practical learning project, focusing on implementing secure authentication strategies, OAuth integrations, session management, and frontend authentication flows.",
 
       responsibilities: [
-        "Implemented Passport.js strategies",
-        "Integrated OAuth providers",
-        "Built authentication APIs",
-        "Configured session management",
-        "Developed frontend authentication pages",
-        "Tested authentication flows",
+        "Implemented Passport.js authentication strategies",
+        "Built local username/password authentication",
+        "Integrated Google OAuth",
+        "Integrated GitHub OAuth",
+        "Integrated Facebook OAuth",
+        "Configured Express session management",
+        "Protected application routes",
+        "Developed React login and registration pages",
+        "Handled authentication errors and validation",
+        "Tested and validated complete authentication workflows",
       ],
     },
 
     features: [
-      "Local authentication",
-      "Google OAuth",
-      "GitHub OAuth",
-      "Facebook OAuth",
-      "Session management",
+      "User registration",
+      "Local email/password authentication",
+      "Google OAuth login",
+      "GitHub OAuth login",
+      "Facebook OAuth login",
+      "Secure session management",
       "Protected routes",
-      "Role-based authentication",
-      "Responsive interface",
+      "Persistent user sessions",
+      "Responsive authentication pages",
+      "Authenticated welcome page",
     ],
   },
   {
@@ -842,30 +1004,33 @@ export const projects = [
     title: "Weather Forecasting App",
 
     subtitle:
-      "Modern weather application with location detection and multi-day forecasts.",
+      "Frontend practice project focused on API integration, asynchronous data fetching, and state management.",
 
     shortDescription:
-      "A responsive weather application providing real-time weather conditions, location detection and five-day forecasts using external weather APIs.",
+      "A responsive weather application developed as a hands-on learning project to practice REST API integration, geolocation, state management, and modern React development.",
 
     // =====================================================
     // Hero
     // =====================================================
 
-    status: "Completed",
+    status: "Learning Project",
 
     duration: "2024",
 
     team: "Personal Project",
 
-    client: "Personal",
+    client: "Self",
 
-    image: "/weather.jpg",
+    image: "/projects/WeatherForcast/weather.jpg",
 
     platform: "Web Application",
 
     industry: "Weather",
 
-    gallery: [],
+    gallery: ["/projects/WeatherForcast/weather.jpg",
+      "/projects/WeatherForcast/weatherforcast1.png",
+      "/projects/WeatherForcast/weatherforcast2.png"
+    ],
 
     technologies: [
       {
@@ -901,47 +1066,57 @@ export const projects = [
     // =====================================================
 
     longDescription:
-      "A modern weather application that provides current weather conditions and five-day forecasts. Users can search by city or use their current location to receive accurate weather information through third-party APIs.",
+      "This project was built as a practical frontend learning experience to understand how React applications consume and manage data from external REST APIs. The application retrieves real-time weather information and five-day forecasts from the OpenWeather API while using the OpenCage Geocoding API to convert user searches and geographic coordinates into locations. Throughout the project, I gained hands-on experience with asynchronous API requests, state management, loading and error handling, geolocation, responsive UI development, and implementing light and dark themes for an improved user experience.",
 
     problem: [
-      "Users need quick access to accurate weather information.",
-      "Searching locations manually can be inconvenient.",
-      "Weather information should be presented clearly on all devices.",
-      "API responses require efficient state management.",
+      "Learn how to integrate third-party REST APIs into React applications.",
+      "Understand asynchronous data fetching and API request lifecycles.",
+      "Practice managing application state based on remote data.",
+      "Handle loading, error, and empty states gracefully.",
+      "Build responsive interfaces with support for both light and dark themes.",
+      "Explore browser geolocation and location-based services.",
     ],
 
     solution: [
-      "Integrated OpenWeather API for forecasts.",
-      "Implemented geolocation using OpenCage API.",
-      "Built a responsive Material UI interface.",
-      "Optimized API requests and loading states.",
+      "Integrated the OpenWeather API to display current weather and five-day forecasts.",
+      "Used the OpenCage Geocoding API for city search and reverse geolocation.",
+      "Implemented asynchronous API requests with proper loading and error handling.",
+      "Managed application state efficiently using React Hooks.",
+      "Built a responsive Material UI interface with light and dark mode support.",
+      "Optimized the user experience through intuitive search and location detection.",
     ],
 
     role: {
       title: "Frontend Developer",
 
       description:
-        "Designed and developed the complete frontend application, integrated external APIs, and focused on delivering a responsive and intuitive weather experience.",
+        "Designed and developed the entire frontend application independently as a practical learning project, focusing on REST API integration, state management, responsive UI development, and delivering a smooth user experience.",
 
       responsibilities: [
-        "Integrated weather APIs",
-        "Implemented geolocation",
-        "Built responsive UI",
-        "Managed application state",
-        "Handled API errors",
-        "Optimized user experience",
+        "Integrated external REST APIs",
+        "Implemented asynchronous data fetching",
+        "Managed application state with React Hooks",
+        "Handled loading and error states",
+        "Implemented browser geolocation",
+        "Built responsive Material UI interfaces",
+        "Developed city search functionality",
+        "Implemented light and dark themes",
+        "Optimized user experience across devices",
+        "Tested API integration and frontend workflows",
       ],
     },
 
     features: [
-      "Current weather",
-      "5-day forecast",
+      "Current weather conditions",
+      "5-day weather forecast",
       "City search",
-      "Location detection",
-      "Responsive design",
-      "Weather icons",
-      "API integration",
-      "Loading states",
+      "Current location detection",
+      "REST API integration",
+      "Real-time weather updates",
+      "Responsive Material UI interface",
+      "Light & dark mode",
+      "Loading and error handling",
+      "Mobile-friendly design",
     ],
   },
   {
@@ -956,22 +1131,22 @@ export const projects = [
     title: "Social Media App",
 
     subtitle:
-      "Full-stack social networking application built with Laravel and React.",
+      "Full-stack practice project built with Laravel, Inertia.js and React to explore modern Laravel application architecture.",
 
     shortDescription:
-      "A Laravel-powered social networking platform allowing users to create posts, interact with others and manage personal profiles through a modern React interface.",
+      "A full-stack social networking application developed as a hands-on learning project to practice Laravel, Inertia.js, React, MySQL, authentication, Eloquent ORM, and full-stack SPA development.",
 
     // =====================================================
     // Hero
     // =====================================================
 
-    status: "Completed",
+    status: "Learning Project",
 
     duration: "2024",
 
     team: "Personal Project",
 
-    client: "Personal",
+    client: "Self",
 
     image: "/social medea laravel.jpg",
 
@@ -1021,168 +1196,189 @@ export const projects = [
     // =====================================================
 
     longDescription:
-      "A social networking platform built with Laravel, Inertia.js and React that enables users to publish posts, interact through comments and likes, manage profiles and experience a seamless SPA architecture.",
+      "This project was built as a practical learning experience to explore Laravel's full-stack development workflow using Inertia.js and React. The objective was to understand how Laravel can power modern single-page applications without building a separate REST API. Throughout the project, I implemented user authentication, post management, comments, likes, user profiles, and database relationships while gaining hands-on experience with Laravel's ecosystem, including Eloquent ORM, migrations, validation, middleware, routing, and authentication.",
 
     problem: [
-      "Explore Laravel with Inertia.js architecture.",
-      "Build a modern SPA without REST overhead.",
-      "Implement authentication and social interactions.",
-      "Practice scalable Laravel application structure.",
+      "Gain practical experience with the Laravel framework and its ecosystem.",
+      "Understand the Laravel + Inertia.js + React architecture for building modern SPAs.",
+      "Learn database modeling and relationships using Eloquent ORM.",
+      "Practice authentication, authorization, validation, and middleware.",
+      "Explore Laravel routing, controllers, migrations, and business logic organization.",
+      "Build a complete full-stack application using Laravel as the backend foundation.",
     ],
 
     solution: [
-      "Built Laravel backend with Inertia.js.",
-      "Developed React frontend components.",
-      "Implemented authentication and authorization.",
-      "Designed reusable application architecture.",
+      "Built the backend using Laravel with a clean MVC architecture.",
+      "Developed a React frontend powered by Inertia.js for seamless page navigation.",
+      "Designed a relational MySQL database using Eloquent models and relationships.",
+      "Implemented authentication, authorization, request validation, and protected routes.",
+      "Created reusable frontend components with Material UI.",
+      "Integrated frontend and backend without a traditional REST API using Inertia.js.",
     ],
 
     role: {
       title: "Full-Stack Developer",
 
       description:
-        "Developed the complete application including backend logic, database design, authentication, frontend interfaces and deployment configuration.",
+        "Designed and developed the complete application independently as a practical Laravel learning project, covering backend development, database design, frontend implementation, authentication, and Laravel best practices.",
 
       responsibilities: [
-        "Developed Laravel backend",
-        "Built React frontend",
-        "Implemented authentication",
-        "Designed MySQL database",
-        "Created reusable components",
-        "Integrated Inertia.js",
+        "Designed the MySQL database schema",
+        "Created Laravel migrations and seeders",
+        "Built Eloquent models and relationships",
+        "Developed Laravel controllers and business logic",
+        "Implemented authentication and authorization",
+        "Applied request validation and middleware",
+        "Configured application routing with Laravel",
+        "Integrated React with Laravel using Inertia.js",
+        "Built reusable Material UI components",
+        "Implemented CRUD operations and social interactions",
       ],
     },
 
     features: [
-      "Authentication",
-      "Posts",
-      "Comments",
-      "Likes",
+      "User registration & authentication",
+      "Secure login and protected pages",
       "User profiles",
-      "SPA architecture",
-      "Responsive interface",
-      "Dashboard",
+      "Create, edit and delete posts",
+      "Like and comment system",
+      "News feed",
+      "Laravel MVC architecture",
+      "Eloquent ORM relationships",
+      "Inertia.js SPA architecture",
+      "Responsive Material UI interface",
     ],
   },
-  {
-    // =====================================================
-    // Basic Information
-    // =====================================================
+ {
+  // =====================================================
+  // Basic Information
+  // =====================================================
 
-    id: 9,
+  id: 9,
 
-    slug: "stock-management-system",
+  slug: "stock-management-system",
 
-    title: "Stock Management System",
+  title: "Stock Management System",
 
-    subtitle: "Inventory management system for products, users and invoices.",
+  subtitle:
+    "Academic full-stack project built with native PHP to explore inventory management and web application fundamentals.",
 
-    shortDescription:
-      "A PHP-based inventory management application enabling businesses to efficiently manage products, stock levels, users and invoices.",
+  shortDescription:
+    "A PHP-based inventory management system developed as a university project to practice native PHP, MySQL, MVC architecture, CRUD operations, authentication, and responsive dashboard development.",
 
-    // =====================================================
-    // Hero
-    // =====================================================
+  // =====================================================
+  // Hero
+  // =====================================================
 
-    status: "Completed",
+  status: "Learning Project",
 
-    duration: "2023",
+  duration: "2023",
 
-    team: "Academic Project",
+  team: "Academic Project",
 
-    client: "Academic",
+  client: "University",
 
-    image: "/stock management.webp",
+  image: "/stock management.webp",
 
-    platform: "Management System",
+  platform: "Management System",
 
-    industry: "Business",
+  industry: "Business",
 
-    gallery: [],
+  gallery: [],
 
-    technologies: [
-      {
-        name: "PHP",
-        icon: SiPhp,
-        color: "#777BB4",
-      },
-      {
-        name: "Bootstrap",
-        icon: SiBootstrap,
-        color: "#7952B3",
-      },
-      {
-        name: "MySQL",
-        icon: SiMysql,
-        color: "#4479A1",
-      },
-      {
-        name: "JavaScript",
-        icon: SiJavascript,
-        color: "#F7DF1E",
-      },
-    ],
-
-    demoUrl: null,
-
-    githubUrl: "https://github.com/Mohamed-Messaoudene/stock-managment",
-
-    color: "#F4A460",
-
-    // =====================================================
-    // Overview
-    // =====================================================
-
-    longDescription:
-      "A stock management system developed to simplify inventory operations by managing products, users, stock movements and invoices through an intuitive administrative interface.",
-
-    problem: [
-      "Businesses require accurate inventory tracking.",
-      "Manual stock management is time-consuming.",
-      "Invoice generation should be centralized.",
-      "Administrators need efficient product management.",
-    ],
-
-    solution: [
-      "Developed a complete PHP MVC application.",
-      "Implemented CRUD operations for inventory.",
-      "Designed a relational MySQL database.",
-      "Built responsive Bootstrap interfaces.",
-    ],
-
-    role: {
-      title: "Full-Stack Developer",
-
-      description:
-        "Designed and developed the complete inventory management system, including database design, backend business logic and responsive administrative interfaces.",
-
-      responsibilities: [
-        "Designed database schema",
-        "Developed PHP backend",
-        "Implemented CRUD operations",
-        "Managed inventory workflow",
-        "Built Bootstrap UI",
-        "Implemented invoice management",
-      ],
+  technologies: [
+    {
+      name: "PHP",
+      icon: SiPhp,
+      color: "#777BB4",
     },
+    {
+      name: "Bootstrap",
+      icon: SiBootstrap,
+      color: "#7952B3",
+    },
+    {
+      name: "MySQL",
+      icon: SiMysql,
+      color: "#4479A1",
+    },
+    {
+      name: "JavaScript",
+      icon: SiJavascript,
+      color: "#F7DF1E",
+    },
+  ],
 
-    features: [
-      "Product management",
-      "Inventory tracking",
-      "User management",
-      "Invoice management",
-      "Authentication",
-      "Reporting",
-      "Responsive dashboard",
-      "CRUD operations",
+  demoUrl: null,
+
+  githubUrl: "https://github.com/Mohamed-Messaoudene/stock-managment",
+
+  color: "#F4A460",
+
+  // =====================================================
+  // Overview
+  // =====================================================
+
+  longDescription:
+    "This project was developed as part of a university practical assignment to gain hands-on experience with full-stack web development using native PHP. The objective was to understand how traditional server-rendered web applications are built without modern frameworks. Throughout the project, I learned how to structure applications using the MVC architecture, interact with MySQL databases, implement authentication and authorization, perform CRUD operations, manage inventory workflows, and build responsive user interfaces with Bootstrap. The system allows administrators to manage products, stock movements, users, and invoices through a centralized dashboard.",
+
+  problem: [
+    "Gain practical experience with native PHP web development.",
+    "Understand how server-side applications interact with relational databases.",
+    "Learn MVC architecture and application organization.",
+    "Practice implementing CRUD operations and business logic.",
+    "Explore authentication and session management in PHP.",
+    "Build responsive administrative interfaces using Bootstrap.",
+  ],
+
+  solution: [
+    "Developed the application using native PHP following the MVC architecture.",
+    "Designed and implemented a relational MySQL database.",
+    "Built authentication and session-based access control.",
+    "Implemented complete CRUD operations for products, users, and inventory.",
+    "Developed invoice and stock management workflows.",
+    "Created responsive Bootstrap interfaces for desktop and mobile devices.",
+  ],
+
+  role: {
+    title: "Full-Stack Developer",
+
+    description:
+      "Designed and developed the complete application independently as a university learning project, covering backend development, database design, business logic implementation, and responsive frontend interfaces using native PHP.",
+
+    responsibilities: [
+      "Designed the MySQL database schema",
+      "Developed backend business logic with native PHP",
+      "Applied the MVC architecture",
+      "Implemented authentication and session management",
+      "Built CRUD operations for products, users, and inventory",
+      "Developed invoice management functionality",
+      "Created responsive Bootstrap interfaces",
+      "Implemented client-side interactions with JavaScript",
+      "Connected frontend with backend and database",
+      "Tested and debugged the complete application",
     ],
   },
+
+  features: [
+    "User authentication",
+    "Product management",
+    "Inventory tracking",
+    "Stock movement management",
+    "Invoice management",
+    "User management",
+    "CRUD operations",
+    "Responsive admin dashboard",
+    "MySQL database integration",
+    "MVC architecture",
+  ],
+},
 ];
 export const heroText = `Building scalable, production-ready digital products like 
 Dashboards, SaaS platforms, business systems & landing pages — 
 crafted with React, TypeScript, Laravel & modern web technologies.`;
 
- /**
+/**
  * Single source of truth for the timeline, ordered chronologically
  * (oldest -> newest). To add a future role, just push a new object
  * with type: "experience" at the end of this array — the timeline,

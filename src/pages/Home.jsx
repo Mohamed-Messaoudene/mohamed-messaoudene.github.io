@@ -1,6 +1,6 @@
 import { Box, useTheme } from "@mui/material";
 
-import NavBar from "../components/NavBar";
+import NavBar from "../components/sections/Home/NavBar";
 
 import Home from "../components/sections/Home/Home";
 import Experience from "../components/sections/Home/Experience";

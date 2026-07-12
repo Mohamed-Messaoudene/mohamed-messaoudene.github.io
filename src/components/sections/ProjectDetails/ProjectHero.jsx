@@ -221,6 +221,9 @@ ProjectHero.propTypes = {
     client: PropTypes.string,
     color: PropTypes.string.isRequired,
 
+    platform: PropTypes.string,
+    industry: PropTypes.string,
+
     role: PropTypes.shape({
       title: PropTypes.string,
       description: PropTypes.string,
