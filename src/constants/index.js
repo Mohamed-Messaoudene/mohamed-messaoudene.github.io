@@ -859,130 +859,139 @@ export const projects = [
     ],
   },
   {
-    // =====================================================
-    // Basic Information
-    // =====================================================
+  // =====================================================
+  // Basic Information
+  // =====================================================
 
-    id: 6,
+  id: 6,
 
-    slug: "authentication-system",
+  slug: "authentication-system",
 
-    title: "Authentication System",
+  title: "Authentication System",
 
-    subtitle:
-      "Complete authentication platform supporting multiple authentication strategies.",
+  subtitle:
+    "Practice project exploring multiple authentication strategies with Passport.js.",
 
-    shortDescription:
-      "A secure authentication system implementing local authentication alongside OAuth providers including Google, GitHub and Facebook using Passport.js.",
+  shortDescription:
+    "A full-stack authentication application built to practice local authentication, session management, and OAuth login with Google, GitHub, and Facebook using Passport.js.",
 
-    // =====================================================
-    // Hero
-    // =====================================================
+  // =====================================================
+  // Hero
+  // =====================================================
 
-    status: "Completed",
+  status: "Learning Project",
 
-    duration: "2024",
+  duration: "2024",
 
-    team: "Personal Project",
+  team: "Personal Project",
 
-    client: "Personal",
+  client: "Self",
 
-    image: "/authentification.jpg",
+  image: "/authentification.jpg",
 
-    platform: "Web Application",
+  platform: "Web Application",
 
-    industry: "Security",
+  industry: "Security",
 
-    gallery: [],
+  gallery: [],
 
-    technologies: [
-      {
-        name: "Node.js",
-        icon: SiNodedotjs,
-        color: "#339933",
-      },
-      {
-        name: "Express",
-        icon: SiExpress,
-        color: "#000000",
-      },
-      {
-        name: "Passport.js",
-        icon: SiPassport,
-        color: "#34E27A",
-      },
-      {
-        name: "MongoDB",
-        icon: SiMongodb,
-        color: "#47A248",
-      },
-      {
-        name: "React",
-        icon: SiReact,
-        color: "#61DAFB",
-      },
-      {
-        name: "Material UI",
-        icon: SiMui,
-        color: "#007FFF",
-      },
-    ],
-
-    demoUrl: null,
-
-    githubUrl:
-      "https://github.com/Mohamed-Messaoudene/passport-authentication-app",
-
-    color: "#4ECDC4",
-
-    // =====================================================
-    // Overview
-    // =====================================================
-
-    longDescription:
-      "A complete authentication platform built to explore different authentication strategies including local authentication, session-based authentication, and OAuth integrations with Google, GitHub and Facebook using Passport.js.",
-
-    problem: [
-      "Applications often require multiple authentication methods.",
-      "Secure session management is essential.",
-      "OAuth integrations can be complex.",
-      "Authentication flows should remain reusable.",
-    ],
-
-    solution: [
-      "Implemented Passport.js authentication strategies.",
-      "Integrated Google, GitHub and Facebook OAuth.",
-      "Configured secure session management.",
-      "Built reusable authentication components.",
-    ],
-
-    role: {
-      title: "Full-Stack Developer",
-
-      description:
-        "Designed and implemented the authentication architecture, backend APIs, frontend interfaces and OAuth integrations while ensuring secure user authentication.",
-
-      responsibilities: [
-        "Implemented Passport.js strategies",
-        "Integrated OAuth providers",
-        "Built authentication APIs",
-        "Configured session management",
-        "Developed frontend authentication pages",
-        "Tested authentication flows",
-      ],
+  technologies: [
+    {
+      name: "Node.js",
+      icon: SiNodedotjs,
+      color: "#339933",
     },
+    {
+      name: "Express.js",
+      icon: SiExpress,
+      color: "#000000",
+    },
+    {
+      name: "Passport.js",
+      icon: SiPassport,
+      color: "#34E27A",
+    },
+    {
+      name: "MongoDB",
+      icon: SiMongodb,
+      color: "#47A248",
+    },
+    {
+      name: "React",
+      icon: SiReact,
+      color: "#61DAFB",
+    },
+    {
+      name: "Material UI",
+      icon: SiMui,
+      color: "#007FFF",
+    },
+  ],
 
-    features: [
-      "Local authentication",
-      "Google OAuth",
-      "GitHub OAuth",
-      "Facebook OAuth",
-      "Session management",
-      "Protected routes",
-      "Role-based authentication",
-      "Responsive interface",
+  demoUrl: null,
+
+  githubUrl:
+    "https://github.com/Mohamed-Messaoudene/passport-authentication-app",
+
+  color: "#4ECDC4",
+
+  // =====================================================
+  // Overview
+  // =====================================================
+
+  longDescription:
+    "This project was built as a practical learning experience focused entirely on authentication and authorization. The objective was to understand how different authentication strategies are implemented in modern web applications using Passport.js. The application includes user registration, login, OAuth authentication with Google, GitHub, and Facebook, secure session management, and protected routes. After successful authentication, users are redirected to a simple welcome page, allowing the project to focus exclusively on implementing and understanding authentication workflows rather than application features.",
+
+  problem: [
+    "Learn how authentication works in modern web applications.",
+    "Understand the differences between local authentication and OAuth providers.",
+    "Practice implementing secure session-based authentication.",
+    "Explore Passport.js strategies for multiple authentication providers.",
+    "Build reusable authentication flows that can be integrated into larger applications.",
+  ],
+
+  solution: [
+    "Implemented local username/password authentication using Passport.js.",
+    "Integrated OAuth authentication with Google, GitHub, and Facebook.",
+    "Configured secure session management with Express.",
+    "Protected authenticated routes using Passport middleware.",
+    "Built React authentication pages with validation and error handling.",
+    "Created a simple authenticated dashboard to verify successful login flows.",
+  ],
+
+  role: {
+    title: "Full-Stack Developer",
+
+    description:
+      "Designed and developed the complete authentication system independently as a practical learning project, focusing on implementing secure authentication strategies, OAuth integrations, session management, and frontend authentication flows.",
+
+    responsibilities: [
+      "Implemented Passport.js authentication strategies",
+      "Built local username/password authentication",
+      "Integrated Google OAuth",
+      "Integrated GitHub OAuth",
+      "Integrated Facebook OAuth",
+      "Configured Express session management",
+      "Protected application routes",
+      "Developed React login and registration pages",
+      "Handled authentication errors and validation",
+      "Tested and validated complete authentication workflows",
     ],
   },
+
+  features: [
+    "User registration",
+    "Local email/password authentication",
+    "Google OAuth login",
+    "GitHub OAuth login",
+    "Facebook OAuth login",
+    "Secure session management",
+    "Protected routes",
+    "Persistent user sessions",
+    "Responsive authentication pages",
+    "Authenticated welcome page",
+  ],
+},
   {
     // =====================================================
     // Basic Information
