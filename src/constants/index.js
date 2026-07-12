@@ -859,139 +859,139 @@ export const projects = [
     ],
   },
   {
-  // =====================================================
-  // Basic Information
-  // =====================================================
+    // =====================================================
+    // Basic Information
+    // =====================================================
 
-  id: 6,
+    id: 6,
 
-  slug: "authentication-system",
+    slug: "authentication-system",
 
-  title: "Authentication System",
+    title: "Authentication System",
 
-  subtitle:
-    "Practice project exploring multiple authentication strategies with Passport.js.",
+    subtitle:
+      "Practice project exploring multiple authentication strategies with Passport.js.",
 
-  shortDescription:
-    "A full-stack authentication application built to practice local authentication, session management, and OAuth login with Google, GitHub, and Facebook using Passport.js.",
+    shortDescription:
+      "A full-stack authentication application built to practice local authentication, session management, and OAuth login with Google, GitHub, and Facebook using Passport.js.",
 
-  // =====================================================
-  // Hero
-  // =====================================================
+    // =====================================================
+    // Hero
+    // =====================================================
 
-  status: "Learning Project",
+    status: "Learning Project",
 
-  duration: "2024",
+    duration: "2024",
 
-  team: "Personal Project",
+    team: "Personal Project",
 
-  client: "Self",
+    client: "Self",
 
-  image: "/authentification.jpg",
+    image: "/authentification.jpg",
 
-  platform: "Web Application",
+    platform: "Web Application",
 
-  industry: "Security",
+    industry: "Security",
 
-  gallery: [],
+    gallery: [],
 
-  technologies: [
-    {
-      name: "Node.js",
-      icon: SiNodedotjs,
-      color: "#339933",
+    technologies: [
+      {
+        name: "Node.js",
+        icon: SiNodedotjs,
+        color: "#339933",
+      },
+      {
+        name: "Express.js",
+        icon: SiExpress,
+        color: "#000000",
+      },
+      {
+        name: "Passport.js",
+        icon: SiPassport,
+        color: "#34E27A",
+      },
+      {
+        name: "MongoDB",
+        icon: SiMongodb,
+        color: "#47A248",
+      },
+      {
+        name: "React",
+        icon: SiReact,
+        color: "#61DAFB",
+      },
+      {
+        name: "Material UI",
+        icon: SiMui,
+        color: "#007FFF",
+      },
+    ],
+
+    demoUrl: null,
+
+    githubUrl:
+      "https://github.com/Mohamed-Messaoudene/passport-authentication-app",
+
+    color: "#4ECDC4",
+
+    // =====================================================
+    // Overview
+    // =====================================================
+
+    longDescription:
+      "This project was built as a practical learning experience focused entirely on authentication and authorization. The objective was to understand how different authentication strategies are implemented in modern web applications using Passport.js. The application includes user registration, login, OAuth authentication with Google, GitHub, and Facebook, secure session management, and protected routes. After successful authentication, users are redirected to a simple welcome page, allowing the project to focus exclusively on implementing and understanding authentication workflows rather than application features.",
+
+    problem: [
+      "Learn how authentication works in modern web applications.",
+      "Understand the differences between local authentication and OAuth providers.",
+      "Practice implementing secure session-based authentication.",
+      "Explore Passport.js strategies for multiple authentication providers.",
+      "Build reusable authentication flows that can be integrated into larger applications.",
+    ],
+
+    solution: [
+      "Implemented local username/password authentication using Passport.js.",
+      "Integrated OAuth authentication with Google, GitHub, and Facebook.",
+      "Configured secure session management with Express.",
+      "Protected authenticated routes using Passport middleware.",
+      "Built React authentication pages with validation and error handling.",
+      "Created a simple authenticated dashboard to verify successful login flows.",
+    ],
+
+    role: {
+      title: "Full-Stack Developer",
+
+      description:
+        "Designed and developed the complete authentication system independently as a practical learning project, focusing on implementing secure authentication strategies, OAuth integrations, session management, and frontend authentication flows.",
+
+      responsibilities: [
+        "Implemented Passport.js authentication strategies",
+        "Built local username/password authentication",
+        "Integrated Google OAuth",
+        "Integrated GitHub OAuth",
+        "Integrated Facebook OAuth",
+        "Configured Express session management",
+        "Protected application routes",
+        "Developed React login and registration pages",
+        "Handled authentication errors and validation",
+        "Tested and validated complete authentication workflows",
+      ],
     },
-    {
-      name: "Express.js",
-      icon: SiExpress,
-      color: "#000000",
-    },
-    {
-      name: "Passport.js",
-      icon: SiPassport,
-      color: "#34E27A",
-    },
-    {
-      name: "MongoDB",
-      icon: SiMongodb,
-      color: "#47A248",
-    },
-    {
-      name: "React",
-      icon: SiReact,
-      color: "#61DAFB",
-    },
-    {
-      name: "Material UI",
-      icon: SiMui,
-      color: "#007FFF",
-    },
-  ],
 
-  demoUrl: null,
-
-  githubUrl:
-    "https://github.com/Mohamed-Messaoudene/passport-authentication-app",
-
-  color: "#4ECDC4",
-
-  // =====================================================
-  // Overview
-  // =====================================================
-
-  longDescription:
-    "This project was built as a practical learning experience focused entirely on authentication and authorization. The objective was to understand how different authentication strategies are implemented in modern web applications using Passport.js. The application includes user registration, login, OAuth authentication with Google, GitHub, and Facebook, secure session management, and protected routes. After successful authentication, users are redirected to a simple welcome page, allowing the project to focus exclusively on implementing and understanding authentication workflows rather than application features.",
-
-  problem: [
-    "Learn how authentication works in modern web applications.",
-    "Understand the differences between local authentication and OAuth providers.",
-    "Practice implementing secure session-based authentication.",
-    "Explore Passport.js strategies for multiple authentication providers.",
-    "Build reusable authentication flows that can be integrated into larger applications.",
-  ],
-
-  solution: [
-    "Implemented local username/password authentication using Passport.js.",
-    "Integrated OAuth authentication with Google, GitHub, and Facebook.",
-    "Configured secure session management with Express.",
-    "Protected authenticated routes using Passport middleware.",
-    "Built React authentication pages with validation and error handling.",
-    "Created a simple authenticated dashboard to verify successful login flows.",
-  ],
-
-  role: {
-    title: "Full-Stack Developer",
-
-    description:
-      "Designed and developed the complete authentication system independently as a practical learning project, focusing on implementing secure authentication strategies, OAuth integrations, session management, and frontend authentication flows.",
-
-    responsibilities: [
-      "Implemented Passport.js authentication strategies",
-      "Built local username/password authentication",
-      "Integrated Google OAuth",
-      "Integrated GitHub OAuth",
-      "Integrated Facebook OAuth",
-      "Configured Express session management",
-      "Protected application routes",
-      "Developed React login and registration pages",
-      "Handled authentication errors and validation",
-      "Tested and validated complete authentication workflows",
+    features: [
+      "User registration",
+      "Local email/password authentication",
+      "Google OAuth login",
+      "GitHub OAuth login",
+      "Facebook OAuth login",
+      "Secure session management",
+      "Protected routes",
+      "Persistent user sessions",
+      "Responsive authentication pages",
+      "Authenticated welcome page",
     ],
   },
-
-  features: [
-    "User registration",
-    "Local email/password authentication",
-    "Google OAuth login",
-    "GitHub OAuth login",
-    "Facebook OAuth login",
-    "Secure session management",
-    "Protected routes",
-    "Persistent user sessions",
-    "Responsive authentication pages",
-    "Authenticated welcome page",
-  ],
-},
   {
     // =====================================================
     // Basic Information
@@ -1004,30 +1004,33 @@ export const projects = [
     title: "Weather Forecasting App",
 
     subtitle:
-      "Modern weather application with location detection and multi-day forecasts.",
+      "Frontend practice project focused on API integration, asynchronous data fetching, and state management.",
 
     shortDescription:
-      "A responsive weather application providing real-time weather conditions, location detection and five-day forecasts using external weather APIs.",
+      "A responsive weather application developed as a hands-on learning project to practice REST API integration, geolocation, state management, and modern React development.",
 
     // =====================================================
     // Hero
     // =====================================================
 
-    status: "Completed",
+    status: "Learning Project",
 
     duration: "2024",
 
     team: "Personal Project",
 
-    client: "Personal",
+    client: "Self",
 
-    image: "/weather.jpg",
+    image: "/projects/WeatherForcast/weather.jpg",
 
     platform: "Web Application",
 
     industry: "Weather",
 
-    gallery: [],
+    gallery: ["/projects/WeatherForcast/weather.jpg",
+      "/projects/WeatherForcast/weatherforcast1.png",
+      "/projects/WeatherForcast/weatherforcast2.png"
+    ],
 
     technologies: [
       {
@@ -1063,179 +1066,189 @@ export const projects = [
     // =====================================================
 
     longDescription:
-      "A modern weather application that provides current weather conditions and five-day forecasts. Users can search by city or use their current location to receive accurate weather information through third-party APIs.",
+      "This project was built as a practical frontend learning experience to understand how React applications consume and manage data from external REST APIs. The application retrieves real-time weather information and five-day forecasts from the OpenWeather API while using the OpenCage Geocoding API to convert user searches and geographic coordinates into locations. Throughout the project, I gained hands-on experience with asynchronous API requests, state management, loading and error handling, geolocation, responsive UI development, and implementing light and dark themes for an improved user experience.",
 
     problem: [
-      "Users need quick access to accurate weather information.",
-      "Searching locations manually can be inconvenient.",
-      "Weather information should be presented clearly on all devices.",
-      "API responses require efficient state management.",
+      "Learn how to integrate third-party REST APIs into React applications.",
+      "Understand asynchronous data fetching and API request lifecycles.",
+      "Practice managing application state based on remote data.",
+      "Handle loading, error, and empty states gracefully.",
+      "Build responsive interfaces with support for both light and dark themes.",
+      "Explore browser geolocation and location-based services.",
     ],
 
     solution: [
-      "Integrated OpenWeather API for forecasts.",
-      "Implemented geolocation using OpenCage API.",
-      "Built a responsive Material UI interface.",
-      "Optimized API requests and loading states.",
+      "Integrated the OpenWeather API to display current weather and five-day forecasts.",
+      "Used the OpenCage Geocoding API for city search and reverse geolocation.",
+      "Implemented asynchronous API requests with proper loading and error handling.",
+      "Managed application state efficiently using React Hooks.",
+      "Built a responsive Material UI interface with light and dark mode support.",
+      "Optimized the user experience through intuitive search and location detection.",
     ],
 
     role: {
       title: "Frontend Developer",
 
       description:
-        "Designed and developed the complete frontend application, integrated external APIs, and focused on delivering a responsive and intuitive weather experience.",
+        "Designed and developed the entire frontend application independently as a practical learning project, focusing on REST API integration, state management, responsive UI development, and delivering a smooth user experience.",
 
       responsibilities: [
-        "Integrated weather APIs",
-        "Implemented geolocation",
-        "Built responsive UI",
-        "Managed application state",
-        "Handled API errors",
-        "Optimized user experience",
+        "Integrated external REST APIs",
+        "Implemented asynchronous data fetching",
+        "Managed application state with React Hooks",
+        "Handled loading and error states",
+        "Implemented browser geolocation",
+        "Built responsive Material UI interfaces",
+        "Developed city search functionality",
+        "Implemented light and dark themes",
+        "Optimized user experience across devices",
+        "Tested API integration and frontend workflows",
       ],
     },
 
     features: [
-      "Current weather",
-      "5-day forecast",
+      "Current weather conditions",
+      "5-day weather forecast",
       "City search",
-      "Location detection",
-      "Responsive design",
-      "Weather icons",
-      "API integration",
-      "Loading states",
+      "Current location detection",
+      "REST API integration",
+      "Real-time weather updates",
+      "Responsive Material UI interface",
+      "Light & dark mode",
+      "Loading and error handling",
+      "Mobile-friendly design",
     ],
   },
- {
-  // =====================================================
-  // Basic Information
-  // =====================================================
+  {
+    // =====================================================
+    // Basic Information
+    // =====================================================
 
-  id: 8,
+    id: 8,
 
-  slug: "social-media-laravel",
+    slug: "social-media-laravel",
 
-  title: "Social Media App",
+    title: "Social Media App",
 
-  subtitle:
-    "Full-stack practice project built with Laravel, Inertia.js and React to explore modern Laravel application architecture.",
+    subtitle:
+      "Full-stack practice project built with Laravel, Inertia.js and React to explore modern Laravel application architecture.",
 
-  shortDescription:
-    "A full-stack social networking application developed as a hands-on learning project to practice Laravel, Inertia.js, React, MySQL, authentication, Eloquent ORM, and full-stack SPA development.",
+    shortDescription:
+      "A full-stack social networking application developed as a hands-on learning project to practice Laravel, Inertia.js, React, MySQL, authentication, Eloquent ORM, and full-stack SPA development.",
 
-  // =====================================================
-  // Hero
-  // =====================================================
+    // =====================================================
+    // Hero
+    // =====================================================
 
-  status: "Learning Project",
+    status: "Learning Project",
 
-  duration: "2024",
+    duration: "2024",
 
-  team: "Personal Project",
+    team: "Personal Project",
 
-  client: "Self",
+    client: "Self",
 
-  image: "/social medea laravel.jpg",
+    image: "/social medea laravel.jpg",
 
-  platform: "Web Application",
+    platform: "Web Application",
 
-  industry: "Social Networking",
+    industry: "Social Networking",
 
-  gallery: [],
+    gallery: [],
 
-  technologies: [
-    {
-      name: "Laravel",
-      icon: SiLaravel,
-      color: "#FF2D20",
+    technologies: [
+      {
+        name: "Laravel",
+        icon: SiLaravel,
+        color: "#FF2D20",
+      },
+      {
+        name: "React",
+        icon: SiReact,
+        color: "#61DAFB",
+      },
+      {
+        name: "Inertia.js",
+        icon: SiInertia,
+        color: "#9553E9",
+      },
+      {
+        name: "MySQL",
+        icon: SiMysql,
+        color: "#4479A1",
+      },
+      {
+        name: "Material UI",
+        icon: SiMui,
+        color: "#007FFF",
+      },
+    ],
+
+    demoUrl: null,
+
+    githubUrl:
+      "https://github.com/Mohamed-Messaoudene/social-media-app-with-laravel",
+
+    color: "#9370DB",
+
+    // =====================================================
+    // Overview
+    // =====================================================
+
+    longDescription:
+      "This project was built as a practical learning experience to explore Laravel's full-stack development workflow using Inertia.js and React. The objective was to understand how Laravel can power modern single-page applications without building a separate REST API. Throughout the project, I implemented user authentication, post management, comments, likes, user profiles, and database relationships while gaining hands-on experience with Laravel's ecosystem, including Eloquent ORM, migrations, validation, middleware, routing, and authentication.",
+
+    problem: [
+      "Gain practical experience with the Laravel framework and its ecosystem.",
+      "Understand the Laravel + Inertia.js + React architecture for building modern SPAs.",
+      "Learn database modeling and relationships using Eloquent ORM.",
+      "Practice authentication, authorization, validation, and middleware.",
+      "Explore Laravel routing, controllers, migrations, and business logic organization.",
+      "Build a complete full-stack application using Laravel as the backend foundation.",
+    ],
+
+    solution: [
+      "Built the backend using Laravel with a clean MVC architecture.",
+      "Developed a React frontend powered by Inertia.js for seamless page navigation.",
+      "Designed a relational MySQL database using Eloquent models and relationships.",
+      "Implemented authentication, authorization, request validation, and protected routes.",
+      "Created reusable frontend components with Material UI.",
+      "Integrated frontend and backend without a traditional REST API using Inertia.js.",
+    ],
+
+    role: {
+      title: "Full-Stack Developer",
+
+      description:
+        "Designed and developed the complete application independently as a practical Laravel learning project, covering backend development, database design, frontend implementation, authentication, and Laravel best practices.",
+
+      responsibilities: [
+        "Designed the MySQL database schema",
+        "Created Laravel migrations and seeders",
+        "Built Eloquent models and relationships",
+        "Developed Laravel controllers and business logic",
+        "Implemented authentication and authorization",
+        "Applied request validation and middleware",
+        "Configured application routing with Laravel",
+        "Integrated React with Laravel using Inertia.js",
+        "Built reusable Material UI components",
+        "Implemented CRUD operations and social interactions",
+      ],
     },
-    {
-      name: "React",
-      icon: SiReact,
-      color: "#61DAFB",
-    },
-    {
-      name: "Inertia.js",
-      icon: SiInertia,
-      color: "#9553E9",
-    },
-    {
-      name: "MySQL",
-      icon: SiMysql,
-      color: "#4479A1",
-    },
-    {
-      name: "Material UI",
-      icon: SiMui,
-      color: "#007FFF",
-    },
-  ],
 
-  demoUrl: null,
-
-  githubUrl:
-    "https://github.com/Mohamed-Messaoudene/social-media-app-with-laravel",
-
-  color: "#9370DB",
-
-  // =====================================================
-  // Overview
-  // =====================================================
-
-  longDescription:
-    "This project was built as a practical learning experience to explore Laravel's full-stack development workflow using Inertia.js and React. The objective was to understand how Laravel can power modern single-page applications without building a separate REST API. Throughout the project, I implemented user authentication, post management, comments, likes, user profiles, and database relationships while gaining hands-on experience with Laravel's ecosystem, including Eloquent ORM, migrations, validation, middleware, routing, and authentication.",
-
-  problem: [
-    "Gain practical experience with the Laravel framework and its ecosystem.",
-    "Understand the Laravel + Inertia.js + React architecture for building modern SPAs.",
-    "Learn database modeling and relationships using Eloquent ORM.",
-    "Practice authentication, authorization, validation, and middleware.",
-    "Explore Laravel routing, controllers, migrations, and business logic organization.",
-    "Build a complete full-stack application using Laravel as the backend foundation.",
-  ],
-
-  solution: [
-    "Built the backend using Laravel with a clean MVC architecture.",
-    "Developed a React frontend powered by Inertia.js for seamless page navigation.",
-    "Designed a relational MySQL database using Eloquent models and relationships.",
-    "Implemented authentication, authorization, request validation, and protected routes.",
-    "Created reusable frontend components with Material UI.",
-    "Integrated frontend and backend without a traditional REST API using Inertia.js.",
-  ],
-
-  role: {
-    title: "Full-Stack Developer",
-
-    description:
-      "Designed and developed the complete application independently as a practical Laravel learning project, covering backend development, database design, frontend implementation, authentication, and Laravel best practices.",
-
-    responsibilities: [
-      "Designed the MySQL database schema",
-      "Created Laravel migrations and seeders",
-      "Built Eloquent models and relationships",
-      "Developed Laravel controllers and business logic",
-      "Implemented authentication and authorization",
-      "Applied request validation and middleware",
-      "Configured application routing with Laravel",
-      "Integrated React with Laravel using Inertia.js",
-      "Built reusable Material UI components",
-      "Implemented CRUD operations and social interactions",
+    features: [
+      "User registration & authentication",
+      "Secure login and protected pages",
+      "User profiles",
+      "Create, edit and delete posts",
+      "Like and comment system",
+      "News feed",
+      "Laravel MVC architecture",
+      "Eloquent ORM relationships",
+      "Inertia.js SPA architecture",
+      "Responsive Material UI interface",
     ],
   },
-
-  features: [
-    "User registration & authentication",
-    "Secure login and protected pages",
-    "User profiles",
-    "Create, edit and delete posts",
-    "Like and comment system",
-    "News feed",
-    "Laravel MVC architecture",
-    "Eloquent ORM relationships",
-    "Inertia.js SPA architecture",
-    "Responsive Material UI interface",
-  ],
-},
   {
     // =====================================================
     // Basic Information
