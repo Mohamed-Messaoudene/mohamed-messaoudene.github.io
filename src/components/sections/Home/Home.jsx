@@ -98,7 +98,7 @@ function Home() {
           flexDirection={"column"}
           justifyContent={"center"}
           alignItems={"center"}
-          marginLeft={{xs:'10px', sm: '0px'}}
+          marginLeft={{ xs: "10px", sm: "0px" }}
         >
           <Box
             width={"15px"}
@@ -117,56 +117,55 @@ function Home() {
           />
         </Box>
         <Box>
-         <motion.div
-  initial={{ opacity: 0, y: 40 }}
-  animate={inView ? { opacity: 1, y: 0 } : {}}
-  transition={{
-    duration: 0.8,
-    ease: "easeOut",
-  }}
->
-  <Typography
-    variant="h1"
-    sx={{
-      fontSize: "clamp(18px, 4vw, 45px)",
-      mb: 2,
-      fontWeight: 700,
-    }}
-    color={theme.palette.primary.text}
-  >
-    Hi
-    <WavingHand
-      sx={{
-        fontSize: "clamp(18px,3vw,45px)",
-        mx: 1,
-      }}
-    />
-    {"I'm"}
-
-    <Box
-      component="span"
-      sx={{
-        display: "block",
-        mt: 1,
-        color: theme.palette.primary.main,
-      }}
-    >
-      <TypeAnimation
-        sequence={[
-          1000,
-          "Mohamed Messaoudene",
-          2500,
-          "Full-Stack Developer",
-          2500,
-        ]}
-        wrapper="span"
-        speed={45}
-        deletionSpeed={55}
-        repeat={Infinity}
-      />
-    </Box>
-  </Typography>
-</motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+            }}
+          >
+            <Typography
+              variant="h1"
+              sx={{
+                fontSize: "clamp(18px, 4vw, 45px)",
+                mb: 2,
+                fontWeight: 700,
+              }}
+              color={theme.palette.primary.text}
+            >
+              Hi
+              <WavingHand
+                sx={{
+                  fontSize: "clamp(18px,3vw,45px)",
+                  mx: 1,
+                }}
+              />
+              {"I'm"}
+              <Box
+                component="span"
+                sx={{
+                  display: "block",
+                  mt: 1,
+                  color: theme.palette.primary.main,
+                }}
+              >
+                <TypeAnimation
+                  sequence={[
+                    1000,
+                    "Mohamed Messaoudene",
+                    2500,
+                    "Full-Stack Developer",
+                    2500,
+                  ]}
+                  wrapper="span"
+                  speed={45}
+                  deletionSpeed={55}
+                  repeat={Infinity}
+                />
+              </Box>
+            </Typography>
+          </motion.div>
           <Typography
             variant="body1"
             color={theme.palette.primary.text}
@@ -175,32 +174,37 @@ function Home() {
               marginBlock: { xs: 0, sm: 1, lg: 3 },
             }}
           >
-            {heroText.split(" ").map((word, index) => (
-              <Box
-                key={index}
-                sx={{ whiteSpace: "nowrap", display: "inline-block" }} // Prevent word breaking
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{
+                delay: 0.4,
+                duration: 0.8,
+                ease: "easeOut",
+              }}
+            >
+              <Typography
+                variant="body1"
+                color={theme.palette.primary.text}
+                sx={{
+                  fontSize: "clamp(12px, 2vw, 24px)",
+                  marginBlock: { xs: 0, sm: 1, lg: 3 },
+                  lineHeight: 1.8,
+                  maxWidth: "700px",
+                }}
               >
-                {word.split("").map((letter, letterIndex) => (
-                  <motion.span
-                    key={letterIndex}
-                    initial={{ opacity: 0, filter: "blur(10px)", y: 12 }}
-                    animate={
-                      inView ? { opacity: 1, filter: "blur(0)", y: 0 } : {}
-                    }
-                    transition={{
-                      duration: 0.6,
-                      ease: "easeInOut",
-                      delay: index * 0.25,
-                    }}
-                    style={{ display: "inline-block" }}
-                  >
-                    {letter === " " ? "\u00A0" : letter}
-                  </motion.span>
-                ))}
-                <span>&nbsp;</span>
-              </Box>
-            ))}
+                {heroText}
+              </Typography>
+            </motion.div>
           </Typography>
+          <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={inView ? { opacity: 1, y: 0 } : {}}
+  transition={{
+    delay: 0.7,
+    duration: 0.6,
+  }}
+>
           <Stack
             direction="row"
             spacing={{ xs: 0.3, sm: 1, lg: 2 }}
@@ -241,6 +245,15 @@ function Home() {
               </Box>
             ))}
           </Stack>
+          </motion.div>
+          <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={inView ? { opacity: 1, y: 0 } : {}}
+  transition={{
+    delay: 0.9,
+    duration: 0.6,
+  }}
+>
           <Stack>
             <Button
               variant="contained"
@@ -279,12 +292,13 @@ function Home() {
               Download CV
             </Button>
           </Stack>
+          </motion.div>
         </Box>
       </Box>
       <motion.div
         style={{ marginTop: "20px" }}
         initial={{ y: 30, width: 0 }}
-        animate={inView ? { y: 0, width: "50%" } : {}}
+        animate={inView ? { y: 0, width: "45%" } : {}}
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
         <img
