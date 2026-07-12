@@ -1249,119 +1249,130 @@ export const projects = [
       "Responsive Material UI interface",
     ],
   },
-  {
-    // =====================================================
-    // Basic Information
-    // =====================================================
+ {
+  // =====================================================
+  // Basic Information
+  // =====================================================
 
-    id: 9,
+  id: 9,
 
-    slug: "stock-management-system",
+  slug: "stock-management-system",
 
-    title: "Stock Management System",
+  title: "Stock Management System",
 
-    subtitle: "Inventory management system for products, users and invoices.",
+  subtitle:
+    "Academic full-stack project built with native PHP to explore inventory management and web application fundamentals.",
 
-    shortDescription:
-      "A PHP-based inventory management application enabling businesses to efficiently manage products, stock levels, users and invoices.",
+  shortDescription:
+    "A PHP-based inventory management system developed as a university project to practice native PHP, MySQL, MVC architecture, CRUD operations, authentication, and responsive dashboard development.",
 
-    // =====================================================
-    // Hero
-    // =====================================================
+  // =====================================================
+  // Hero
+  // =====================================================
 
-    status: "Completed",
+  status: "Learning Project",
 
-    duration: "2023",
+  duration: "2023",
 
-    team: "Academic Project",
+  team: "Academic Project",
 
-    client: "Academic",
+  client: "University",
 
-    image: "/stock management.webp",
+  image: "/stock management.webp",
 
-    platform: "Management System",
+  platform: "Management System",
 
-    industry: "Business",
+  industry: "Business",
 
-    gallery: [],
+  gallery: [],
 
-    technologies: [
-      {
-        name: "PHP",
-        icon: SiPhp,
-        color: "#777BB4",
-      },
-      {
-        name: "Bootstrap",
-        icon: SiBootstrap,
-        color: "#7952B3",
-      },
-      {
-        name: "MySQL",
-        icon: SiMysql,
-        color: "#4479A1",
-      },
-      {
-        name: "JavaScript",
-        icon: SiJavascript,
-        color: "#F7DF1E",
-      },
-    ],
-
-    demoUrl: null,
-
-    githubUrl: "https://github.com/Mohamed-Messaoudene/stock-managment",
-
-    color: "#F4A460",
-
-    // =====================================================
-    // Overview
-    // =====================================================
-
-    longDescription:
-      "A stock management system developed to simplify inventory operations by managing products, users, stock movements and invoices through an intuitive administrative interface.",
-
-    problem: [
-      "Businesses require accurate inventory tracking.",
-      "Manual stock management is time-consuming.",
-      "Invoice generation should be centralized.",
-      "Administrators need efficient product management.",
-    ],
-
-    solution: [
-      "Developed a complete PHP MVC application.",
-      "Implemented CRUD operations for inventory.",
-      "Designed a relational MySQL database.",
-      "Built responsive Bootstrap interfaces.",
-    ],
-
-    role: {
-      title: "Full-Stack Developer",
-
-      description:
-        "Designed and developed the complete inventory management system, including database design, backend business logic and responsive administrative interfaces.",
-
-      responsibilities: [
-        "Designed database schema",
-        "Developed PHP backend",
-        "Implemented CRUD operations",
-        "Managed inventory workflow",
-        "Built Bootstrap UI",
-        "Implemented invoice management",
-      ],
+  technologies: [
+    {
+      name: "PHP",
+      icon: SiPhp,
+      color: "#777BB4",
     },
+    {
+      name: "Bootstrap",
+      icon: SiBootstrap,
+      color: "#7952B3",
+    },
+    {
+      name: "MySQL",
+      icon: SiMysql,
+      color: "#4479A1",
+    },
+    {
+      name: "JavaScript",
+      icon: SiJavascript,
+      color: "#F7DF1E",
+    },
+  ],
 
-    features: [
-      "Product management",
-      "Inventory tracking",
-      "User management",
-      "Invoice management",
-      "Authentication",
-      "Reporting",
-      "Responsive dashboard",
-      "CRUD operations",
+  demoUrl: null,
+
+  githubUrl: "https://github.com/Mohamed-Messaoudene/stock-managment",
+
+  color: "#F4A460",
+
+  // =====================================================
+  // Overview
+  // =====================================================
+
+  longDescription:
+    "This project was developed as part of a university practical assignment to gain hands-on experience with full-stack web development using native PHP. The objective was to understand how traditional server-rendered web applications are built without modern frameworks. Throughout the project, I learned how to structure applications using the MVC architecture, interact with MySQL databases, implement authentication and authorization, perform CRUD operations, manage inventory workflows, and build responsive user interfaces with Bootstrap. The system allows administrators to manage products, stock movements, users, and invoices through a centralized dashboard.",
+
+  problem: [
+    "Gain practical experience with native PHP web development.",
+    "Understand how server-side applications interact with relational databases.",
+    "Learn MVC architecture and application organization.",
+    "Practice implementing CRUD operations and business logic.",
+    "Explore authentication and session management in PHP.",
+    "Build responsive administrative interfaces using Bootstrap.",
+  ],
+
+  solution: [
+    "Developed the application using native PHP following the MVC architecture.",
+    "Designed and implemented a relational MySQL database.",
+    "Built authentication and session-based access control.",
+    "Implemented complete CRUD operations for products, users, and inventory.",
+    "Developed invoice and stock management workflows.",
+    "Created responsive Bootstrap interfaces for desktop and mobile devices.",
+  ],
+
+  role: {
+    title: "Full-Stack Developer",
+
+    description:
+      "Designed and developed the complete application independently as a university learning project, covering backend development, database design, business logic implementation, and responsive frontend interfaces using native PHP.",
+
+    responsibilities: [
+      "Designed the MySQL database schema",
+      "Developed backend business logic with native PHP",
+      "Applied the MVC architecture",
+      "Implemented authentication and session management",
+      "Built CRUD operations for products, users, and inventory",
+      "Developed invoice management functionality",
+      "Created responsive Bootstrap interfaces",
+      "Implemented client-side interactions with JavaScript",
+      "Connected frontend with backend and database",
+      "Tested and debugged the complete application",
     ],
   },
+
+  features: [
+    "User authentication",
+    "Product management",
+    "Inventory tracking",
+    "Stock movement management",
+    "Invoice management",
+    "User management",
+    "CRUD operations",
+    "Responsive admin dashboard",
+    "MySQL database integration",
+    "MVC architecture",
+  ],
+},
 ];
 export const heroText = `Building scalable, production-ready digital products like 
 Dashboards, SaaS platforms, business systems & landing pages — 
