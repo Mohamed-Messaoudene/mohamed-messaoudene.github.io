@@ -595,136 +595,135 @@ export const projects = [
       "Performance optimization",
     ],
   },
- {
-  // =====================================================
-  // Basic Information
-  // =====================================================
+  {
+    // =====================================================
+    // Basic Information
+    // =====================================================
 
-  id: 4,
+    id: 4,
 
-  slug: "sharefiring-platform",
+    slug: "sharefiring-platform",
 
-  title: "ShareFiring",
+    title: "ShareFiring",
 
-  subtitle:
-    "AI-powered knowledge management platform for organizations and enterprise teams.",
+    subtitle:
+      "AI-powered knowledge management platform for organizations and enterprise teams.",
 
-  shortDescription:
-    "A modern enterprise platform combining a responsive marketing website with an administrative dashboard to help organizations centralize, organize, and share institutional knowledge.",
+    shortDescription:
+      "A modern enterprise platform combining a responsive marketing website with an administrative dashboard to help organizations centralize, organize, and share institutional knowledge.",
 
-  // =====================================================
-  // Hero
-  // =====================================================
+    // =====================================================
+    // Hero
+    // =====================================================
 
-  status: "Production",
+    status: "Production",
 
-  duration: "2025",
+    duration: "2025",
 
-  team: "Frontend Team",
+    team: "Frontend Team",
 
-  client: "ShareFiring",
+    client: "ShareFiring",
 
-  image: "/projects/Sahrefiring/sharefiring1.png",
+    image: "/projects/Sahrefiring/sharefiring1.png",
 
-  platform: "Web Platform",
+    platform: "Web Platform",
 
-  industry: "Knowledge Management",
+    industry: "Knowledge Management",
 
+    gallery: [
+      "/projects/Sahrefiring/sharefiring1.png",
+      "/projects/Sahrefiring/sharefiring2.png",
+      "/projects/Sahrefiring/sharefiring3.png",
+    ],
+    technologies: [
+      {
+        name: "React",
+        icon: SiReact,
+        color: "#61DAFB",
+      },
+      {
+        name: "Material UI",
+        icon: SiMui,
+        color: "#007FFF",
+      },
+      {
+        name: "Inertia.js",
+        icon: SiInertia,
+        color: "#9553E9",
+      },
+      {
+        name: "Laravel",
+        icon: SiLaravel,
+        color: "#FF2D20",
+      },
+      {
+        name: "MySQL",
+        icon: SiMysql,
+        color: "#4479A1",
+      },
+    ],
 
-  gallery: [
-    '/projects/Sahrefiring/sharefiring1.png',
-    '/projects/Sahrefiring/sharefiring2.png',
-    '/projects/Sahrefiring/sharefiring3.png'
-  ],
-  technologies: [
-    {
-      name: "React",
-      icon: SiReact,
-      color: "#61DAFB",
+    demoUrl: "https://sharefiring.com/",
+
+    githubUrl: null,
+
+    color: "#1E90FF",
+
+    // =====================================================
+    // Overview
+    // =====================================================
+
+    longDescription:
+      "ShareFiring is an enterprise knowledge management platform designed to help organizations centralize, organize, and share institutional knowledge. The platform combines a modern marketing website that presents the product and its capabilities with an administrative dashboard for managing users, organizational content, and platform resources. As a Frontend Developer, I contributed to building responsive interfaces, integrating frontend functionality with the Laravel backend through Inertia.js, and delivering a consistent user experience across both the public website and the administration portal.",
+
+    problem: [
+      "Organizations needed a centralized platform to preserve and organize institutional knowledge.",
+      "The product required a professional marketing website to clearly communicate its value proposition.",
+      "Administrators needed an intuitive dashboard to manage users and platform resources efficiently.",
+      "The application had to deliver a responsive and consistent user experience across desktop and mobile devices.",
+    ],
+
+    solution: [
+      "Developed responsive React interfaces for both the landing page and administrative dashboard.",
+      "Integrated frontend pages with Laravel backend endpoints using Inertia.js.",
+      "Built reusable UI components with Material UI to improve consistency and maintainability.",
+      "Implemented responsive layouts, interactive forms, and frontend validation to deliver a smooth user experience.",
+    ],
+
+    role: {
+      title: "Frontend Developer",
+
+      description:
+        "Contributed to the frontend development of both the marketing website and the administrative dashboard. Worked with React, Material UI, and Inertia.js to build responsive interfaces, integrate backend data, implement application flows, and deliver a polished user experience while collaborating closely with backend developers.",
+
+      responsibilities: [
+        "Developed the responsive landing page",
+        "Built administrative dashboard interfaces",
+        "Developed reusable React components",
+        "Integrated Laravel backend using Inertia.js",
+        "Implemented frontend forms and validation",
+        "Handled authentication and protected frontend routes",
+        "Implemented CRUD interfaces",
+        "Built responsive layouts for desktop, tablet, and mobile",
+        "Improved UI consistency using Material UI components",
+        "Collaborated with backend developers to integrate APIs and business logic",
+      ],
     },
-    {
-      name: "Material UI",
-      icon: SiMui,
-      color: "#007FFF",
-    },
-    {
-      name: "Inertia.js",
-      icon: SiInertia,
-      color: "#9553E9",
-    },
-    {
-      name: "Laravel",
-      icon: SiLaravel,
-      color: "#FF2D20",
-    },
-    {
-      name: "MySQL",
-      icon: SiMysql,
-      color: "#4479A1",
-    },
-  ],
 
-  demoUrl: "https://sharefiring.com/",
-
-  githubUrl: null,
-
-  color: "#1E90FF",
-
-  // =====================================================
-  // Overview
-  // =====================================================
-
-  longDescription:
-    "ShareFiring is an enterprise knowledge management platform designed to help organizations centralize, organize, and share institutional knowledge. The platform combines a modern marketing website that presents the product and its capabilities with an administrative dashboard for managing users, organizational content, and platform resources. As a Frontend Developer, I contributed to building responsive interfaces, integrating frontend functionality with the Laravel backend through Inertia.js, and delivering a consistent user experience across both the public website and the administration portal.",
-
-  problem: [
-    "Organizations needed a centralized platform to preserve and organize institutional knowledge.",
-    "The product required a professional marketing website to clearly communicate its value proposition.",
-    "Administrators needed an intuitive dashboard to manage users and platform resources efficiently.",
-    "The application had to deliver a responsive and consistent user experience across desktop and mobile devices.",
-  ],
-
-  solution: [
-    "Developed responsive React interfaces for both the landing page and administrative dashboard.",
-    "Integrated frontend pages with Laravel backend endpoints using Inertia.js.",
-    "Built reusable UI components with Material UI to improve consistency and maintainability.",
-    "Implemented responsive layouts, interactive forms, and frontend validation to deliver a smooth user experience.",
-  ],
-
-  role: {
-    title: "Frontend Developer",
-
-    description:
-      "Contributed to the frontend development of both the marketing website and the administrative dashboard. Worked with React, Material UI, and Inertia.js to build responsive interfaces, integrate backend data, implement application flows, and deliver a polished user experience while collaborating closely with backend developers.",
-
-    responsibilities: [
-      "Developed the responsive landing page",
-      "Built administrative dashboard interfaces",
-      "Developed reusable React components",
-      "Integrated Laravel backend using Inertia.js",
-      "Implemented frontend forms and validation",
-      "Handled authentication and protected frontend routes",
-      "Implemented CRUD interfaces",
-      "Built responsive layouts for desktop, tablet, and mobile",
-      "Improved UI consistency using Material UI components",
-      "Collaborated with backend developers to integrate APIs and business logic",
+    features: [
+      "Responsive marketing website",
+      "Administrative dashboard",
+      "Authentication flows",
+      "User management interface",
+      "Content management interface",
+      "Knowledge resource management",
+      "Contact and lead request forms",
+      "CRUD management screens",
+      "Responsive design",
+      "Material UI component system",
+      "Laravel + Inertia.js integration",
     ],
   },
-
-  features: [
-    "Responsive marketing website",
-    "Administrative dashboard",
-    "Authentication flows",
-    "User management interface",
-    "Content management interface",
-    "Knowledge resource management",
-    "Contact and lead request forms",
-    "CRUD management screens",
-    "Responsive design",
-    "Material UI component system",
-    "Laravel + Inertia.js integration",
-  ],
-},
   {
     // =====================================================
     // Basic Information
@@ -737,22 +736,22 @@ export const projects = [
     title: "Social Media App",
 
     subtitle:
-      "Full-stack social networking platform with authentication and real-time interactions.",
+      "Full-stack practice project built to explore modern web application architecture and backend development.",
 
     shortDescription:
-      "A social networking application allowing users to create posts, interact with others through comments and likes, and build their own social network.",
+      "A full-stack social networking application developed as a hands-on learning project to practice React, Express.js, PostgreSQL, authentication, REST APIs, and MVC architecture.",
 
     // =====================================================
     // Hero
     // =====================================================
 
-    status: "Completed",
+    status: "Learning Project",
 
     duration: "2024",
 
     team: "Personal Project",
 
-    client: "Personal",
+    client: "Self",
 
     image: "/social medea app.jpg",
 
@@ -769,12 +768,17 @@ export const projects = [
         color: "#61DAFB",
       },
       {
+        name: "Material UI",
+        icon: SiMui,
+        color: "#007FFF",
+      },
+      {
         name: "Node.js",
         icon: SiNodedotjs,
         color: "#339933",
       },
       {
-        name: "Express",
+        name: "Express.js",
         icon: SiExpress,
         color: "#000000",
       },
@@ -784,13 +788,13 @@ export const projects = [
         color: "#4169E1",
       },
       {
-        name: "Material UI",
-        icon: SiMui,
-        color: "#007FFF",
+        name: "Sequelize",
+        icon: SiSequelize,
+        color: "#52B0E7",
       },
     ],
 
-    demoUrl: "https://social-media-j5ch.onrender.com/",
+    demoUrl: null,
 
     githubUrl: "https://github.com/Mohamed-Messaoudene/social-media-app",
 
@@ -801,47 +805,57 @@ export const projects = [
     // =====================================================
 
     longDescription:
-      "A complete full-stack social networking platform that enables users to create posts, upload content, comment, like posts, follow other users, and manage personal profiles using a secure authentication system.",
+      "This project was built as a practical full-stack learning experience to understand how modern web applications are designed and developed from scratch. Rather than focusing on solving a business problem, the goal was to gain hands-on experience with frontend and backend development, database design, authentication, REST APIs, and application architecture. The application allows users to create accounts, publish posts, interact through likes and comments, manage profiles, and communicate with a backend powered by Express.js and PostgreSQL using the Sequelize ORM.",
 
     problem: [
-      "Learn full-stack application architecture.",
-      "Implement authentication and authorization.",
-      "Practice relational database design.",
-      "Build scalable REST APIs.",
+      "Gain practical experience building a complete full-stack application.",
+      "Understand how frontend and backend communicate through REST APIs.",
+      "Practice designing relational databases using PostgreSQL and Sequelize ORM.",
+      "Learn authentication, authorization, and protected routes.",
+      "Apply the MVC architecture in a real-world backend project.",
+      "Build reusable React components and responsive user interfaces.",
     ],
 
     solution: [
-      "Built REST APIs using Express.js.",
-      "Designed PostgreSQL database models.",
-      "Implemented secure authentication.",
-      "Developed responsive React interfaces.",
+      "Developed a complete Express.js backend following the MVC architecture.",
+      "Designed a normalized PostgreSQL database using Sequelize ORM.",
+      "Implemented secure user authentication and authorization.",
+      "Created RESTful APIs for posts, users, comments, and social interactions.",
+      "Built a responsive React frontend using Material UI.",
+      "Connected the frontend to backend APIs using Axios with proper error handling and state management.",
     ],
 
     role: {
       title: "Full-Stack Developer",
 
       description:
-        "Designed, developed and deployed the entire application including frontend, backend, database architecture and authentication.",
+        "Designed and developed the entire application independently as a practical learning project, covering frontend development, backend architecture, database design, authentication, and API integration.",
 
       responsibilities: [
-        "Designed database schema",
-        "Built REST APIs",
-        "Implemented authentication",
-        "Developed React frontend",
-        "Managed PostgreSQL database",
-        "Deployed the application",
+        "Designed the PostgreSQL database schema",
+        "Implemented Sequelize ORM models and relationships",
+        "Built RESTful APIs with Express.js",
+        "Applied the MVC architecture",
+        "Implemented user authentication and authorization",
+        "Created reusable React components",
+        "Built responsive Material UI interfaces",
+        "Integrated frontend with backend APIs",
+        "Handled API requests, validation, and error states",
+        "Tested and debugged the complete application",
       ],
     },
 
     features: [
-      "User authentication",
-      "Create posts",
-      "Like & comment",
-      "Follow users",
+      "User registration & authentication",
+      "Secure login and protected routes",
       "User profiles",
-      "News feed",
-      "Responsive design",
-      "REST API",
+      "Create, edit and delete posts",
+      "Like and comment system",
+      "Personalized news feed",
+      "RESTful API architecture",
+      "PostgreSQL database with Sequelize ORM",
+      "Responsive Material UI interface",
+      "MVC backend architecture",
     ],
   },
   {
@@ -1083,126 +1097,136 @@ export const projects = [
       "Loading states",
     ],
   },
-  {
-    // =====================================================
-    // Basic Information
-    // =====================================================
+ {
+  // =====================================================
+  // Basic Information
+  // =====================================================
 
-    id: 8,
+  id: 8,
 
-    slug: "social-media-laravel",
+  slug: "social-media-laravel",
 
-    title: "Social Media App",
+  title: "Social Media App",
 
-    subtitle:
-      "Full-stack social networking application built with Laravel and React.",
+  subtitle:
+    "Full-stack practice project built with Laravel, Inertia.js and React to explore modern Laravel application architecture.",
 
-    shortDescription:
-      "A Laravel-powered social networking platform allowing users to create posts, interact with others and manage personal profiles through a modern React interface.",
+  shortDescription:
+    "A full-stack social networking application developed as a hands-on learning project to practice Laravel, Inertia.js, React, MySQL, authentication, Eloquent ORM, and full-stack SPA development.",
 
-    // =====================================================
-    // Hero
-    // =====================================================
+  // =====================================================
+  // Hero
+  // =====================================================
 
-    status: "Completed",
+  status: "Learning Project",
 
-    duration: "2024",
+  duration: "2024",
 
-    team: "Personal Project",
+  team: "Personal Project",
 
-    client: "Personal",
+  client: "Self",
 
-    image: "/social medea laravel.jpg",
+  image: "/social medea laravel.jpg",
 
-    platform: "Web Application",
+  platform: "Web Application",
 
-    industry: "Social Networking",
+  industry: "Social Networking",
 
-    gallery: [],
+  gallery: [],
 
-    technologies: [
-      {
-        name: "Laravel",
-        icon: SiLaravel,
-        color: "#FF2D20",
-      },
-      {
-        name: "React",
-        icon: SiReact,
-        color: "#61DAFB",
-      },
-      {
-        name: "Inertia.js",
-        icon: SiInertia,
-        color: "#9553E9",
-      },
-      {
-        name: "MySQL",
-        icon: SiMysql,
-        color: "#4479A1",
-      },
-      {
-        name: "Material UI",
-        icon: SiMui,
-        color: "#007FFF",
-      },
-    ],
-
-    demoUrl: null,
-
-    githubUrl:
-      "https://github.com/Mohamed-Messaoudene/social-media-app-with-laravel",
-
-    color: "#9370DB",
-
-    // =====================================================
-    // Overview
-    // =====================================================
-
-    longDescription:
-      "A social networking platform built with Laravel, Inertia.js and React that enables users to publish posts, interact through comments and likes, manage profiles and experience a seamless SPA architecture.",
-
-    problem: [
-      "Explore Laravel with Inertia.js architecture.",
-      "Build a modern SPA without REST overhead.",
-      "Implement authentication and social interactions.",
-      "Practice scalable Laravel application structure.",
-    ],
-
-    solution: [
-      "Built Laravel backend with Inertia.js.",
-      "Developed React frontend components.",
-      "Implemented authentication and authorization.",
-      "Designed reusable application architecture.",
-    ],
-
-    role: {
-      title: "Full-Stack Developer",
-
-      description:
-        "Developed the complete application including backend logic, database design, authentication, frontend interfaces and deployment configuration.",
-
-      responsibilities: [
-        "Developed Laravel backend",
-        "Built React frontend",
-        "Implemented authentication",
-        "Designed MySQL database",
-        "Created reusable components",
-        "Integrated Inertia.js",
-      ],
+  technologies: [
+    {
+      name: "Laravel",
+      icon: SiLaravel,
+      color: "#FF2D20",
     },
+    {
+      name: "React",
+      icon: SiReact,
+      color: "#61DAFB",
+    },
+    {
+      name: "Inertia.js",
+      icon: SiInertia,
+      color: "#9553E9",
+    },
+    {
+      name: "MySQL",
+      icon: SiMysql,
+      color: "#4479A1",
+    },
+    {
+      name: "Material UI",
+      icon: SiMui,
+      color: "#007FFF",
+    },
+  ],
 
-    features: [
-      "Authentication",
-      "Posts",
-      "Comments",
-      "Likes",
-      "User profiles",
-      "SPA architecture",
-      "Responsive interface",
-      "Dashboard",
+  demoUrl: null,
+
+  githubUrl:
+    "https://github.com/Mohamed-Messaoudene/social-media-app-with-laravel",
+
+  color: "#9370DB",
+
+  // =====================================================
+  // Overview
+  // =====================================================
+
+  longDescription:
+    "This project was built as a practical learning experience to explore Laravel's full-stack development workflow using Inertia.js and React. The objective was to understand how Laravel can power modern single-page applications without building a separate REST API. Throughout the project, I implemented user authentication, post management, comments, likes, user profiles, and database relationships while gaining hands-on experience with Laravel's ecosystem, including Eloquent ORM, migrations, validation, middleware, routing, and authentication.",
+
+  problem: [
+    "Gain practical experience with the Laravel framework and its ecosystem.",
+    "Understand the Laravel + Inertia.js + React architecture for building modern SPAs.",
+    "Learn database modeling and relationships using Eloquent ORM.",
+    "Practice authentication, authorization, validation, and middleware.",
+    "Explore Laravel routing, controllers, migrations, and business logic organization.",
+    "Build a complete full-stack application using Laravel as the backend foundation.",
+  ],
+
+  solution: [
+    "Built the backend using Laravel with a clean MVC architecture.",
+    "Developed a React frontend powered by Inertia.js for seamless page navigation.",
+    "Designed a relational MySQL database using Eloquent models and relationships.",
+    "Implemented authentication, authorization, request validation, and protected routes.",
+    "Created reusable frontend components with Material UI.",
+    "Integrated frontend and backend without a traditional REST API using Inertia.js.",
+  ],
+
+  role: {
+    title: "Full-Stack Developer",
+
+    description:
+      "Designed and developed the complete application independently as a practical Laravel learning project, covering backend development, database design, frontend implementation, authentication, and Laravel best practices.",
+
+    responsibilities: [
+      "Designed the MySQL database schema",
+      "Created Laravel migrations and seeders",
+      "Built Eloquent models and relationships",
+      "Developed Laravel controllers and business logic",
+      "Implemented authentication and authorization",
+      "Applied request validation and middleware",
+      "Configured application routing with Laravel",
+      "Integrated React with Laravel using Inertia.js",
+      "Built reusable Material UI components",
+      "Implemented CRUD operations and social interactions",
     ],
   },
+
+  features: [
+    "User registration & authentication",
+    "Secure login and protected pages",
+    "User profiles",
+    "Create, edit and delete posts",
+    "Like and comment system",
+    "News feed",
+    "Laravel MVC architecture",
+    "Eloquent ORM relationships",
+    "Inertia.js SPA architecture",
+    "Responsive Material UI interface",
+  ],
+},
   {
     // =====================================================
     // Basic Information
