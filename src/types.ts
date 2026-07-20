@@ -25,8 +25,8 @@ export type Project = {
         });
     color: string;
   }[];
-  demoUrl: string;
-  githubUrl: null;
+  demoUrl: string|null;
+  githubUrl: string|null;
   color: string;
   longDescription: string;
   problem: string[];
@@ -61,9 +61,9 @@ export type Language = {
   level: string;
 };
 
-export type JourneyItem =
+export type Experience =
   | {
-      type: string;
+      type:string;
       title: string;
       org: string;
       location: string;
