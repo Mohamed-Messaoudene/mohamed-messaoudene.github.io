@@ -1,14 +1,10 @@
 import CustomDevider from "../../CustomDevider";
 import { Box, Typography, useTheme, Chip, Divider, alpha } from "@mui/material";
 import { useInView } from "react-intersection-observer";
-import { skillCategories } from "../../../constants";
+import { languages, skillCategories } from "../../../constants";
 import CategoryRow from "../../CategoryRow";
 
-const languages = [
-  { name: "Arabic", level: "Native" },
-  { name: "English", level: "Professional Working Proficiency" },
-  { name: "French", level: "Intermediate" },
-];
+
 
 function Skills() {
   const theme = useTheme();

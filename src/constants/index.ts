@@ -123,6 +123,13 @@ export const skillCategories = [
   },
 ];
 
+// langauges with level for each
+export const languages = [
+  { name: "Arabic", level: "Native" },
+  { name: "English", level: "Professional Working Proficiency" },
+  { name: "French", level: "Intermediate" },
+];
+
 export const projects = [
   {
     // =====================================================
