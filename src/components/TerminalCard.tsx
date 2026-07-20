@@ -1,7 +1,5 @@
-import { alpha, Box, useTheme, Typography } from "@mui/material";
+import { Box, useTheme, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import PropTypes from "prop-types";
-import { useCodeColors } from "../utils/useCodeColors";
 
 const bioBefore =
   "I'm Mohamed Messaoudene, a full-stack developer based in Medea, Algeria, specializing in React, TypeScript, and Laravel. After graduating as an ICT Engineer from ";
@@ -9,17 +7,13 @@ const bioBefore =
 const bioAfter =
   " in June 2025, I worked remotely as a frontend contractor for GamifierSA in Saudi Arabia, delivering production applications—from multilingual healthcare platforms to B2B/B2C marketplaces—for international clients. That contract has since ended, and I'm now focused on new freelance projects and full-time opportunities where I can bring that same experience to a team.";
 
-
-
-
 function TerminalCard({ inView }) {
   const theme = useTheme();
-  const c = useCodeColors(theme.palette.mode);
 
   return (
     <Box
       sx={{
-        bgcolor: c.bg,
+        bgcolor: theme.palette.code.bg,
         borderRadius: "12px",
         overflow: "hidden",
         boxShadow:
@@ -29,7 +23,7 @@ function TerminalCard({ inView }) {
         border:
           theme.palette.mode === "dark"
             ? "none"
-            : `1px solid ${c.chromeBorder}`,
+            : `1px solid ${theme.palette.code.chromeBorder}`,
         fontFamily: '"Fira Code", "Courier New", monospace',
         width: "100%",
         transition: "background-color 0.3s ease",
@@ -43,7 +37,7 @@ function TerminalCard({ inView }) {
           gap: 0.8,
           px: 2,
           py: 1.2,
-          borderBottom: `1px solid ${c.chromeBorder}`,
+          borderBottom: `1px solid ${theme.palette.code.chromeBorder}`,
         }}
       >
         {["#ff5f56", "#ffbd2e", "#27c93f"].map((dot) => (
@@ -56,7 +50,7 @@ function TerminalCard({ inView }) {
           sx={{
             ml: 1.5,
             fontSize: "clamp(10px,1.1vw,13px)",
-            color: c.filename,
+            color: theme.palette.code.filename,
             fontFamily: '"Fira Code", "Courier New", monospace',
           }}
         >
@@ -72,11 +66,13 @@ function TerminalCard({ inView }) {
           lineHeight: 2,
         }}
       >
-        <Box sx={{ color: c.comment, mb: 0.5 }}>{"// developer profile"}</Box>
+        <Box sx={{ color: theme.palette.code.comment, mb: 0.5 }}>
+          {"// developer profile"}
+        </Box>
         <Box>
-          <span style={{ color: c.keyword }}>const</span>{" "}
-          <span style={{ color: c.variable }}>developer</span>{" "}
-          <span style={{ color: c.punctuation }}>= {"{"}</span>
+          <span style={{ color: theme.palette.code.keyword }}>const</span>{" "}
+          <span style={{ color: theme.palette.code.variable }}>developer</span>{" "}
+          <span style={{ color: theme.palette.code.punctuation }}>= {"{"}</span>
         </Box>
 
         <Box sx={{ pl: 2.5 }}>
@@ -86,9 +82,9 @@ function TerminalCard({ inView }) {
             transition={{ duration: 0.45, delay: 0.15 }}
           >
             <Box sx={{ display: "flex", alignItems: "baseline", gap: "4px" }}>
-              <span style={{ color: c.key }}>bio</span>
-              <span style={{ color: c.punctuation }}>:</span>
-              <span style={{ color: c.string }}>`</span>
+              <span style={{ color: theme.palette.code.key }}>bio</span>
+              <span style={{ color: theme.palette.code.punctuation }}>:</span>
+              <span style={{ color: theme.palette.code.string }}>`</span>
             </Box>
 
             <Box
@@ -98,8 +94,8 @@ function TerminalCard({ inView }) {
                 pl: 2,
                 pr: 2,
                 py: 1.8,
-                borderLeft: `3px solid ${c.string}`,
-                bgcolor: c.bioBg,
+                borderLeft: `3px solid ${theme.palette.code.string}`,
+                bgcolor: theme.palette.code.bioBg,
                 borderRadius: "0 8px 8px 0",
               }}
             >
@@ -109,7 +105,7 @@ function TerminalCard({ inView }) {
                   fontFamily: '"Fira Code", "Courier New", monospace',
                   fontSize: "clamp(11px,1.25vw,14.5px)",
                   lineHeight: 1.9,
-                  color: c.bioText,
+                  color: theme.palette.code.bioText,
                 }}
               >
                 {bioBefore}
@@ -120,7 +116,7 @@ function TerminalCard({ inView }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{
-                    color: c.variable,
+                    color: theme.palette.code.variable,
                     fontWeight: 700,
                     textDecoration: "none",
                     "&:hover": {
@@ -136,20 +132,15 @@ function TerminalCard({ inView }) {
             </Box>
 
             <Box sx={{ display: "flex", alignItems: "baseline", gap: "4px" }}>
-              <span style={{ color: c.string }}>`</span>
+              <span style={{ color: theme.palette.code.string }}>`</span>
             </Box>
           </motion.div>
         </Box>
 
-        <Box sx={{ color: c.punctuation }}>{"};"}</Box>
+        <Box sx={{ color: theme.palette.code.punctuation }}>{"};"}</Box>
       </Box>
     </Box>
   );
 }
-
-// PropTypes for TerminalCard
-TerminalCard.propTypes = {
-  inView: PropTypes.bool.isRequired,
-};
 
 export default TerminalCard;
