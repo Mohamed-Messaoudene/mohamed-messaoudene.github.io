@@ -4,9 +4,6 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import TerminalCard from "../../TerminalCard";
 
-
-
-
 function AboutMe() {
   const theme = useTheme();
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });

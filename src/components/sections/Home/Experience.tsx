@@ -2,7 +2,7 @@ import { Box, Typography, useTheme } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 
 
-import { timelineData } from "../../../constants";
+import { JourneyData } from "../../../constants";
 import CustomDevider from "../../CustomDevider";
 import TimelineItem from "../../TimeLineItem";
 
@@ -37,14 +37,14 @@ function Experience() {
       <CustomDevider />
 
       <Box sx={{ width: "100%", mt: 4 }}>
-        {timelineData.map((item, index) => (
+        {JourneyData.map((item, index) => (
           <TimelineItem
             key={`${item.org}-${item.title}`}
             item={item}
             index={index}
             inView={inView}
-            isLast={index === timelineData.length - 1}
-            nextColor={timelineData[index + 1]?.color || item.color}
+            isLast={index === JourneyData.length - 1}
+            nextColor={JourneyData[index + 1]?.color || item.color}
           />
         ))}
       </Box>

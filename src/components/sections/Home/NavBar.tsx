@@ -162,8 +162,7 @@ export default function NavBar() {
             />
             <IconButton
               onClick={toggleTheme}
-              color={theme.palette.primary.text}
-              sx={{ marginLeft: { xs: "60px", sm: "80px", md: "100px" } }}
+              sx={{ marginLeft: { xs: "60px", sm: "80px", md: "100px" }, color:theme.palette.primary.text }}
             >
               {mode === "dark" ? (
                 <DarkModeIcon sx={{ fontSize: { xs: "20px", sm: "27px" } }} />
