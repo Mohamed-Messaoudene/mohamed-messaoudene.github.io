@@ -39,21 +39,23 @@ export type Project = {
   features: string[];
 };
 
-export type SkillCategory = {
-  title: string;
-  icon: OverridableComponent<SvgIconTypeMap<{}, "svg">> & {
-    muiName: string;
-  };
-  color: string;
-  skills: {
-    name: string;
+export type Skill = {
+name: string;
     icon:
       | IconType
       | (OverridableComponent<SvgIconTypeMap<{}, "svg">> & {
           muiName: string;
         });
     core: boolean;
-  }[];
+}
+
+export type SkillCategory = {
+  title: string;
+  icon: OverridableComponent<SvgIconTypeMap<{}, "svg">> & {
+    muiName: string;
+  };
+  color: string;
+  skills: Skill[];
 };
 
 export type Language = {

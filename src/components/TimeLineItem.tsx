@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import {
   Box,
   Typography,
@@ -20,8 +19,17 @@ import {
 } from "@mui/icons-material";
 import Collapse from "@mui/material/Collapse";
 import { useState } from "react";
+import { Experience } from "../types";
 
-function TimelineItem({ item, index, isLast, inView, nextColor }) {
+type TimelineItemProps = {
+  item: Experience;
+  index: number;
+  isLast: boolean;
+  inView: boolean;
+  nextColor: string;
+}
+
+function TimelineItem({ item, index, isLast, inView, nextColor }: TimelineItemProps) {
   const [expanded, setExpanded] = useState(false);
   const theme = useTheme();
 
@@ -262,26 +270,5 @@ function TimelineItem({ item, index, isLast, inView, nextColor }) {
     </Box>
   );
 }
-
-TimelineItem.propTypes = {
-  index: PropTypes.number.isRequired,
-  isLast: PropTypes.bool.isRequired,
-  inView: PropTypes.bool.isRequired,
-  nextColor: PropTypes.string.isRequired,
-
-  item: PropTypes.shape({
-    type: PropTypes.oneOf(["education", "experience"]).isRequired,
-    title: PropTypes.string.isRequired,
-    org: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    duration: PropTypes.string.isRequired,
-    color: PropTypes.string.isRequired,
-
-    description: PropTypes.string,
-    tags: PropTypes.arrayOf(PropTypes.string),
-
-    contributions: PropTypes.arrayOf(PropTypes.string),
-  }).isRequired,
-};
 
 export default TimelineItem;

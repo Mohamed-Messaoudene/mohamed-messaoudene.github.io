@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect, useContext, type ReactNode } from 'react';
 import { createTheme, ThemeProvider as MUIThemeProvider } from '@mui/material/styles';
-import generateTheme from '../assets/customTheme';
+import generateTheme from '../utils/customTheme';
 import { ThemeMode } from '../types';
 
 type ThemeContextValue = {

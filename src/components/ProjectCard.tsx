@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
+import { type MouseEvent } from "react";
 import {
   Card,
   CardMedia,
@@ -16,10 +16,15 @@ import { motion } from "framer-motion";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
+import { Project } from "../types";
+
+type ProjectCardProps = {
+  project: Project;
+};
 
 const MAX_VISIBLE_TECHS = 4;
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project }: ProjectCardProps) {
   const theme = useTheme();
   const navigate = useNavigate();
   const detailPath = `/projects/${project.slug}`;
@@ -29,7 +34,7 @@ export default function ProjectCard({ project }) {
 
   const goToDetail = () => navigate(detailPath);
 
-  const stopAndOpen = (e) => {
+  const stopAndOpen = (e: MouseEvent<HTMLAnchorElement>) => {
     // Prevent the card's own click-to-navigate from also firing
     // when someone clicks a demo/GitHub icon inside it.
     e.stopPropagation();
@@ -235,24 +240,4 @@ export default function ProjectCard({ project }) {
       </CardContent>
     </Card>
   );
-}
-
-ProjectCard.propTypes = {
-  project: PropTypes.shape({
-    slug: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    shortDescription: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-    status: PropTypes.string,
-    color: PropTypes.string.isRequired,
-    demoUrl: PropTypes.string,
-    githubUrl: PropTypes.string,
-    technologies: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        icon: PropTypes.elementType,
-        color: PropTypes.string,
-      })
-    ).isRequired,
-  }).isRequired,
 };

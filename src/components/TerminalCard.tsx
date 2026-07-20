@@ -1,9 +1,7 @@
-// Two syntax palettes, loosely modeled on VS Code's Dark+ / Light+
-// themes, so the code panel actually respects the site's mode toggle
-
 import { alpha, Box, useTheme, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
+import { useCodeColors } from "../utils/useCodeColors";
 
 const bioBefore =
   "I'm Mohamed Messaoudene, a full-stack developer based in Medea, Algeria, specializing in React, TypeScript, and Laravel. After graduating as an ICT Engineer from ";
@@ -11,36 +9,8 @@ const bioBefore =
 const bioAfter =
   " in June 2025, I worked remotely as a frontend contractor for GamifierSA in Saudi Arabia, delivering production applications—from multilingual healthcare platforms to B2B/B2C marketplaces—for international clients. That contract has since ended, and I'm now focused on new freelance projects and full-time opportunities where I can bring that same experience to a team.";
 
-// instead of always forcing a dark editor look.
-function useCodeColors(mode) {
-  return mode === "dark"
-    ? {
-        bg: "#1e1e2e",
-        chromeBorder: "rgba(255,255,255,0.08)",
-        filename: "rgba(255,255,255,0.5)",
-        comment: "#6a9955",
-        keyword: "#569cd6",
-        variable: "#4fc1ff",
-        key: "#9cdcfe",
-        string: "#ce9178",
-        punctuation: "#d4d4d4",
-        bioText: "#dcd7ce",
-        bioBg: alpha("#ce9178", 0.08),
-      }
-    : {
-        bg: "#fafafa",
-        chromeBorder: "rgba(0,0,0,0.08)",
-        filename: "rgba(0,0,0,0.45)",
-        comment: "#008000",
-        keyword: "#0000ff",
-        variable: "#267f99",
-        key: "#001080",
-        string: "#a31515",
-        punctuation: "#1e1e1e",
-        bioText: "#3b3b3b",
-        bioBg: alpha("#a31515", 0.05),
-      };
-}
+
+
 
 function TerminalCard({ inView }) {
   const theme = useTheme();

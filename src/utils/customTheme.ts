@@ -1,6 +1,7 @@
 import { grey, purple } from '@mui/material/colors';
+import { ThemeMode } from '../types';
 
-const generateTheme = (mode) => ({
+const generateTheme = (mode: ThemeMode): any => ({
     palette: {
         mode,
         ...(mode === 'light'
