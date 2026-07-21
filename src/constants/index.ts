@@ -48,7 +48,7 @@ import {
   Bolt as BoltIcon,
   Security as SecurityIcon,
   DevicesRounded as DevicesRoundedIcon,
-  Article, Email, GitHub, Instagram, LinkedIn
+  Article, Email, GitHub, LinkedIn
 } from "@mui/icons-material";
 import { ContactLink, Experience, Language, Project, SkillCategory } from "../types";
 
@@ -1460,12 +1460,6 @@ export const contactLinks: ContactLink[] = [
     href: "https://medium.com/@mohamed.messaoudene_67018",
     color: "#12100E",
     icon: Article,
-  },
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/messaoudene691/",
-    color: "#E1306C",
-    icon: Instagram,
   },
   {
     name: "Email",

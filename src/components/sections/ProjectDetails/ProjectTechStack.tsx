@@ -9,10 +9,10 @@ import { ProjectRole, Technology } from "../../../types";
 
 interface ProjectTechStackProps {
   role: ProjectRole;
-  technologies: Technology[]
+  technologies: Technology[];
 }
 
-function ProjectTechStack({ role, technologies }:ProjectTechStackProps) {
+function ProjectTechStack({ role, technologies }: ProjectTechStackProps) {
   const theme = useTheme();
 
   const techs = [...technologies, ...technologies, ...technologies];
@@ -213,7 +213,10 @@ function ProjectTechStack({ role, technologies }:ProjectTechStackProps) {
                         }}
                       >
                         <Icon
-                          sx={{ fontSize: { xs: 10, sm: 20 }, color: tech.color }}
+                          style={{
+                            fontSize: "clamp(10px, 2vw, 20px)",
+                            color: tech.color,
+                          }}
                         />
 
                         <Typography
