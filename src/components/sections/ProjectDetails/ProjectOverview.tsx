@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import {
   Box,
   Typography,
@@ -20,7 +19,13 @@ import {
   GitHub,
 } from "@mui/icons-material";
 
-function SectionTitle({ icon, title, color }) {
+interface SectionTitleProps {
+  icon: React.ReactNode;
+  title: string;
+  color: string;
+}
+
+function SectionTitle({ icon, title, color }: SectionTitleProps) {
   return (
     <Stack
       direction="row"
@@ -332,17 +337,5 @@ function ProjectOverview({ project }) {
     </Box>
   );
 }
-
-ProjectOverview.propTypes = {
-  project: PropTypes.shape({
-    longDescription: PropTypes.string.isRequired,
-    duration: PropTypes.string.isRequired,
-    status: PropTypes.string.isRequired,
-    team: PropTypes.string.isRequired,
-    problem: PropTypes.arrayOf(PropTypes.string).isRequired,
-    solution: PropTypes.arrayOf(PropTypes.string).isRequired,
-    features: PropTypes.arrayOf(PropTypes.string).isRequired,
-  }).isRequired,
-};
 
 export default ProjectOverview;

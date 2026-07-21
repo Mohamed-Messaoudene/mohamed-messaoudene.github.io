@@ -10,7 +10,13 @@ import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import DarkModeRoundedIcon from "@mui/icons-material/DarkModeRounded";
 
-function MiniNav({ color, demoUrl, githubUrl }) {
+type MiniNavProps = {
+  color: string;
+  demoUrl: string | null;
+  githubUrl: string | null;
+};
+
+function MiniNav({ color, demoUrl, githubUrl }: MiniNavProps) {
   const { mode, toggleTheme } = useCustomTheme();
 
   return (

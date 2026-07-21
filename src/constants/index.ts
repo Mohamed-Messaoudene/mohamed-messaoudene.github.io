@@ -48,8 +48,9 @@ import {
   Bolt as BoltIcon,
   Security as SecurityIcon,
   DevicesRounded as DevicesRoundedIcon,
+  Article, Email, GitHub, Instagram, LinkedIn
 } from "@mui/icons-material";
-import { Experience, Language, Project, SkillCategory } from "../types";
+import { ContactLink, Experience, Language, Project, SkillCategory } from "../types";
 
 
 // hero text that is displayed in the hero section  ========================================================
@@ -1439,4 +1440,38 @@ export const projects: Project[] = [
   },
 ];
 
+// all contants are exported as a single object for easy import
+
+export const contactLinks: ContactLink[] = [
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/mohamed-messaoudene-ab595a269",
+    color: "#0077B5",
+    icon: LinkedIn,
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/Mohamed-Messaoudene",
+    color: "#181717",
+    icon: GitHub,
+  },
+  {
+    name: "Medium",
+    href: "https://medium.com/@mohamed.messaoudene_67018",
+    color: "#12100E",
+    icon: Article,
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/messaoudene691/",
+    color: "#E1306C",
+    icon: Instagram,
+  },
+  {
+    name: "Email",
+    href: "mailto:messaoudenemohamed54@gmail.com",
+    color: "#D44638",
+    icon: Email,
+  },
+];
 

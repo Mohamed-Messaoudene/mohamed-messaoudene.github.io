@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { Box, Typography, Grid, Stack, useTheme } from "@mui/material";
 import {
   PersonRounded,
@@ -6,8 +5,14 @@ import {
   CheckCircleRounded,
 } from "@mui/icons-material";
 import { motion } from "framer-motion";
+import { ProjectRole, Technology } from "../../../types";
 
-function ProjectTechStack({ role, technologies }) {
+interface ProjectTechStackProps {
+  role: ProjectRole;
+  technologies: Technology[]
+}
+
+function ProjectTechStack({ role, technologies }:ProjectTechStackProps) {
   const theme = useTheme();
 
   const techs = [...technologies, ...technologies, ...technologies];
@@ -208,8 +213,7 @@ function ProjectTechStack({ role, technologies }) {
                         }}
                       >
                         <Icon
-                          sx={{ fontSize: { xs: 10, sm: 20 } }}
-                          color={tech.color}
+                          sx={{ fontSize: { xs: 10, sm: 20 }, color: tech.color }}
                         />
 
                         <Typography
@@ -234,15 +238,5 @@ function ProjectTechStack({ role, technologies }) {
     </Box>
   );
 }
-
-ProjectTechStack.propTypes = {
-  technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
-
-  role: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    responsibilities: PropTypes.arrayOf(PropTypes.string).isRequired,
-  }).isRequired,
-};
 
 export default ProjectTechStack;

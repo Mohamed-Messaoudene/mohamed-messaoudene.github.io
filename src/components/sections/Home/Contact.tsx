@@ -19,6 +19,13 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { useInView } from "react-intersection-observer";
 
+interface ContactFormValues {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
 export default function Contact() {
   const theme = useTheme();
   const [loading, setLoading] = useState(false);
@@ -31,7 +38,7 @@ export default function Contact() {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm<ContactFormValues>();
 
   const sendEmail = async (data) => {
     setLoading(true);

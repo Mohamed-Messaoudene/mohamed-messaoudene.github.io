@@ -1,19 +1,22 @@
-import PropTypes from "prop-types";
-
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import LinkRoundedIcon from "@mui/icons-material/LinkRounded";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+
+
 import { alpha, Box, Chip, Stack, Typography, useTheme } from "@mui/material";
+import { Project } from "../../../types";
 
 
 /** Pulls a clean, displayable hostname out of a full URL, or null if invalid/empty. */
-function getDisplayHost(url) {
+function getDisplayHost(url:string|null):string|null {
   if (!url) return null;
   try {
     return new URL(url).hostname.replace(/^www\./, "");
@@ -22,7 +25,7 @@ function getDisplayHost(url) {
   }
 }
 
-function ProjectHero({ project }) {
+function ProjectHero({ project }: { project: Project }) {
   const theme = useTheme();
   const demoHost = getDisplayHost(project.demoUrl);
 
@@ -211,39 +214,5 @@ function ProjectHero({ project }) {
     </Box>
   );
 }
-
-ProjectHero.propTypes = {
-  project: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    shortDescription: PropTypes.string.isRequired,
-    status: PropTypes.string,
-    duration: PropTypes.string,
-    client: PropTypes.string,
-    color: PropTypes.string.isRequired,
-
-    platform: PropTypes.string,
-    industry: PropTypes.string,
-
-    role: PropTypes.shape({
-      title: PropTypes.string,
-      description: PropTypes.string,
-      responsibilities: PropTypes.arrayOf(PropTypes.string),
-    }),
-
-    technologies: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        icon: PropTypes.elementType.isRequired,
-        color: PropTypes.string.isRequired,
-      }),
-    ).isRequired,
-
-    image: PropTypes.string,
-    gallery: PropTypes.arrayOf(PropTypes.string),
-
-    demoUrl: PropTypes.string,
-    githubUrl: PropTypes.string,
-  }).isRequired,
-};
 
 export default ProjectHero;

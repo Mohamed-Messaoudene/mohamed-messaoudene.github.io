@@ -1,12 +1,4 @@
-import {
-  Article,
-  Download,
-  Email,
-  GitHub,
-  Instagram,
-  LinkedIn,
-  WavingHand,
-} from "@mui/icons-material";
+import { Download, WavingHand } from "@mui/icons-material";
 import {
   Box,
   IconButton,
@@ -20,55 +12,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { TypeAnimation } from "react-type-animation";
 import { heroText } from "../../../constants";
-
-const contactItems = [
-  {
-    icon: (
-      <GitHub
-        sx={{ fontSize: { xs: "15px", sm: "22px", md: "27px", lg: "30px" } }}
-      />
-    ),
-    link: "https://github.com/Mohamed-Messaoudene",
-    color: "#181717", // Official GitHub black
-  },
-  {
-    icon: (
-      <LinkedIn
-        sx={{ fontSize: { xs: "15px", sm: "22px", md: "27px", lg: "30px" } }}
-      />
-    ),
-    link: "https://www.linkedin.com/in/mohamed-messaoudene-ab595a269",
-    color: "#0077B5", // Official LinkedIn blue
-  },
-  {
-    title: "medium",
-    icon: (
-      <Article
-        sx={{ fontSize: { xs: "15px", sm: "22px", md: "27px", lg: "30px" } }}
-      />
-    ),
-    link: "https://medium.com/@mohamed.messaoudene_67018",
-    color: "#12100E", // Official Medium black
-  },
-  {
-    icon: (
-      <Instagram
-        sx={{ fontSize: { xs: "15px", sm: "22px", md: "27px", lg: "30px" } }}
-      />
-    ),
-    link: "https://www.instagram.com/messaoudene691/",
-    color: "#E1306C", // Official Instagram pinkish-red
-  },
-  {
-    icon: (
-      <Email
-        sx={{ fontSize: { xs: "15px", sm: "22px", md: "27px", lg: "30px" } }}
-      />
-    ),
-    link: "mailto:messaoudenemohamed54@gmail.com",
-    color: "#D44638", // Official Gmail red
-  },
-];
+import { contactLinks } from "../../../constants/index";
 
 function Home() {
   const theme = useTheme();
@@ -98,7 +42,7 @@ function Home() {
           flexDirection={"column"}
           justifyContent={"center"}
           alignItems={"center"}
-          marginLeft={{xs:'10px', sm: '0px'}}
+          marginLeft={{ xs: "10px", sm: "0px" }}
         >
           <Box
             width={"15px"}
@@ -188,7 +132,7 @@ function Home() {
             spacing={{ xs: 0.3, sm: 1, lg: 2 }}
             marginBlock={"15px"}
           >
-            {contactItems.map((item, index) => (
+            {contactLinks.map((item, index) => (
               <Box
                 key={index}
                 sx={{
@@ -213,12 +157,21 @@ function Home() {
               >
                 <IconButton
                   component="a"
-                  href={item.link}
+                  href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{ color: "inherit" }}
                 >
-                  {item.icon}
+                  <item.icon
+                    sx={{
+                      fontSize: {
+                        xs: "15px",
+                        sm: "22px",
+                        md: "27px",
+                        lg: "30px",
+                      },
+                    }}
+                  />{" "}
                 </IconButton>
               </Box>
             ))}

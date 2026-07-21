@@ -7,15 +7,12 @@ import {
   useTheme,
 } from "@mui/material";
 import {
-  LinkedIn as LinkedInIcon,
-  GitHub as GitHubIcon,
-  Instagram as InstagramIcon,
   KeyboardArrowUp as KeyboardArrowUpIcon,
   Email as EmailIcon,
   Phone as PhoneIcon,
-  Article,
 } from "@mui/icons-material";
 import { motion } from "framer-motion";
+import { contactLinks } from "../../constants";
 
 export default function Footer() {
   const theme = useTheme();
@@ -28,29 +25,7 @@ export default function Footer() {
     });
   };
 
-  const socialLinks = [
-    {
-      icon: <LinkedInIcon sx={{ fontSize: "clamp(16px,1.2vw,28px)" }} />,
-      href: "https://www.linkedin.com/in/mohamed-messaoudene-ab595a269",
-      name: "LinkedIn",
-    },
-    {
-      icon: <GitHubIcon sx={{ fontSize: "clamp(16px,1.2vw,28px)" }} />,
-      href: "https://github.com/Mohamed-Messaoudene",
-      name: "GitHub",
-    },
-    {
-      // <TwitterIcon sx={{ fontSize: "clamp(16px,1.2vw,28px)" }}
-      icon: <Article sx={{ fontSize: "clamp(16px,1.2vw,28px)" }} />,
-      href: "https://medium.com/@mohamed.messaoudene_67018",
-      name: "Medium",
-    },
-    {
-      icon: <InstagramIcon sx={{ fontSize: "clamp(18px,1.2vw,28px)" }} />,
-      href: "https://www.instagram.com/messaoudene691/",
-      name: "Instagram",
-    },
-  ];
+  const socialLinks = contactLinks.filter((item) => item.name !== "Email");
 
   return (
     <Box
@@ -156,7 +131,7 @@ export default function Footer() {
                     },
                   }}
                 >
-                  {social.icon}
+                  <social.icon sx={{ fontSize: "clamp(16px,1.2vw,28px)" }} />
                 </IconButton>
               </Tooltip>
             </motion.div>

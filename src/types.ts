@@ -1,6 +1,25 @@
-import { SvgIconTypeMap } from "@mui/material";
+import { SvgIconTypeMap,SvgIconProps } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
+import { ElementType } from "react";
 import { IconType } from "react-icons";
+
+
+export type ProjectRole = {
+  title: string;
+  description: string;
+  responsibilities: string[];
+};
+
+export type Technology =
+{
+    name: string;
+    icon:
+      | IconType
+      | (OverridableComponent<SvgIconTypeMap<{}, "svg">> & {
+          muiName: string;
+        });
+    color: string;
+  }
 
 export type Project = {
   id: number;
@@ -16,26 +35,14 @@ export type Project = {
   platform: string;
   industry: string;
   gallery: string[];
-  technologies: {
-    name: string;
-    icon:
-      | IconType
-      | (OverridableComponent<SvgIconTypeMap<{}, "svg">> & {
-          muiName: string;
-        });
-    color: string;
-  }[];
+  technologies: Technology[];
   demoUrl: string|null;
   githubUrl: string|null;
   color: string;
   longDescription: string;
   problem: string[];
   solution: string[];
-  role: {
-    title: string;
-    description: string;
-    responsibilities: string[];
-  };
+  role: ProjectRole;
   features: string[];
 };
 
@@ -86,5 +93,13 @@ export type Experience =
       description?: undefined;
       tags?: undefined;
     };
+
+
+export type ContactLink = {
+  name: string;
+  href: string;
+  color: string;
+  icon: ElementType;
+};   
 
 export type ThemeMode = "dark" | "light"
