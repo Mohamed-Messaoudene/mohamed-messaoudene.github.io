@@ -2,7 +2,7 @@ import { Box, useTheme } from "@mui/material";
 
 import NavBar from "../components/sections/Home/NavBar";
 
-import Home from "../components/sections/Home/Home";
+import Home from "../components/sections/Home/Hero";
 import Experience from "../components/sections/Home/Experience";
 import AboutMe from "../components/sections/Home/AboutMe";
 import Projects from "../components/sections/Home/Projects";

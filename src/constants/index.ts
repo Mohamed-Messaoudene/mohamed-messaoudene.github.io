@@ -48,13 +48,61 @@ import {
   Bolt as BoltIcon,
   Security as SecurityIcon,
   DevicesRounded as DevicesRoundedIcon,
+  Article, Email, GitHub, LinkedIn
 } from "@mui/icons-material";
+import { ContactLink, Experience, Language, Project, SkillCategory } from "../types";
 
-// `core: true` renders as a solid filled chip — the skills you'd lead
+
+// hero text that is displayed in the hero section  ========================================================
+export const heroText = `Building scalable, production-ready digital products like 
+Dashboards, SaaS platforms, business systems & landing pages — 
+crafted with React, TypeScript, Laravel & modern web technologies.`;
+
+/**
+ * Single source of truth for the timeline, ordered chronologically ========================================
+ * (oldest -> newest). To add a future role, just push a new object
+ * with type: "experience" at the end of this array — the timeline,
+ * colors, and animations all extend automatically.
+ */
+export const JourneyData: Experience[] = [
+  {
+    type: "education",
+    title: "ICT Engineer",
+    org: "National Higher School of Telecommunications and ICT",
+    location: "Oran, Algeria",
+    duration: "Graduated: June 2025",
+    color: "#607d8b",
+    description:
+      "Engineering degree covering the full foundation of modern software and communication systems.",
+    tags: [
+      "Software Engineering",
+      "Web Development",
+      "Database Systems",
+      "Computer Networks",
+      "Telecommunications",
+    ],
+  },
+  {
+    type: "experience",
+    title: "Frontend Developer (Contract)",
+    org: "GamifierSA",
+    location: "Saudi Arabia (Remote)",
+    duration: "April 2025 — May 2026",
+    color: "#3f51b5",
+    contributions: [
+      "Delivered multiple production-ready projects — landing pages, dashboards, and full-featured platforms — including NearClinic and Montasib, serving Arabic and English-speaking users across Saudi Arabia",
+      "Converted Figma designs into pixel-perfect, fully responsive UIs with smooth animations using Tailwind CSS and Material-UI",
+      "Optimized API performance through React Query caching and request batching, improving load times and perceived speed across key user flows",
+      "Developed reusable component libraries and consistent state management patterns adopted across the team, reducing development time on new features",
+      "Participated in code reviews, bug fixing, performance improvements, and deployment preparation for production releases",
+    ],
+  },
+];
+
+// `core: true` renders as a solid filled chip — the skills you'd lead =====================================
 // with in an interview. Everything else renders outlined: still fully
-// visible, just visually secondary. No percentages — nobody can
-// defend "why 85% and not 80%" under questioning, so we don't claim it.
-export const skillCategories = [
+// visible, just visually secondary. 
+export const skillCategories: SkillCategory[] = [
   {
     title: "Frontend",
     icon: LanguageIcon,
@@ -123,7 +171,15 @@ export const skillCategories = [
   },
 ];
 
-export const projects = [
+// langauges with level for each =============================================================================
+export const languages: Language[] = [
+  { name: "Arabic", level: "Native" },
+  { name: "English", level: "Professional Working Proficiency" },
+  { name: "French", level: "Intermediate" },
+];
+
+// all projects data are place here ===========================================================================
+export const projects: Project[] = [
   {
     // =====================================================
     // Basic Information
@@ -1383,58 +1439,33 @@ export const projects = [
     ],
   },
 ];
-export const heroText = `Building scalable, production-ready digital products like 
-Dashboards, SaaS platforms, business systems & landing pages — 
-crafted with React, TypeScript, Laravel & modern web technologies.`;
 
-/**
- * Single source of truth for the timeline, ordered chronologically
- * (oldest -> newest). To add a future role, just push a new object
- * with type: "experience" at the end of this array — the timeline,
- * colors, and animations all extend automatically.
- */
-export const timelineData = [
+// all contants are exported as a single object for easy import
+
+export const contactLinks: ContactLink[] = [
   {
-    type: "education",
-    title: "ICT Engineer",
-    org: "National Higher School of Telecommunications and ICT",
-    location: "Oran, Algeria",
-    duration: "Graduated: June 2025",
-    color: "#607d8b",
-    description:
-      "Engineering degree covering the full foundation of modern software and communication systems.",
-    tags: [
-      "Software Engineering",
-      "Web Development",
-      "Database Systems",
-      "Computer Networks",
-      "Telecommunications",
-    ],
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/mohamed-messaoudene-ab595a269",
+    color: "#0077B5",
+    icon: LinkedIn,
   },
   {
-    type: "experience",
-    title: "Frontend Developer (Contract)",
-    org: "GamifierSA",
-    location: "Saudi Arabia (Remote)",
-    duration: "April 2025 — May 2026",
-    color: "#3f51b5",
-    contributions: [
-      "Delivered multiple production-ready projects — landing pages, dashboards, and full-featured platforms — including NearClinic and Montasib, serving Arabic and English-speaking users across Saudi Arabia",
-      "Converted Figma designs into pixel-perfect, fully responsive UIs with smooth animations using Tailwind CSS and Material-UI",
-      "Optimized API performance through React Query caching and request batching, improving load times and perceived speed across key user flows",
-      "Developed reusable component libraries and consistent state management patterns adopted across the team, reducing development time on new features",
-      "Participated in code reviews, bug fixing, performance improvements, and deployment preparation for production releases",
-    ],
+    name: "GitHub",
+    href: "https://github.com/Mohamed-Messaoudene",
+    color: "#181717",
+    icon: GitHub,
   },
-
-  // 👇 Future roles go here, same shape as the GamifierSA entry above:
-  // {
-  //   type: "experience",
-  //   title: "...",
-  //   org: "...",
-  //   location: "...",
-  //   duration: "...",
-  //   color: "#00897b",
-  //   contributions: ["..."],
-  // },
+  {
+    name: "Medium",
+    href: "https://medium.com/@mohamed.messaoudene_67018",
+    color: "#12100E",
+    icon: Article,
+  },
+  {
+    name: "Email",
+    href: "mailto:messaoudenemohamed54@gmail.com",
+    color: "#D44638",
+    icon: Email,
+  },
 ];
+
